@@ -1,0 +1,42 @@
+.viewpoint {
+    text-align: center;
+    margin-top: 30vh;
+}
+
+.viewpoint div {
+    display: block;
+}
+
+.logo {
+    width: 256px;
+}
+
+.logo-text {
+    margin-top: 2%;
+    width: 200px;
+}
+
+.social {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 25%;
+}
+
+@media (max-width: 1024px) {
+    .social {
+        width: 256px;
+    }
+}
+
+@media (max-width: 512px) {
+    .viewpoint {
+        margin-top: 20vh;
+    }
+    .logo {
+        width: 200px;
+    }
+    .logo-text {
+        width: 150px;
+    }
+}
