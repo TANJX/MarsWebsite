@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>ADD AN EVENT</title>
+    <title>EVENTS | Mars Inc.</title>
     <script>
         function validateForm() {
             var a = document.forms["Form"]["name"].value;
@@ -23,12 +23,15 @@
 <body>
     <div class="container">
         <h1 class="title my-5">Event List</h1>
-        <ul class="nav">
+        <ul class="nav align-middle">
             <li class="nav-item">
-                <a class="nav-link active" href="../index.html">Main</a>
+                <a class="nav-link active" href="../index.html">Mars Inc.</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="add.html">Add</a>
+                <a class="nav-link active" href="log.php">Log</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="newevent.html">New Event</a>
             </li>
         </ul>
         <div class="card-columns">

@@ -11,6 +11,6 @@ mysql_query("set names utf8;");
 //insert语句
 $insert = "insert into event (name,date) values ('$name','$date')";
 $res_insert = mysql_query($insert);
-header("Location: index.php");
+header("Location: ../event.php");
 exit;
 ?>
