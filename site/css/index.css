@@ -1,0 +1,118 @@
+.viewpoint {
+    text-align: center;
+    margin-top: 30vh;
+}
+
+.viewpoint div {
+    display: block;
+}
+
+.logo {
+    width: 256px;
+}
+
+.logo-text {
+    margin-top: 2%;
+    width: 200px;
+}
+
+.social {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 25%;
+}
+
+@media (max-width: 1024px) {
+    .social {
+        width: 256px;
+    }
+}
+
+@media (max-width: 512px) {
+    .viewpoint {
+        margin-top: 20vh;
+    }
+    .logo {
+        width: 200px;
+    }
+    .logo-text {
+        width: 150px;
+    }
+}
+
+svg {
+    height: 700px;
+}
+
+#Desk {
+    opacity: 0;
+    animation: 1s fade-in;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+#Items_on_Desk {
+    opacity: 0;
+    animation: 1s fade-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+#Layer_5 {
+    opacity: 0;
+    animation: 1s fade-in;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+#Chair {
+    opacity: 0;
+    animation: 1s fade-in;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+#Mars {
+    opacity: 0;
+    animation: 1s drop-in;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#screen {
+    filter: drop-shadow( -500px -5px 5px #000);
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes drop-in {
+    0% {
+        opacity: 0;
+        transform: translate(0, -2050px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes shine {
+    0% {
+        box-shadow: 0 40px 80px 0 rgba(255, 255, 255, 0.2), 0 60px 200px 0 rgba(255, 255, 255, 0.19);
+    }
+    50% {
+        box-shadow: 0 0px 0px 0 rgba(255, 255, 255, 0.2), 0 0px 0px 0 rgba(255, 255, 255, 0.19);
+    }
+    100 % {
+        box-shadow: 0 40px 80px 0 rgba(255, 255, 255, 0.2), 0 60px 200px 0 rgba(255, 255, 255, 0.19);
+    }
+}
