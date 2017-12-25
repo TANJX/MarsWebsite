@@ -1,70 +1,62 @@
-<!DOCTYPE html>
-<html lang="">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mars Inc.</title>
-</head>
-
-<body>
-  <header>
-    <div class="title ">
-      <p class="container">FALL 2017</p>
-    </div>
-  </header>
-
-  <div class="logo">
-    <!--    <img src="logo/logo.svg">-->
-    <svg class="logo-main" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 745.28 884.57"><defs>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 745.28 884.57"><defs>
     <style>.cls-1,.cls-11,.cls-12,.cls-14,.cls-16,.cls-20{fill:none;}.cls-2{fill:#8dc63f;stroke-width:10px;}.cls-11,.cls-12,.cls-13,.cls-14,.cls-2,.cls-20,.cls-21,.cls-3,.cls-9{stroke:#414042;}.cls-13,.cls-16,.cls-2,.cls-3,.cls-9{stroke-miterlimit:10;}.cls-3{fill:#ac2743;}.cls-12,.cls-3{stroke-width:25.44px;}.cls-4{fill:#c13356;}.cls-5{fill:#ea506d;}.cls-6{opacity:0.31;}.cls-7{clip-path:url(#clip-path);}.cls-8{fill:#b33548;}.cls-9{fill:#ffc239;}.cls-14,.cls-9{stroke-width:21.62px;}.cls-10{fill:#414042;}.cls-11,.cls-12,.cls-14,.cls-16,.cls-20{stroke-linecap:round;}.cls-11,.cls-12,.cls-14,.cls-20,.cls-21{stroke-linejoin:round;}.cls-11{stroke-width:12.72px;}.cls-13{fill:#ddd;stroke-width:18.35px;}.cls-15{fill:#333;}.cls-16{stroke:#333;stroke-width:4.88px;}.cls-17{fill:#912a3e;}.cls-18{clip-path:url(#clip-path-2);}.cls-19{fill:#ff395a;}.cls-20,.cls-21{stroke-width:24px;}.cls-21{fill:#efefef;}
+      #Layer_8 {
+  animation: .8s hat-in;
+  opacity: 1;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.05);
+  transition: 0.5s;
+}
+
+.logo:hover #Layer_8 {
+  transition: 0.2s;
+  animation: .4s hat-jump;
+  animation-fill-mode: forwards;
+}
+
+.logo:hover #L_logo {
+  transition: 0.2s;
+  animation: .4s logo-jump;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hat-in {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.1);
+  }
+  80% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes hat-jump {
+  100% {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.1);
+  }
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes logo-jump {
+  100% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 5px);
+  }
+  0% {
+    transform: translate(0px, 0px);
+  }
+}
       </style>
     <clipPath id="clip-path"><circle id="_Clipping_Path_" data-name="&lt;Clipping Path&gt;" class="cls-1" cx="405.12" cy="433.06" r="235.94"/></clipPath><clipPath id="clip-path-2"><polyline class="cls-1" points="109.51 84.99 145.15 292.34 338.75 164.64 101.06 12 54.88 121.01 121.56 74.22"/></clipPath></defs><title>logo_christmas</title><g id="Layer_2" data-name="Layer 2"><g id="L_logo" data-name="L logo"><circle id="_Path_" data-name="&lt;Path&gt;" class="cls-2" cx="541.54" cy="221.11" r="20.86"/><circle id="_Path_2" data-name="&lt;Path&gt;" class="cls-3" cx="405.12" cy="433.06" r="248.15"/><path id="_Path_3" data-name="&lt;Path&gt;" class="cls-4" d="M638.51,434.84c0,124.39-70,213.81-195.87,231.49C317.74,683.75,181.9,559.23,181.9,434.84S284.16,197.24,410.21,197.24,638.51,310.57,638.51,434.84Z"/><path id="_Path_4" data-name="&lt;Path&gt;" class="cls-5" d="M632.15,439.8c0,122.49-70,210.76-195.87,228.05C311.38,685,175.54,562.28,175.54,439.8S277.8,205.38,403.85,204.11C552,202.59,632.15,317.18,632.15,439.8Z"/><g class="cls-6"><g class="cls-7"><circle class="cls-8" cx="239.77" cy="335.75" r="118.29"/><circle class="cls-8" cx="358.06" cy="553.25" r="75.04"/><circle class="cls-8" cx="628.34" cy="530.99" r="79.49"/></g></g><circle id="_Path_5" data-name="&lt;Path&gt;" class="cls-9" cx="433.99" cy="190.5" r="37.52"/><circle id="_Path_6" data-name="&lt;Path&gt;" class="cls-10" cx="410.21" cy="466.98" r="6.36"/><circle id="_Path_7" data-name="&lt;Path&gt;" class="cls-10" cx="531.04" cy="336.01" r="6.36"/><path id="_Path_8" data-name="&lt;Path&gt;" class="cls-11" d="M239.39,553.89c0,14.75,9.54,26.71,21.24,26.71"/><circle id="_Path_9" data-name="&lt;Path&gt;" class="cls-10" cx="297.77" cy="155.4" r="6.36"/><circle id="_Path_10" data-name="&lt;Path&gt;" class="cls-10" cx="480.54" cy="149.04" r="6.36"/><circle id="_Path_11" data-name="&lt;Path&gt;" class="cls-10" cx="598.83" cy="213.65" r="6.36"/><circle id="_Path_12" data-name="&lt;Path&gt;" class="cls-10" cx="571.23" cy="134.66" r="9.79"/><path id="_Path_13" data-name="&lt;Path&gt;" class="cls-12" d="M587.38,262.62C624.14,251.55,646.53,254,661,270,698.55,311.46,628,436.36,503.44,548.93s-256,169.93-293.56,128.46c-16.92-18.82-18.7-40.07,3.56-84.07"/><circle id="_Path_14" data-name="&lt;Path&gt;" class="cls-13" cx="433.99" cy="602.47" r="41.34"/><line id="_Path_15" data-name="&lt;Path&gt;" class="cls-14" x1="478.51" y1="514.46" x2="589.42" y2="396.3"/><path id="_Path_16" data-name="&lt;Path&gt;" class="cls-14" d="M229,349.36C241.3,290.09,284,249,324.48,257.4"/></g><g id="L_Text" data-name="L Text"><g id="MARS_INC" data-name="MARS INC"><path class="cls-15" d="M185.85,883.27H172.07V818.86l-.65-.19c-.43.75-.91,1.46-1.28,2.24-9.48,20-19,40-28.35,60-.93,2-2.06,2.31-4,2.56-4.45.57-6.58-1.15-8.46-5.25-9.12-19.91-18.66-39.63-28.66-59.35v64.31h-14V783c3.84,0,7.7-.16,11.53.12.82.06,1.77,1.58,2.26,2.61q16.55,35,33,70.08c.88,1.88,1.79,3.74,2.93,6.1,2.93-6.23,5.66-12,8.38-17.81,9-19.27,18.14-38.51,27-57.85,1.22-2.66,2.65-3.59,5.45-3.34s5.65.05,8.67.05Z"/><path class="cls-15" d="M525.49,783c4.07,0,8-.15,11.84.11,1,.06,2,1.28,2.68,2.22q18.38,27.32,36.66,54.7c3.91,5.84,7.86,11.65,12.37,17.32V783.22h14V883.4c-4.08,0-8.07.18-12-.12-1-.08-2.14-1.5-2.85-2.55Q571,855.25,554,829.71c-4.62-6.9-9.26-13.79-14.49-20.54v74h-14Z"/><path class="cls-15" d="M331.31,842.43c4.74,7.09,9.24,13.84,13.76,20.58s8.88,13.22,13.7,20.39c-6.14,0-11.59.11-17-.11-.91,0-2-1.37-2.6-2.33q-11.59-17.74-23-35.59a3.78,3.78,0,0,0-3.79-2.07c-2.94.13-5.89,0-9.19,0v39.84h-14V783h4.66c10.34,0,20.7-.21,31,.18,11.06.42,20.71,4.23,26.81,14.15a29.63,29.63,0,0,1-17.53,44.28C333.26,841.8,332.46,842.07,331.31,842.43Zm-28.1-11.11c8.59-.43,17-.25,25.31-1.43,8.7-1.24,12.81-7.23,12.85-16.47,0-9.72-4-15.86-12.84-17.15-8.26-1.2-16.73-1-25.32-1.41Z"/><path class="cls-15" d="M712.89,812.64c-5.3,0-10.23.08-15.15-.08-.78,0-1.77-1-2.24-1.78-7.33-12.3-18.7-16.39-32.26-15.76-20.68,1-36.62,18.17-33.61,43.62,2.07,17.45,12.17,28.81,28,32.17,14.82,3.14,30.88-2.13,38-15.45a3.08,3.08,0,0,1,2.07-1.53c4.92-.13,9.85-.07,14.89-.07-6.74,20.78-26.8,31.38-48.34,30.68-29.69-1-47.07-23.36-49.11-44.74-3.13-32.82,18.18-52.08,38.77-56.5C680,777.61,704.51,789.7,712.89,812.64Z"/><path class="cls-15" d="M371.48,856.64H385.7c.3,7.66,4.07,12.81,11.43,14.37,9.09,1.92,18,1.69,24.7-6.22,4.41-5.22,5.43-16.38-3.84-20.48-5.51-2.44-11.59-3.64-17.43-5.32-4.35-1.25-8.9-1.93-13.06-3.63-12.1-4.94-17.13-14-16.24-28.43.63-10.27,8.75-20,19.68-23.14,10.69-3,21.29-2.79,31.38,2.37,8.5,4.34,14.4,14,14.25,22.92h-15c-.52-5.87-3.52-10.28-9-12.54a24.08,24.08,0,0,0-19.68.33c-6.28,2.83-8.51,8.09-8.18,14.71.3,5.94,3.72,9.67,9,11.37,6.9,2.23,14,3.83,21,5.74,2,.55,4,1.23,6,1.84C442.28,837,442.21,861.89,431.2,874c-8.32,9.15-18.91,11.28-30.53,10.37-7.37-.58-14.3-2.57-20.33-7.1A21.79,21.79,0,0,1,371.48,856.64Z"/><path class="cls-15" d="M495.07,783.12h13.65V883.21H495.07Z"/><circle class="cls-15" cx="736.11" cy="875.3" r="9.16"/><line class="cls-16" x1="215.76" y1="765.3" x2="215.76" y2="795.39"/><line class="cls-16" x1="228.77" y1="775.88" x2="228.77" y2="795.39"/><line class="cls-16" x1="222.27" y1="778.8" x2="222.27" y2="790.59"/><polygon class="cls-15" points="276.04 883.41 276.04 782.72 265.37 782.72 189.26 883.41 204.68 883.41 262.93 805.81 262.93 883.31 276.04 883.41"/><rect class="cls-15" x="218.4" y="848.78" width="47.73" height="12.23"/><polygon class="cls-15" points="203.21 782.93 244.94 782.93 203.21 838.04 203.21 782.93"/></g></g>
     <g id="Layer_8" data-name="Layer 8">
     <polyline class="cls-17" points="109.51 84.99 145.15 292.34 338.75 164.64 101.06 12 54.88 121.01 121.56 74.22"/><g class="cls-18"><polyline class="cls-19" points="128.12 83.36 163.75 290.71 357.36 163.01 119.67 10.37 73.49 119.39 140.16 72.59"/></g><polyline class="cls-20" points="115.06 117.25 145.15 292.34 338.75 164.64 101.06 12 54.88 121.01 121.56 74.22"/><path class="cls-21" d="M359.82,175.36,164.66,325.59c-10,7.7-26.3,2.45-34.24-11.05h0c-6.28-10.67-5.14-23,2.7-29.16L326.29,133.08c8.15-6.43,21-4.25,29.95,5.07l2,2.08C368.87,151.32,369.62,167.83,359.82,175.36Z"/><circle class="cls-21" cx="49.29" cy="138.36" r="37.29" transform="translate(-11.87 4.82) rotate(-5)"/>
     </g>
-    </g>
-    </svg>
-  </div>
-
-  <div class="container nav-bar">
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link" href="/index.html">HOME</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/index.html">GRAPHIC</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/index.html">VIDEO</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/index.html">GAME</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/index.html">ABOUT</a>
-      </li>
-    </ul>
-  </div>
-  <div class="intro">
-    <div class="container">
-      <p>Hello world! This is Jianxuan Tan, also Mars. I am currently a communication majored student at USC Annenberg School for Communication and Journalism. I come from Shenzhen, China. I am a innovator who tries to communicate with the world and make impact through effective and competent communication by utilizing digital tools as a designer and programmer. The following is what I have been doing recently. </p>
-    </div>
-  </div>
-  <div class="section graphics">
-    <div class="container">
-      <div class="section-title">
-        <img class="title-icon" src="icon/pen.svg">
-        <h2>Graphic Deisgn and Animation</h2>
-      </div>
-      <img class="graphics-img" src="img/graphic.png">
-    </div>
-  </div>
-</body>
-
-</html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
-<link rel="stylesheet" href="index.css">
-<link rel="stylesheet" href="christmas.css">
+    </g></svg>

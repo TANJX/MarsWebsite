@@ -1,0 +1,54 @@
+#Layer_8 {
+  animation: .8s hat-in;
+  opacity: 1;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.05);
+  transition: 0.5s;
+}
+
+.logo:hover #Layer_8 {
+  transition: 0.2s;
+  animation: .4s hat-jump;
+  animation-fill-mode: forwards;
+}
+
+.logo:hover #L_logo {
+  transition: 0.2s;
+  animation: .4s logo-jump;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hat-in {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.1);
+  }
+  80% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes hat-jump {
+  100% {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.1);
+  }
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes logo-jump {
+  100% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 5px);
+  }
+  0% {
+    transform: translate(0px, 0px);
+  }
+}
