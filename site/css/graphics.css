@@ -1,0 +1,73 @@
+.head {
+  margin-top: 0;
+  padding-top: 100px;
+  height: 180px;
+  background-color: dodgerblue;
+  text-align: center;
+  color: white;
+  margin-bottom: 35px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+
+.cards {
+  float: left;
+}
+
+.card {
+  width: 32%;
+  display: inline-block;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-info {
+  background-color: black;
+  height: 25%;
+  position: absolute;
+  bottom: 0;
+  padding: 5% 5%;
+  width: 100%;
+  transform: translate(0px, 150px);
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.card:hover .card-info {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 25%;
+  position: absolute;
+  bottom: 0;
+  padding: 5% 5%;
+  width: 100%;
+  transform: translate(0px, 0px);
+  transition: 0.2s;
+  opacity: 1;
+}
+
+.card img {
+  transition: 0.2s;
+}
+
+.card:hover img {
+  transform: scale(0.95);
+  transition: 0.2s;
+}
+
+@media (max-width: 576px) {
+  .cards {
+    float: none;
+  }
+
+  .card {
+    width: 100%;
+    display: block;
+    margin-right: 0%;
+    margin-bottom: 2%;
+  }
+}
