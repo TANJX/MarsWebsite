@@ -6,7 +6,7 @@ $link = mysql_connect('marstanjxcom.ipagemysql.com', 'mars', 'root');
 if (!$link) { 
     die('Could not connect: ' . mysql_error()); 
 }
-mysql_select_db(marsql); 
+mysql_select_db('marsql'); 
 //设置mysql字符编码
 mysql_query("set names utf8;");
 //insert语句

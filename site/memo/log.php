@@ -41,7 +41,7 @@
         </ul>
         <?php
 $conn = mysql_connect('marstanjxcom.ipagemysql.com', 'mars', 'root'); 
-mysql_select_db(marsql); 
+mysql_select_db('marsql');
 mysql_query("set names utf8;");
 
 $sql = sprintf("select * from log ORDER BY time DESC;");  
@@ -61,18 +61,19 @@ mysql_free_result($result);
 mysql_close($conn);  
 ?>
     </div>
-    <style>
-        .title {
-            background-color: grey;
-        }
-
-        .card {
-            text-align: center;
-            margin: 0 auto;
-        }
-
-    </style>
 </body>
+
+<style>
+    .title {
+        background-color: grey;
+    }
+
+    .card {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+</style>
 
 </html>
 

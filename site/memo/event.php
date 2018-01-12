@@ -42,7 +42,7 @@
         <div class="card-columns">
             <?php
 $conn = mysql_connect('marstanjxcom.ipagemysql.com', 'mars', 'root'); 
-mysql_select_db(marsql); 
+mysql_select_db('marsql');
 mysql_query("set names utf8;");
 
 $sql = sprintf("select * from event ORDER BY date ASC;");  
@@ -63,18 +63,19 @@ mysql_close($conn);
 ?>
         </div>
     </div>
-    <style>
-        .title {
-            background-color: greenyellow;
-        }
-
-        .card {
-            text-align: center;
-            margin: 0 auto;
-        }
-
-    </style>
 </body>
+
+<style>
+    .title {
+        background-color: greenyellow;
+    }
+
+    .card {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+</style>
 
 </html>
 <link rel="stylesheet" href="../css/header.css">

@@ -300,9 +300,9 @@
             echo "<ul>";
             for($i = 0; $i < $num; $i++) {
                 echo "<li>";
-                echo getRandomScale(true);
+                getRandomScale(true);
                 echo ", ";
-                echo getRandomPerform();
+                getRandomPerform();
                 echo "</li>";
             }
             echo "</ul>";
@@ -311,9 +311,9 @@
             echo "<ul>";
             for($i = 0; $i < $num; $i++) {
                 echo "<li>";
-                echo getRandomScale(false);
+                getRandomScale(false);
                 echo ", ";
-                echo getRandomPerform();
+                getRandomPerform();
                 echo "</li>";
             }
             echo "</ul>";
@@ -321,9 +321,9 @@
             echo "<ul>";
             for($i = 0; $i < $num; $i++) {
                 echo "<li>";
-                echo getRandomScale(false);
+                getRandomScale(false);
                 echo ", ";
-                echo getRandomPerform();
+                getRandomPerform();
                 echo "</li>";
             }
             echo "</ul>";
@@ -340,9 +340,9 @@
             echo "<ul>";
             for($i = 0; $i < $num; $i++) {
                 echo "<li>";
-                echo getRandomScale(false);
+                getRandomScale(false);
                 echo " ";
-                echo getRandomPosition();
+                getRandomPosition();
                 echo "</li>";
             }
             echo "</ul>";
@@ -352,7 +352,7 @@
             for($i = 0; $i < $num; $i++) {
                 echo "<li>";
                 echo "Starting at ";
-                echo getRandomKey();
+                getRandomKey();
                 echo "</li>";
             }
             echo "</ul>";
@@ -362,7 +362,7 @@
             for($i = 0; $i < $num; $i++) {
                 echo "<li>";
                 echo "Starting at ";
-                echo getRandomKey();
+                getRandomKey();
                 echo "</li>";
             }
             echo "</ul>";
