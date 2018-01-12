@@ -11,14 +11,13 @@
 </head>
 
 <body>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.js" integrity="sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe" crossorigin="anonymous"></script>
   <script>
     $(document).ready(function() {
       $('body').bootstrapMaterialDesign();
     });
-
   </script>
   <header>
     <div class="title ">
@@ -40,21 +39,27 @@
   </div>
 
   <div class="container nav-bar">
-    <ul class="nav justify-content-center">
+    <ul class="nav nav-main justify-content-center">
       <li class="nav-item">
-        <a class="nav-link" href="/index.html">PROJECT</a>
+        <a class="nav-link" href="/index">PROJECT</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/graphics">GRAPHIC</a>
+        <span class="accent"></span>
+        <ul class="drop-down">
+          <li><a href="graphics.php?filter=vector">Vector</a></li>
+          <li><a href="graphics.php?filter=animation">Animation</a></li>
+          <li><a href="poster">Poster</a></li>
+        </ul>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/index.html">VIDEO</a>
+        <a class="nav-link" href="/video">VIDEO</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/index.html">GAME</a>
+        <a class="nav-link" href="/game">GAME</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/index.html">ABOUT</a>
+        <a class="nav-link" href="/about">ABOUT</a>
       </li>
     </ul>
   </div>
@@ -66,10 +71,12 @@
 
   <div class="section graphics">
     <div class="container">
-      <div class="section-title">
-        <img class="title-icon" src="icon/pen.svg">
-        <h2>Graphic Deisgn & Animation</h2>
-      </div>
+      <a href="graphics">
+        <div class="section-title">
+          <img class="title-icon" src="icon/pen.svg">
+          <h2>Graphic Deisgn & Animation</h2>
+        </div>
+      </a>
       <div class="block block-l">
         <div class="block-inner">
           <h3>Illustration</h3>
@@ -157,12 +164,14 @@
         </div>
       </div>
       <div class="block block-r">
-        <div class="sub-block-1">
-          <div class="block-inner">
-            <h3>GitHub</h3>
-            <p>TANJX</p>
+        <a href="https://github.com/TANJX" target="_blank">
+          <div class="sub-block-1">
+            <div class="block-inner">
+              <h3>GitHub</h3>
+              <p>TANJX</p>
+            </div>
           </div>
-        </div>
+        </a>
         <div class="sub-block-2">
           <div class="block-inner">
             <h3>Web Design/Application</h3>
@@ -191,13 +200,20 @@
   <script>
     $(function() {
       $('[data-toggle="tooltip"]').tooltip()
-    })
-
+    });
+    $("li").mouseover(function() {
+      $(this).find(".drop-down").slideDown(300);
+      $(this).find(".accent").addClass("animate");
+      $(this).find(".nav-item").css("color", "#FFF");
+    }).mouseleave(function() {
+      $(this).find(".drop-down").slideUp(300);
+      $(this).find(".accent").removeClass("animate");
+      $(this).find(".nav-item").css("color", "#000");
+    });
   </script>
 </body>
 
 </html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/christmas.css">

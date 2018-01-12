@@ -1,177 +1,177 @@
 <collection>
-<works>
-<title>Mars w/ Piano</title>
-<description></description>
-<file>mars_piano.gif</file>
-<date>2017-12-27</date>
-<type>Animation</type>
-</works>
-<works>
-<title>Mars Inc Avatar (Christmas)</title>
-<description></description>
-<file>avatar-17christmas-4.png</file>
-<date>2017-12-25</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>Workspace at USC</title>
-<description></description>
-<file>workspace.svg</file>
-<date>2017-12-12</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>Mt. Fuji</title>
-<description></description>
-<file>mtfuji.jpg</file>
-<date>2017-12-02</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>SZMS 70's</title>
-<description></description>
-<file>szms.gif</file>
-<date>2017-11-18</date>
-<type>Animation</type>
-</works>
-<works>
-<title>Flat 3D Design</title>
-<description></description>
-<file>sphere.gif</file>
-<date>2017-11-17</date>
-<type>Animation</type>
-</works>
-<works>
-<title>Skiing</title>
-<description></description>
-<file>montain_1.gif</file>
-<date>2017-11-04</date>
-<type>Animation</type>
-</works>
-<works>
-<title>Minion</title>
-<description></description>
-<file>minion.svg</file>
-<date>2017-10-07</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>Miku</title>
-<description></description>
-<file>miku.svg</file>
-<date>2017-10-01</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>Sushi</title>
-<description></description>
-<file>sushi.gif</file>
-<date>2017-09-14</date>
-<type>Animation</type>
-</works>
-<works>
-<title>Rin, Shelter</title>
-<description></description>
-<file>shelter.svg</file>
-<date>2017-05-10</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>Light Bulbs</title>
-<description></description>
-<file>light.svg</file>
-<date>2017-05-08</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>Shiny Texture</title>
-<description></description>
-<file>Shiny 2.png</file>
-<date>2017-05-03</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>18's Birthday</title>
-<description></description>
-<file>birthday.svg</file>
-<date>2017-04-24</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>Miku Eye</title>
-<description></description>
-<file>miku_eye.svg</file>
-<date>2017-03-16</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>Offer</title>
-<description></description>
-<file>offer.gif</file>
-<date>2017-03-12</date>
-<type>Animation</type>
-</works>
-<works>
-<title>Calculus Mindmap</title>
-<description></description>
-<file>calculus mindmap.jpg</file>
-<date>2017-03-09</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>Miku Avatar</title>
-<description></description>
-<file>miku_avatar.gif</file>
-<date>2017-02-20</date>
-<type>Animation</type>
-</works>
-<works>
-<title>Never Give Up</title>
-<description></description>
-<file>tree.gif</file>
-<date>2017-02-19</date>
-<type>Animation</type>
-</works>
-<works>
-<title>Chicken</title>
-<description></description>
-<file>chicken.gif</file>
-<date>2017-01-02</date>
-<type>Animation</type>
-</works>
-<works>
-<title>Chicken Hockey</title>
-<description></description>
-<file>zombie.jpg</file>
-<date>2016-12-19</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>Miku</title>
-<description></description>
-<file>miku_front.svg</file>
-<date>2016-12-13</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>bilibili</title>
-<description></description>
-<file>bilibili.jpg</file>
-<date>2016-12-11</date>
-<type>Graphics</type>
-</works>
-<works>
-<title>Cat</title>
-<description></description>
-<file>cat.gif</file>
-<date>2016-12-10</date>
-<type>Animation</type>
-</works>
-<works>
-<title>Gem</title>
-<description></description>
-<file>gem.gif</file>
-<date>2016-12-04</date>
-<type>Animation</type>
-</works>
+  <works>
+    <title>Mars w/ Piano</title>
+    <description></description>
+    <file>mars_piano.gif</file>
+    <date>2017-12-27</date>
+    <type>Animation</type>
+  </works>
+  <works>
+    <title>Mars Inc Avatar (Christmas)</title>
+    <description></description>
+    <file>avatar-17christmas-4.png</file>
+    <date>2017-12-25</date>
+    <type>Vector</type>
+  </works>
+  <works>
+    <title>Workspace at USC</title>
+    <description></description>
+    <file>workspace.svg</file>
+    <date>2017-12-12</date>
+    <type>Vector</type>
+  </works>
+  <works>
+    <title>Mt. Fuji</title>
+    <description></description>
+    <file>mtfuji.jpg</file>
+    <date>2017-12-02</date>
+    <type>Graphics</type>
+  </works>
+  <works>
+    <title>SZMS 70's</title>
+    <description></description>
+    <file>szms.gif</file>
+    <date>2017-11-18</date>
+    <type>Animation</type>
+  </works>
+  <works>
+    <title>Flat 3D Design</title>
+    <description></description>
+    <file>sphere.gif</file>
+    <date>2017-11-17</date>
+    <type>Animation</type>
+  </works>
+  <works>
+    <title>Skiing</title>
+    <description></description>
+    <file>montain_1.gif</file>
+    <date>2017-11-04</date>
+    <type>Animation</type>
+  </works>
+  <works>
+    <title>Minion</title>
+    <description></description>
+    <file>minion.svg</file>
+    <date>2017-10-07</date>
+    <type>Vector</type>
+  </works>
+  <works>
+    <title>Miku</title>
+    <description></description>
+    <file>miku.svg</file>
+    <date>2017-10-01</date>
+    <type>Vector</type>
+  </works>
+  <works>
+    <title>Sushi</title>
+    <description></description>
+    <file>sushi.gif</file>
+    <date>2017-09-14</date>
+    <type>Animation</type>
+  </works>
+  <works>
+    <title>Rin, Shelter</title>
+    <description></description>
+    <file>shelter.svg</file>
+    <date>2017-05-10</date>
+    <type>Vector</type>
+  </works>
+  <works>
+    <title>Light Bulbs</title>
+    <description></description>
+    <file>light.svg</file>
+    <date>2017-05-08</date>
+    <type>Vector</type>
+  </works>
+  <works>
+    <title>Shiny Texture</title>
+    <description></description>
+    <file>Shiny 2.png</file>
+    <date>2017-05-03</date>
+    <type>Graphics</type>
+  </works>
+  <works>
+    <title>18's Birthday</title>
+    <description></description>
+    <file>birthday.svg</file>
+    <date>2017-04-24</date>
+    <type>Vector</type>
+  </works>
+  <works>
+    <title>Miku Eye</title>
+    <description></description>
+    <file>miku_eye.svg</file>
+    <date>2017-03-16</date>
+    <type>Vector</type>
+  </works>
+  <works>
+    <title>Offer</title>
+    <description></description>
+    <file>offer.gif</file>
+    <date>2017-03-12</date>
+    <type>Animation</type>
+  </works>
+  <works>
+    <title>Calculus Mindmap</title>
+    <description></description>
+    <file>calculus mindmap.jpg</file>
+    <date>2017-03-09</date>
+    <type>Graphics</type>
+  </works>
+  <works>
+    <title>Miku Avatar</title>
+    <description></description>
+    <file>miku_avatar.gif</file>
+    <date>2017-02-20</date>
+    <type>Animation</type>
+  </works>
+  <works>
+    <title>Never Give Up</title>
+    <description></description>
+    <file>tree.gif</file>
+    <date>2017-02-19</date>
+    <type>Animation</type>
+  </works>
+  <works>
+    <title>Chicken</title>
+    <description></description>
+    <file>chicken.gif</file>
+    <date>2017-01-02</date>
+    <type>Animation</type>
+  </works>
+  <works>
+    <title>Chicken Hockey</title>
+    <description></description>
+    <file>zombie.jpg</file>
+    <date>2016-12-19</date>
+    <type>Graphics</type>
+  </works>
+  <works>
+    <title>Miku</title>
+    <description></description>
+    <file>miku_front.svg</file>
+    <date>2016-12-13</date>
+    <type>Vector</type>
+  </works>
+  <works>
+    <title>bilibili</title>
+    <description></description>
+    <file>bilibili.jpg</file>
+    <date>2016-12-11</date>
+    <type>Graphics</type>
+  </works>
+  <works>
+    <title>Cat</title>
+    <description></description>
+    <file>cat.gif</file>
+    <date>2016-12-10</date>
+    <type>Animation</type>
+  </works>
+  <works>
+    <title>Gem</title>
+    <description></description>
+    <file>gem.gif</file>
+    <date>2016-12-04</date>
+    <type>Animation</type>
+  </works>
 </collection>

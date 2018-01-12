@@ -13,6 +13,10 @@
   margin: 0 auto;
 }
 
+.section a {
+  color: black;
+}
+
 .nav a {
   color: orangered;
   text-align: center;
@@ -22,6 +26,57 @@
 .nav a:hover {
   color: palevioletred;
   transition: .5s;
+}
+
+ul li {
+  list-style: none;
+  float: left;
+  position: relative;
+}
+
+.nav-main ul li a {
+  text-transform: uppercase;
+  position: relative;
+  color: #ed3368;
+  padding: 10px 13px 10px 13px;
+  display: block;
+  z-index: 10;
+  font-size: .8em;
+}
+
+ul li a i {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+}
+
+ul li .drop-down {
+  position: absolute;
+  padding: 0;
+  display: none;
+  margin: 0;
+  left: 0;
+  z-index: 5;
+  background-color: white;
+}
+
+ul li .drop-down li {
+  position: relative;
+  float: none;
+}
+
+ul li .drop-down li a:hover {
+  background: #fd82a5;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.accent {
+  width: 0%;
+  height: 100%;
+  background: #ddd;
+  position: absolute;
+  transition: 0.3s ease;
 }
 
 .logo {
@@ -86,6 +141,10 @@
   display: block;
   float: left;
   width: 32.5%;
+}
+
+.section a:hover {
+  text-decoration: none;
 }
 
 .section .block-m {
@@ -212,6 +271,12 @@
   background-color: #10A0FF;
   color: white;
   height: 100px;
+  transition: .5s;
+}
+
+.coding .sub-block-1:hover {
+  background-color: #1295CF;
+  transition: .5s;
 }
 
 .coding .sub-block-2 {

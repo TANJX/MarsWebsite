@@ -1,13 +1,24 @@
-.item:hover {
-  color: #FFF;
+.head {
+  margin-top: 0;
+  padding-top: 100px;
+  height: 180px;
+  background-color: dodgerblue;
+  text-align: center;
+  color: white;
+  margin-bottom: 35px;
 }
+
+p {
+  margin-bottom: 0;
+}
+
 
 .cards {
   float: left;
 }
 
 .card {
-  width: 32%;
+  width: 49%;
   display: inline-block;
   margin-right: 1%;
   margin-bottom: 1%;
