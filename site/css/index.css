@@ -72,7 +72,7 @@ ul li .drop-down li a:hover {
 }
 
 .accent {
-  width: 0%;
+  width: 0;
   height: 100%;
   background: #ddd;
   position: absolute;
@@ -93,7 +93,7 @@ ul li .drop-down li a:hover {
   background-color: #F95F8B;
   display: block;
   color: white;
-  padding: 30px 0px 10px 0px;
+  padding: 30px 0 10px 0;
   text-align: justify;
 }
 
@@ -157,10 +157,8 @@ ul li .drop-down li a:hover {
 }
 
 .graphics-img {
-  background-image: url(../img/graphic.png);
   background-size: 180%;
-  background-position: 40% 80%;
-  background-repeat: no-repeat;
+  background: url(../img/graphic.png) no-repeat 40% 80%;
 }
 
 .graphics .block-l {
@@ -187,12 +185,9 @@ ul li .drop-down li a:hover {
 
 .graphics .sub-block-3 {
   margin-top: 10px;
-  background-color: aliceblue;
-  background-image: url(../icon/timeline.svg);
   height: 150px;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: aliceblue url(../icon/timeline.svg) no-repeat center;
 }
 
 .video .block-t {
