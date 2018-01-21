@@ -10,8 +10,8 @@ mysql_select_db('marsql');
 //设置mysql字符编码
 mysql_query("set names utf8;");
 //insert语句
-$insert = "insert into log (project,start,end) values ('$type','$start','$end')";
+$insert = "insert into progress (name,start,end) values ('$type','$start','$end')";
 $res_insert = mysql_query($insert);
-header("Location: ../practice.php");
+header("Location: ../progress.php");
 exit;
 ?>

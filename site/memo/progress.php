@@ -4,7 +4,7 @@
 <head>
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <title>EVENTS | Mars Inc.</title>
+ <title>PROGRESS | Mars Inc.</title>
  <script>
   function validateForm() {
    var a = document.forms["Form"]["name"].value;
@@ -23,8 +23,8 @@
 <body>
  <div class="title ">
   <div class="container">
-   <h1>Event List</h1>
-   <p>Mars' life</p>
+   <h1 style="color: white">Progress Bar</h1>
+   <p style="color: white">Mars' life</p>
   </div>
  </div>
  <div class="container">
@@ -36,7 +36,7 @@
     <a class="nav-link active" href="log.php">Log</a>
    </li>
    <li class="nav-item">
-    <a class="nav-link active" href="progress.php">Progress</a>
+    <a class="nav-link active" href="event.php">Event</a>
    </li>
    <li class="nav-item">
     <a class="nav-link active" href="../music/index.php">Scale Picker</a>
@@ -45,48 +45,53 @@
     <a class="nav-link active" href="../japanese/index.html">Japanese</a>
    </li>
    <li class="nav-item">
-    <a class="nav-link" href="newevent.html">New Event</a>
+    <a class="nav-link" href="newprogress.html">New Progress Bar</a>
    </li>
   </ul>
-  <div class="card-columns">
+  <div class="bar-wrapper">
    <?php
-$conn = mysql_connect('marstanjxcom.ipagemysql.com', 'mars', 'root'); 
-mysql_select_db('marsql');
-mysql_query("set names utf8;");
-
-$sql = sprintf("select * from event ORDER BY date ASC;");  
-$result = mysql_query($sql, $conn);  
-echo $thstr;  
-while ($row=mysql_fetch_array($result, MYSQL_ASSOC))
-{ 
-	echo "<div class='card' style='width: 15rem;'>
-    <div class='card-body'>
-    <h4 class='card-title'>";
-    echo "$row[name]" ;
-    echo "</h4><h6 class='card-subtitle mb-2 text-muted'>";
-    echo "$row[date]";
-    echo "</h6></div></div>";
-}  
-mysql_free_result($result);  
-mysql_close($conn);  
+ $conn = mysql_connect('marstanjxcom.ipagemysql.com', 'mars', 'root'); 
+ mysql_select_db('marsql');
+ mysql_query("set names utf8;");
+ 
+ $sql = sprintf("select * from progress;");  
+ $result = mysql_query($sql, $conn);  
+ echo $thstr;  
+ while ($row=mysql_fetch_array($result, MYSQL_ASSOC))
+ { 
+  echo "<div class='bar-wrapper'>";
+  echo "<div class='bar-info'>";
+  echo "<h2>";
+  date_default_timezone_set('America/Los_Angeles');
+  $now = new DateTime('now');
+  $startdate = new DateTime($row[start]);
+  $enddate = new DateTime($row[end]);  
+  $interval1 = $startdate->diff($now);
+  $interval2 = $startdate->diff($enddate);
+  $diff=1.0* $interval1->days/ $interval2->days;
+  if($interval1->invert==1) $diff=0;
+  echo "$row[name]";
+  echo "</h2></div><div class='bar'><div class='progress-bar' style='width: ";
+  echo $diff*100;
+  echo "%'> </div></div></div>";
+   
+ } 
+ mysql_free_result($result);  
+ mysql_close($conn);  
 ?>
   </div>
- </div>
 </body>
 
 <style>
  .title {
-  background-color: greenyellow;
- }
-
- .card {
-  text-align: center;
-  margin: 0 auto;
+  background-color: forestgreen;
  }
 
 </style>
 
 </html>
-<link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
 <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
+
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="progress.css">

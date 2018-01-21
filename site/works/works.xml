@@ -1,5 +1,19 @@
 <collection>
   <works>
+    <title>Back and Forth</title>
+    <description></description>
+    <file>rotating_sphere.gif</file>
+    <date>2018-1-15</date>
+    <type>Animation</type>
+  </works>
+  <works>
+    <title>Square One Logo</title>
+    <description></description>
+    <file>squareone.gif</file>
+    <date>2018-1-2</date>
+    <type>Animation</type>
+  </works>
+  <works>
     <title>Mars w/ Piano</title>
     <description></description>
     <file>mars_piano.gif</file>

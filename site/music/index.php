@@ -2,39 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Scale Picker | Mars Inc.</title>
-    <script>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <title>Scale Picker | Mars Inc.</title>
+ <script>
 
 
-    </script>
+ </script>
 </head>
 
 <body>
-    <div class="title ">
-        <div class="container">
-            <h1>Scale Picker</h1>
-            <p>by Mars</p>
-        </div>
-    </div>
-    <div class="container">
-        <ul class="nav align-middle">
-            <li class="nav-item">
-                <a class="nav-link active" href="../index.html">Mars Inc.</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="https://marstanjx.com/music/index.php">New Pick</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="../memo/log.php">Log</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../memo/event.php">Event</a>
-            </li>
-        </ul>
-        <div class="section">
-            <?php
+ <div class="title ">
+  <div class="container">
+   <h1>Scale Picker</h1>
+   <p>by Mars</p>
+  </div>
+ </div>
+ <div class="container">
+  <ul class="nav align-middle">
+   <li class="nav-item">
+    <a class="nav-link active" href="../index.html">Mars Inc.</a>
+   </li>
+   <li class="nav-item">
+    <a class="nav-link active" href="../memo/log.php">Log</a>
+   </li>
+   <li class="nav-item">
+    <a class="nav-link" href="../memo/event.php">Event</a>
+   </li>
+   <li class="nav-item">
+    <a class="nav-link" href="../memo/progress.php">Progress</a>
+   </li>
+   <li class="nav-item">
+    <a class="nav-link" href="../music/index.php">Scale Picker</a>
+   </li>
+   <li class="nav-item">
+    <a class="nav-link active" href="https://marstanjx.com/music/index.php">New Pick</a>
+   </li>
+  </ul>
+  <div class="section">
+   <?php
             function getRandomKey() {
                 $a = rand(0,11);
                 switch($a) {
@@ -368,20 +374,20 @@
             echo "</ul>";
             
 ?>
-        </div>
-    </div>
-    <style>
-        .title {
-            background-color: black;
-            color: whitesmoke;
-        }
+  </div>
+ </div>
+ <style>
+  .title {
+   background-color: black;
+   color: whitesmoke;
+  }
 
-        .card {
-            text-align: center;
-            margin: 0 auto;
-        }
+  .card {
+   text-align: center;
+   margin: 0 auto;
+  }
 
-    </style>
+ </style>
 </body>
 
 </html>
