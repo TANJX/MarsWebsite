@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(empty($_SESSION["id"])) {
+    echo "Not Logged in";
+    exit;
+}
 $type = $_POST['type'];
 $start = $_POST['start'];
 $end = $_POST['end'];

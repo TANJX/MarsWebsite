@@ -1,5 +1,10 @@
 <?php
-$name = $_POST['name']; 
+session_start();
+if(empty($_SESSION["id"])) {
+    echo "Not Logged in";
+    exit;
+}
+$name = $_POST['name'];
 $date = $_POST['date'];
 $type = $_POST['type'];
 $link = mysql_connect('marstanjxcom.ipagemysql.com', 'mars', 'root'); 
@@ -14,4 +19,4 @@ $insert = "insert into event (name,date,type) values ('$name','$date','$type')";
 $res_insert = mysql_query($insert);
 header("Location: ../event.php");
 exit;
-?>
+

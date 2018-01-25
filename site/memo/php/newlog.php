@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(empty($_SESSION["id"])) {
+    echo "Not Logged in";
+    exit;
+}
 $msg = $_POST['msg'];
 $link = mysql_connect('marstanjxcom.ipagemysql.com', 'mars', 'root'); 
 if (!$link) { 
