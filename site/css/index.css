@@ -112,7 +112,7 @@ ul li .drop-down li a:hover {
   left: -35px;
 }
 
-.video .title-icon {
+.project .title-icon {
   height: 20px;
 }
 
@@ -121,19 +121,14 @@ ul li .drop-down li a:hover {
   margin-bottom: 80px;
 }
 
-.graphics {
+.section {
   background-color: white;
   overflow: auto;
 }
 
-.video {
-  background-color: #eee;
-  overflow: auto;
-}
-
+.project,
 .coding {
-  background-color: white;
-  overflow: auto;
+  background-color: #eee;
 }
 
 .section .block {
@@ -156,6 +151,46 @@ ul li .drop-down li a:hover {
   font-size: 1.25rem;
 }
 
+.project .block-m .sub-block-1 {
+  background-color: #0083E8;
+  color: white;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+#project-text-wrapper {
+  transition: .5s;
+}
+
+.project .block-m .sub-block-2 {
+  background-color: black;
+  height: 330px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 1s;
+}
+
+.project .block-r .sub-block-1 {
+  background-color: #F2D680;
+  color: #333;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.project .block-r .sub-block-2 {
+  background-color: #F29A2E;
+  color: white;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.project .block-r .sub-block-3 {
+  background-color: #D92818;
+  height: 260px;
+  color: white;
+}
+
 .graphics-img {
   background-image: url(../img/graphic.png);
   background-size: 180%;
@@ -176,10 +211,10 @@ ul li .drop-down li a:hover {
   background-color: #777;
   height: 60px;
   color: white;
+  margin-bottom: 10px;
 }
 
 .graphics .sub-block-2 {
-  margin-top: 10px;
   background-color: #555;
   height: 180px;
   color: white;
@@ -193,53 +228,6 @@ ul li .drop-down li a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.video .block-t {
-  margin-left: 1%;
-  float: left;
-  width: 66.5%;
-  height: 130px;
-}
-
-.video .block-b {
-  margin-top: 10px;
-  margin-left: 1%;
-  float: left;
-  width: 66.5%;
-  height: 260px;
-  background-image: url(../img/video.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.video .block-t .block-l {
-  background-color: rgba(0, 0, 0, 0);
-  width: 49%;
-  margin-right: 2%;
-}
-
-.video .block-t .block-r {
-  background-color: rgba(0, 0, 0, 0);
-  width: 49%;
-}
-
-.video .sub-block-1 {
-  background-color: #E8AA00;
-  height: 60px;
-}
-
-.video .sub-block-2 {
-  margin-top: 10px;
-  background-color: #0083E8;
-  height: 60px;
-}
-
-.video .block-t .block-r .block-inner {
-  background-color: #555;
-  color: white;
-  height: 130px;
 }
 
 .coding .block-m {
@@ -284,6 +272,46 @@ ul li .drop-down li a:hover {
   background-color: #555;
   color: white;
   height: 290px;
+}
+
+.about .block-l {
+  font-style: italic;
+}
+
+.about .block-m .sub-block-1 {
+  background-color: #F29A2E;
+  height: 60px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.about .block-m .sub-block-2 {
+  background-image: url('../img/piano.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 330px;
+  background-position: 50%;
+}
+
+.about .block-r .sub-block-1 {
+  background-image: url('../img/drama.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  background-position: 80%;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 1px 1px 3px #aaa;
+}
+
+.about .block-r .sub-block-1 p {
+  margin-top: 180px;
+}
+
+.about .block-r .sub-block-2 {
+  background-color: #3D9DF2;
+  height: 140px;
+  color: white;
 }
 
 .block-l {
@@ -374,40 +402,8 @@ footer:hover p {
     margin-right: 0;
   }
 
-  .video {
-    height: auto;
-    overflow: visible;
-  }
-
-  .video .block-t {
+  .sub-block-1 {
     margin-top: 10px;
-    margin-left: 0%;
-    float: none;
-    width: 100%;
-  }
-
-  .video .block-b {
-    margin-top: 10px;
-    margin-left: 0%;
-    float: none;
-    width: 100%;
-  }
-
-  .video .block-t .block-l {
-    width: 100%;
-    margin-right: 0%;
-  }
-
-  .video .block-t .block-r {
-    width: 100%;
-  }
-
-  .video .sub-block-1 {
-    margin-top: 10px;
-  }
-
-  .video .block-t .block-r .block-inner {
-    color: white;
   }
 
   .coding .block-m {
@@ -416,10 +412,6 @@ footer:hover p {
 
   .coding .sub-block-1:after {
     background-position: 280px 10px;
-  }
-
-  .coding .sub-block-1 {
-    margin-top: 10px;
   }
 
   .coding .sub-block-2 {
