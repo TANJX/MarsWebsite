@@ -285,7 +285,7 @@ ul li .drop-down li a:hover {
 }
 
 .coding .block-m {
-  background-image: url(../img/minecraft.png);
+  background-image: url(../img/minecraft.jpg);
   background-repeat: no-repeat;
   background-position: 35% 50%;
   background-size: cover;
@@ -362,10 +362,39 @@ ul li .drop-down li a:hover {
   margin-top: 180px;
 }
 
+/* Japanese */
+
 .about .block-r .sub-block-2 {
-  background-color: #3D9DF2;
+  background: #3D9DF2;
   height: 140px;
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+#japanese-text span {
+  position: absolute;
+  right: -150px;
+  opacity: 0.8;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-530px);
+  }
+}
+
+
+@keyframes nothing {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 .block-l {
@@ -470,6 +499,19 @@ footer:hover p {
 
   .coding .sub-block-2 {
     margin-top: 10px;
+  }
+
+}
+
+@media (max-width: 832px) and (min-width: 380px) {
+
+  @keyframes move {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-730px);
+    }
   }
 
 }

@@ -11,13 +11,14 @@
 </head>
 
 <body>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.js" integrity="sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe" crossorigin="anonymous"></script>
+  <script src='lib/jquery.min.js'></script>
+  <script src='lib/popper.js'></script>
+  <script src='lib/bootstrap-material-design.js'></script>
   <script>
     $(document).ready(function() {
       $('body').bootstrapMaterialDesign();
     });
+
   </script>
   <header>
     <div class="title ">
@@ -241,6 +242,21 @@
           <div class="block-inner">
             <h3>Japanese</h3>
           </div>
+          <div id="japanese-text">
+            <span>大好きです</span>
+            <span>日本語</span>
+            <span>すごい</span>
+            <span>勉強する</span>
+            <span>愛</span>
+            <span>アメリカ</span>
+            <span>砂霧</span>
+            <span>コンビニ</span>
+            <span>大学生</span>
+            <span>マーズ</span>
+            <span>行きますよ</span>
+            <span>ないでもないよ</span>
+            <span>付き合って！</span>
+          </div>
         </div>
       </div>
     </div>
@@ -267,6 +283,8 @@
     $(function() {
       $('[data-toggle="tooltip"]').tooltip()
     });
+
+    // nav-item animation
     $("li").mouseover(function() {
       $(this).find(".drop-down").slideDown(300);
       $(this).find(".accent").addClass("animate");
@@ -277,6 +295,7 @@
       $(this).find(".nav-item").css("color", "#000");
     });
 
+    // calendar and bookmark hover animation
     $("#calendar-view").mouseover(function() {
       $(this).css("height", "260px");
       $("#squareone-view").css("height", "60px");
@@ -297,16 +316,16 @@
       $("#squareone-view").find("p").css("opacity", "1");
     });
 
+    // calendar and bookmark scroll animation
     $(window).scroll(function() {
       if ($(window).width() < 830) {
         var pos = $(window).height() + $(window).scrollTop() - $("#calendar-view").offset().top;
-        console.log(pos);
         if (pos > 150 && pos < 450) {
           $("#calendar-view").css("height", "260px");
           $("#calendar-image").css("opacity", "1");
           $("#bookmark-view").css("height", "60px");
           $("#bookmark-image").css("opacity", "0");
-        } else if (pos < 600) {
+        } else if (pos >= 450 && pos < 600) {
           $("#calendar-view").css("height", "60px");
           $("#calendar-image").css("opacity", "0");
           $("#bookmark-view").css("height", "260px");
@@ -319,16 +338,15 @@
         }
       }
     });
-  </script>
 
-  <script>
+    // rocket floating animation
     setTimeout(animation, 3000);
 
     function animation() {
-      console.log("hi!");
       document.getElementById("rocket").style.animation = "rocket-float 1.6s ease-in-out alternate infinite";
     };
 
+    // project view slide show
     var i = 0;
     document.getElementById("project-view").style.backgroundImage = "url(../img/video/football.jpg)";
     document.getElementById("project-text").innerHTML = "Football Documentary";
@@ -336,7 +354,6 @@
     setTimeout(project_animation, 6000);
 
     function project_animation() {
-      console.log(i);
       switch (i) {
         case (0):
           document.getElementById("project-view").style.backgroundImage = "url(../img/video/aplus.gif)";
@@ -363,6 +380,41 @@
       if (i >= 4) i = 0;
       setTimeout(project_animation, 6000);
     };
+
+    // japanese phases animation
+    setTimeout(japanese_animation, 1000);
+    var state = new Array(13);
+    var i2;
+    for (i2 = 0; i2 < 13; i2++) {
+      if (Math.random() < 0.3) {
+        var now = Math.floor(Date.now());
+        var obj = $('#japanese-text').children().get(i2);
+        obj.style.top = (Math.floor(Math.random() * $('.about .block-r .sub-block-2').height()) - 15) + "px";
+        obj.style.fontSize = (Math.random() * 1 + 0.6) + "rem";
+        obj.style.animation = "move " + (5 + Math.random() * 4) + "s -" + (Math.random() * 4) + "s";
+        state[i2] = now;
+      } else
+        state[i2] = 0;
+    }
+
+    function japanese_animation() {
+      var now = Math.floor(Date.now());
+      var j = Math.floor(Math.random() * 13);
+      var obj = $('#japanese-text').children().get(j);
+      if (state[j] == 0) {
+        obj.style.top = (Math.floor(Math.random() * $('.about .block-r .sub-block-2').height()) - 15) + "px";
+        obj.style.fontSize = (Math.random() * 1 + 0.6) + "rem";
+        obj.style.animation = "move " + (5 + Math.random() * 4) + "s linear";
+        obj.style.display = "inline";
+        state[j] = now;
+      } else if (now - state[j] > 7000) {
+        obj.style.animation = "none";
+        obj.style.display = "none";
+        state[j] = 0;
+      }
+      setTimeout(japanese_animation, 1000);
+    }
+
   </script>
 </body>
 
