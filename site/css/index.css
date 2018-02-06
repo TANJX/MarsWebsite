@@ -5,6 +5,18 @@
   color: white;
 }
 
+.title p {
+  margin: 0;
+}
+
+.title p:first-of-type {
+  float: left;
+}
+
+.title p:last-of-type {
+  float: right;
+}
+
 .nav-bar {
   margin: 0 auto;
 }
@@ -384,16 +396,6 @@ ul li .drop-down li a:hover {
   }
   100% {
     transform: translateX(-530px);
-  }
-}
-
-
-@keyframes nothing {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(0px);
   }
 }
 

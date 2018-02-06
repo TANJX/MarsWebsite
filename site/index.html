@@ -18,13 +18,16 @@
     $(document).ready(function() {
       $('body').bootstrapMaterialDesign();
     });
-
   </script>
   <header>
-    <div class="title ">
-      <p class="container">SPRING 2018</p>
+    <div class="title clearfix">
+      <div class="container">
+        <p>SPRING 2018</p>
+        <p>Week <span></span></p>
+      </div>
     </div>
   </header>
+
 
   <div class="logo">
     <svg class="logo-main" viewBox="0 0 745.28 884.57"><defs><style>.cls-1,.cls-13,.cls-14,.cls-16,.cls-22,.cls-3{fill:none;}.cls-2{fill:#333;}.cls-3{stroke:#333;stroke-width:4.88px;}.cls-13,.cls-14,.cls-16,.cls-22,.cls-3{stroke-linecap:round;}.cls-11,.cls-15,.cls-3,.cls-4,.cls-5{stroke-miterlimit:10;}.cls-4{fill:#8dc63f;stroke-width:10px;}.cls-11,.cls-13,.cls-14,.cls-15,.cls-16,.cls-4,.cls-5{stroke:#414042;}.cls-5{fill:#ac2743;}.cls-14,.cls-5{stroke-width:25.44px;}.cls-6{fill:#c13356;}.cls-7{fill:#ea506d;}.cls-8{opacity:0.31;}.cls-9{clip-path:url(#clip-path);}.cls-10{fill:#b33548;}.cls-11{fill:#ffc239;}.cls-11,.cls-16{stroke-width:21.62px;}.cls-12{fill:#414042;}.cls-13,.cls-14,.cls-16,.cls-22{stroke-linejoin:round;}.cls-13{stroke-width:12.72px;}.cls-15{fill:#ddd;stroke-width:18.35px;}.cls-17{fill:#42628c;}.cls-18{fill:#d92818;}.cls-19{fill:#f2d680;}.cls-20{fill:#f29a2e;}.cls-21{fill:#faffed;}.cls-22{stroke:#434244;stroke-width:12px;}</style><clipPath id="clip-path"><circle class="cls-1" cx="405.12" cy="433.06" r="235.94"/></clipPath></defs>
@@ -281,7 +284,9 @@
 
   <script>
     $(function() {
-      $('[data-toggle="tooltip"]').tooltip()
+      $('[data-toggle="tooltip"]').tooltip();
+      var difference = new Date() - Date.parse("08 Jan 2018 00:00:00 -0400");
+      $('.title p span').text(Math.floor(difference / 1000 / 60 / 60 / 24 / 7) + 1);
     });
 
     // nav-item animation
@@ -414,7 +419,6 @@
       }
       setTimeout(japanese_animation, 1000);
     }
-
   </script>
 </body>
 
