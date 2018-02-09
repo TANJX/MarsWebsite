@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
   <script src='lib/jquery.min.js'></script>
   <script src='lib/popper.js'></script>
   <script src='lib/bootstrap-material-design.js'></script>
@@ -20,46 +19,55 @@
       $('body').bootstrapMaterialDesign();
     });
   </script>
+  <nav id="menu" class="menu" style="display: none">
+    <div class="menu__brand">
+      <a href="/index">
+      <img src="logo/logo-text.svg">
+      </a>
+    </div>
+    <ul class="menu__list">
+      <li class="menu__item"><a href="/index" class="menu__link">Project</a></li>
+      <li class="menu__item"><a href="/graphics" class="menu__link">Graphics</a></li>
+      <li class="menu__item"> <a href="/game" class="menu__link">Game</a> </li>
+      <li class="menu__item"> <a href="/about" class="menu__link">About</a> </li>
+    </ul>
+  </nav>
   <header>
-    <div class="title ">
-      <div class="container">
-        <a href="index">
-          <img class="logo-text" src="logo/logo-text.svg">
-        </a>
-        <p>SPRING 2018</p>
+    <div class="nav-bar-2">
+      <div class="container clearfix">
+        <a href="/index"><img src="logo/logo.svg" alt="mars-logo"></a>
+        <ul class="justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/index">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/project">PROJECT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/graphics">GRAPHIC</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/game">GAME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">ABOUT</a>
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="burger__patty"></div>
+          <div class="burger__patty"></div>
+          <div class="burger__patty"></div>
+        </div>
       </div>
+
     </div>
   </header>
 
   <div class="head">
     <div class="container ">
+      <div id="anime"></div>
       <h1>Programming</h1>
     </div>
-  </div>
-  <div class="container nav-bar">
-    <ul class="nav nav-main justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link" href="/index">PROJECT</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/graphics">GRAPHIC</a>
-        <span class="accent"></span>
-        <ul class="drop-down">
-          <li><a href="graphics.php?filter=vector">Vector</a></li>
-          <li><a href="graphics.php?filter=animation">Animation</a></li>
-          <li><a href="poster">Poster</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/video">VIDEO</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/game">GAME</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/about">ABOUT</a>
-      </li>
-    </ul>
   </div>
 
   <div class="container">
@@ -74,25 +82,18 @@
         <a href="https://www.facebook.com/mars.tanjx" target="_blank"><img class="social-icon" src="icon/fb.svg" data-toggle="tooltip" data-placement="bottom" title="@mars.tanjx"></a>
         <a href="https://www.instagram.com/mars.tanjx/" target="_blank"><img class="social-icon" src="icon/ins.svg" data-toggle="tooltip" data-placement="bottom" title="@mars.tanjx"></a>
         <a href="https://github.com/TANJX" target="_blank"><img class="social-icon" src="icon/github.svg" data-toggle="tooltip" data-placement="bottom" title="@TANJX"></a>
+        <a href="https://marstanjx.com/blog" target="_blank"><img class="social-icon" src="icon/wordpress.svg" data-toggle="tooltip" data-placement="bottom" title="@TANJX"></a>
         <img class="social-icon" src="icon/wechat.svg" data-toggle="tooltip" data-placement="bottom" title="@TANJX424">
       </div>
-      <p>Mars. 2017. <a href="https://github.com/TANJX/MarsWebsite">GitHub</a>.</p>
+      <p>Mars. 2018. <a href="https://github.com/TANJX/MarsWebsite">GitHub</a>.</p>
     </div>
   </footer>
-  <script>
-    $("li").mouseover(function() {
-      $(this).find(".drop-down").slideDown(300);
-      $(this).find(".accent").addClass("animate");
-      $(this).find(".nav-item").css("color", "#FFF");
-    }).mouseleave(function() {
-      $(this).find(".drop-down").slideUp(300);
-      $(this).find(".accent").removeClass("animate");
-      $(this).find(".nav-item").css("color", "#000");
-    });
-  </script>
+
+  <script src="js/menu.js"></script>
 </body>
 
 </html>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/sub.css">
+<link rel="stylesheet" href="css/menu.css">

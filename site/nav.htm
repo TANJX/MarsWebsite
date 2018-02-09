@@ -1,25 +1,52 @@
-<div class="container nav-bar">
-  <ul class="nav nav-main justify-content-center">
-    <li class="nav-item">
-      <a class="nav-link" href="/index">PROJECT</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/graphics">GRAPHIC</a>
-      <span class="accent"></span>
-      <ul class="drop-down">
-        <li><a href="graphics.php?filter=vector">Vector</a></li>
-        <li><a href="graphics.php?filter=animation">Animation</a></li>
-        <li><a href="poster">Poster</a></li>
-      </ul>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/video">VIDEO</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/game">GAME</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/about">ABOUT</a>
-    </li>
+<script src='lib/jquery.min.js'></script>
+<script src='lib/popper.js'></script>
+<script src='lib/bootstrap-material-design.js'></script>
+<script>
+  $(document).ready(function() {
+    $('body').bootstrapMaterialDesign();
+  });
+
+</script>
+<nav id="menu" class="menu" style="display: none">
+  <div class="menu__brand">
+    <a href="/index">
+      <img src="logo/logo-text.svg">
+      </a>
+  </div>
+  <ul class="menu__list">
+    <li class="menu__item"><a href="/index" class="menu__link">Project</a></li>
+    <li class="menu__item"><a href="/graphics" class="menu__link">Graphics</a></li>
+    <li class="menu__item"> <a href="/game" class="menu__link">Game</a> </li>
+    <li class="menu__item"> <a href="/about" class="menu__link">About</a> </li>
   </ul>
-</div>
+</nav>
+<header>
+  <div class="nav-bar-2">
+    <div class="container clearfix">
+      <a href="/index"><img src="logo/logo.svg" alt="mars-logo"></a>
+      <ul class="justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="/index">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/project">PROJECT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/graphics">GRAPHIC</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/game">GAME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">ABOUT</a>
+        </li>
+      </ul>
+      <div class="burger">
+        <div class="burger__patty"></div>
+        <div class="burger__patty"></div>
+        <div class="burger__patty"></div>
+      </div>
+    </div>
+
+  </div>
+</header>

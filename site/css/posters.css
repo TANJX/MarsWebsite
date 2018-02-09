@@ -1,20 +1,10 @@
 .head {
-  margin-top: 0;
-  padding-top: 100px;
-  height: 180px;
   background-color: dodgerblue;
-  text-align: center;
   color: white;
-  margin-bottom: 35px;
 }
 
 p {
   margin-bottom: 0;
-}
-
-
-.cards {
-  float: left;
 }
 
 .card {

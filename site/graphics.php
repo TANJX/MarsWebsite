@@ -11,37 +11,18 @@
 </head>
 
 <body>
-  <script src='lib/jquery.min.js'></script>
-  <script src='lib/popper.js'></script>
-  <script src='lib/bootstrap-material-design.js'></script>
-  <script>
-    $(document).ready(function() {
-      $('body').bootstrapMaterialDesign();
-    });
-
-  </script>
-  <header>
-    <div class="title ">
-      <div class="container">
-        <a href="index">
-          <img class="logo-text" src="logo/logo-text.svg">
-        </a>
-        <p>SPRING 2018</p>
-      </div>
-    </div>
-  </header>
-
-  <div class="head">
-    <div class="container ">
-      <h1>Graphics Design and Animation</h1>
-    </div>
-  </div>
   <?php
   $doc = new DOMDocument();
   $doc->loadHTMLFile("nav.htm");
   echo $doc->saveHTML();
   ?>
-
+    <script src="lib/lottie.js"></script>
+    <div class="head">
+      <div class="container ">
+        <div id="anime"></div>
+        <h1>Graphics Design and Animation</h1>
+      </div>
+    </div>
     <div class="filter container">
       <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='graphics.php?filter=vector'">Vector Design</button>
       <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='graphics.php?filter=animation'">Animation</button>
@@ -85,18 +66,8 @@
   $doc->loadHTMLFile("footer.htm");
   echo $doc->saveHTML();
   ?>
-      <script>
-        $("li").mouseover(function() {
-          $(this).find(".drop-down").slideDown(300);
-          $(this).find(".accent").addClass("animate");
-          $(this).find(".nav-item").css("color", "#FFF");
-        }).mouseleave(function() {
-          $(this).find(".drop-down").slideUp(300);
-          $(this).find(".accent").removeClass("animate");
-          $(this).find(".nav-item").css("color", "#000");
-        });
 
-      </script>
+      <script src="js/menu.js"></script>
 </body>
 
 </html>
@@ -104,3 +75,4 @@
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/sub.css">
 <link rel="stylesheet" href="css/graphics.css">
+<link rel="stylesheet" href="css/menu.css">
