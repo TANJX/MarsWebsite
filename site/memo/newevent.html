@@ -2,56 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Add an event | Mars Inc.</title>
-    <script>
-        function validateForm() {
-            var a = document.forms["Form"]["name"].value;
-            if (a == null || a == "") {
-                document.getElementById("error-box").style.display = "block";
-                return false;
-            }
-            var b = document.forms["Form"]["type"].value;
-            if (b == "Choose...") {
-                document.getElementById("error-box").style.display = "block";
-                return false;
-            }
-            document.getElementById("error-box").style.display = "none";
-            return true;
-        }
-
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Add an event | Mars Inc.</title>
+  <script>
+    function validateForm() {
+      var a = document.forms["Form"]["name"].value;
+      if (a == null || a == "") {
+        document.getElementById("error-box").style.display = "block";
+        return false;
+      }
+      var b = document.forms["Form"]["type"].value;
+      if (b == "Choose...") {
+        document.getElementById("error-box").style.display = "block";
+        return false;
+      }
+      document.getElementById("error-box").style.display = "none";
+      return true;
+    }
+  </script>
 </head>
 
 
 <body>
-    <div class="container">
-        <h1 class="my-5">New Event</h1>
-        <div style="display: none;" id="error-box" class="alert alert-danger" role="alert">
-            Please Fill All Required Field
-        </div>
-        <form method="post" action="php/newevent.php" class="mt-5" name="Form" onsubmit="return validateForm();">
-            <div class=" form-group ">
-                <label for="inputName " class="bmd-label-floating ">Name</label>
-                <input name="name" value="" class="form-control " placeholder="Type in text" type="text" />
-            </div>
-            <div class="form-group ">
-                <label for="inputDate " class="bmd-label-floating ">Date</label>
-                <input name="date" value="" class="form-control " type="date" placeholder="2017-01-13" required />
-            </div>
-            <div class="form-group">
-                <label for="inputType " class="bmd-label-floating ">Type</label>
-                <select name="type" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+  <div class="container">
+    <h1 class="my-5">New Event</h1>
+    <div style="display: none;" id="error-box" class="alert alert-danger" role="alert">
+      Please Fill All Required Field
+    </div>
+    <form method="post" action="php/newevent.php" class="mt-5" name="Form" onsubmit="return validateForm();">
+      <div class=" form-group ">
+        <label for="inputName " class="bmd-label-floating ">Name</label>
+        <input name="name" value="" class="form-control " placeholder="Type in text" type="text" required/>
+      </div>
+      <div class="form-group ">
+        <label for="inputDate " class="bmd-label-floating ">Date</label>
+        <input name="date" value="" class="form-control " type="date" placeholder="2017-01-13" required />
+      </div>
+      <div class="form-group">
+        <label for="inputType " class="bmd-label-floating ">Type</label>
+        <select name="type" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
                     <option selected>Choose...</option>
                     <option value="school">School</option>
                     <option value="life">Life</option>
                     <option value="work">Work</option>
                 </select>
-            </div>
-            <input type="submit" value="SUBMIT" class="btn btn-primary btn-raised ">
-        </form>
-    </div>
+      </div>
+      <input type="submit" value="SUBMIT" class="btn btn-primary btn-raised ">
+    </form>
+  </div>
 
 </body>
 

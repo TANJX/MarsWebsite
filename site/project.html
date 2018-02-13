@@ -7,7 +7,7 @@
   <title>Project | Mars Inc.</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
   <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="lib/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="lib/fullpage.css" />
 
 </head>
 
@@ -16,13 +16,12 @@
   <script src='lib/jquery.min.js'></script>
   <script src='lib/popper.js'></script>
   <script src='lib/bootstrap-material-design.js'></script>
-  <script src="lib/jquery.fullPage.js"></script>
+  <script src="lib/fullpage.js"></script>
   <script>
     $(document).ready(function() {
       $('body').bootstrapMaterialDesign();
       $('#fullpage').fullpage();
     });
-
   </script>
   <nav id="menu" class="menu" style="display: none">
     <div class="menu__brand">
@@ -77,6 +76,15 @@
   </div>
 </div>
 -->
+    <div class="section recent">
+      <div class="container">
+        <div class="section-info">
+          <h2>Ramen - ラーメン</h2>
+          <h3>In Progress</h3>
+          <p>Feb 10, 2018</p>
+        </div>
+      </div>
+    </div>
     <div class="section football">
       <div class="top-img"> </div>
       <div class="container">
@@ -88,13 +96,19 @@
     <div class="section">
       <div></div>
       <div class="container">
-        <h2>Football Documentary</h2>
+        <h2>"A Plus" Concept Video</h2>
       </div>
     </div>
     <div class="section">
       <div></div>
       <div class="container">
-        <h2>Football Documentary</h2>
+        <h2>Research in Urban City</h2>
+      </div>
+    </div>
+    <div class="section">
+      <div></div>
+      <div class="container">
+        <h2>Research: A Tale of Two Cities</h2>
       </div>
     </div>
   </div>
@@ -116,18 +130,7 @@
     </div>
   </footer>
 
-  <script>
-    $("li").mouseover(function() {
-      $(this).find(".drop-down").slideDown(300);
-      $(this).find(".accent").addClass("animate");
-      $(this).find(".nav-item").css("color", "#FFF");
-    }).mouseleave(function() {
-      $(this).find(".drop-down").slideUp(300);
-      $(this).find(".accent").removeClass("animate");
-      $(this).find(".nav-item").css("color", "#000");
-    });
-
-  </script>
+  <script src="js/menu.js"></script>
 </body>
 
 </html>

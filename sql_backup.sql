@@ -3,14 +3,12 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: custsql-ipg58.eigbox.net
--- Generation Time: Jan 21, 2018 at 05:03 PM
+-- Generation Time: Feb 12, 2018 at 06:56 PM
 -- Server version: 5.6.37
 -- PHP Version: 4.4.9
 -- 
 -- Database: `marsql`
 -- 
-CREATE DATABASE `marsql` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `marsql`;
 
 -- --------------------------------------------------------
 
@@ -24,24 +22,28 @@ CREATE TABLE `event` (
   `date` date NOT NULL,
   `type` char(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 -- 
 -- Dumping data for table `event`
 -- 
 
-INSERT INTO `event` VALUES (1, 'Register Domain', '2017-09-12', '');
-INSERT INTO `event` VALUES (2, 'Register Class For Spring Semester', '2017-10-23', '');
-INSERT INTO `event` VALUES (3, 'End of Fall 2017 Semester', '2017-12-12', '');
-INSERT INTO `event` VALUES (4, 'Start of Spring 2018 Semester', '2018-01-08', '');
-INSERT INTO `event` VALUES (5, 'Concert: Coldplay', '2017-10-06', '');
-INSERT INTO `event` VALUES (6, 'Concert: Ludovico Einaudi', '2017-10-19', '');
-INSERT INTO `event` VALUES (7, 'Fall 2017 Class Ends', '2017-12-01', '');
-INSERT INTO `event` VALUES (8, 'Spring 2018 Class begins', '2018-01-08', '1');
-INSERT INTO `event` VALUES (9, 'Start Learning Japanese', '2017-02-08', '2');
-INSERT INTO `event` VALUES (10, 'Hamilton', '2017-11-29', '2');
-INSERT INTO `event` VALUES (11, 'Jingle Ball', '2017-12-01', '2');
-INSERT INTO `event` VALUES (12, 'Fly to San Fransico', '2017-11-22', '2');
+INSERT INTO `event` VALUES (1, 'Register Domain', '2017-09-12', 'work');
+INSERT INTO `event` VALUES (2, 'Register Class For Spring Semester', '2017-10-23', 'school');
+INSERT INTO `event` VALUES (3, 'Fall 2017 Semester Ends', '2017-12-12', 'school');
+INSERT INTO `event` VALUES (5, 'Concert: Coldplay', '2017-10-06', 'life');
+INSERT INTO `event` VALUES (6, 'Concert: Ludovico Einaudi', '2017-10-19', 'life');
+INSERT INTO `event` VALUES (7, 'Fall 2017 Class Ends', '2017-12-01', 'school');
+INSERT INTO `event` VALUES (8, 'Spring 2018 Class Begins', '2018-01-08', 'school');
+INSERT INTO `event` VALUES (9, 'Start Learning Japanese', '2017-02-08', 'life');
+INSERT INTO `event` VALUES (10, 'Concert: Hamilton', '2017-11-29', 'life');
+INSERT INTO `event` VALUES (11, 'Concert: Jingle Ball', '2017-12-01', 'life');
+INSERT INTO `event` VALUES (12, 'Fly to San Fransico', '2017-11-22', 'life');
+INSERT INTO `event` VALUES (13, 'Scope Interview', '2018-01-26', 'work');
+INSERT INTO `event` VALUES (14, 'Big Bear Lake', '2018-01-27', 'life');
+INSERT INTO `event` VALUES (15, 'Spring 2018 Class Ends', '2018-05-09', 'school');
+INSERT INTO `event` VALUES (16, '2018 Spring Breaks', '2018-03-10', 'life');
+INSERT INTO `event` VALUES (17, '2018 Chinese New Year', '2018-02-16', 'life');
 
 -- --------------------------------------------------------
 
@@ -54,7 +56,7 @@ CREATE TABLE `log` (
   `msg` text NOT NULL,
   `time` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 -- 
 -- Dumping data for table `log`
@@ -79,27 +81,46 @@ INSERT INTO `log` VALUES (15, 'ウェブサイトのバックエンドシステ�
 -- --------------------------------------------------------
 
 -- 
--- Table structure for table `practice`
+-- Table structure for table `progress`
 -- 
 
-CREATE TABLE `practice` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `project` char(15) NOT NULL,
-  `start` datetime NOT NULL,
-  `end` datetime NOT NULL,
+CREATE TABLE `progress` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `name` text NOT NULL,
+  `start` date NOT NULL,
+  `end` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 -- 
--- Dumping data for table `practice`
+-- Dumping data for table `progress`
 -- 
 
-INSERT INTO `practice` VALUES (1, 'piano', '2017-09-16 17:10:00', '2017-09-16 18:40:00');
-INSERT INTO `practice` VALUES (2, 'piano', '2017-09-18 16:00:00', '2017-09-18 17:00:00');
-INSERT INTO `practice` VALUES (3, 'piano', '2017-09-20 17:20:00', '2017-09-20 18:05:00');
-INSERT INTO `practice` VALUES (4, 'piano', '2017-09-21 18:40:00', '2017-09-21 20:35:00');
-INSERT INTO `practice` VALUES (5, 'piano', '2017-09-24 16:15:00', '2017-09-24 18:35:00');
-INSERT INTO `practice` VALUES (6, 'piano', '2017-09-25 16:05:00', '2017-09-25 17:30:00');
-INSERT INTO `practice` VALUES (7, 'piano', '2017-09-26 15:30:00', '2017-09-26 17:30:00');
-INSERT INTO `practice` VALUES (8, 'piano', '2017-09-28 15:30:00', '2017-09-28 17:00:00');
-INSERT INTO `practice` VALUES (9, 'piano', '2017-10-01 16:30:00', '2017-10-01 18:00:00');
+INSERT INTO `progress` VALUES (1, 'Spring 2018 Semester', '2018-01-08', '2018-05-09');
+INSERT INTO `progress` VALUES (2, 'Year 2018', '2018-01-01', '2018-12-31');
+INSERT INTO `progress` VALUES (3, 'Spring Recess', '2018-03-10', '2018-03-18');
+INSERT INTO `progress` VALUES (4, 'Summer Vacation', '2018-05-09', '2018-08-16');
+INSERT INTO `progress` VALUES (5, 'Sophomore Housing', '2018-08-15', '2019-05-08');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `user`
+-- 
+
+CREATE TABLE `user` (
+  `id` varchar(16) NOT NULL,
+  `name` varchar(16) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` text NOT NULL,
+  `type` varchar(10) NOT NULL,
+  `info` text,
+  `coin` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- 
+-- Dumping data for table `user`
+-- 
+
+INSERT INTO `user` VALUES ('tanjx', 'Mars Tan', '3cda028accb6fe535d7db5ed6231e8ff33379c34', 'jianxuat@usc.edu', 'admin', NULL, 0);

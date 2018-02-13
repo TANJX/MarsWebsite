@@ -2,37 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Add an event | Mars Inc.</title>
-    <script>
-        function validateForm() {
-            var a = document.forms["Form"]["msg"].value;
-            if (a == null || a == "") {
-                document.getElementById("error-box").style.display = "block";
-                return false;
-            }
-            document.getElementById("error-box").style.display = "none";
-            return true;
-        }
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Add an event | Mars Inc.</title>
+  <script>
+    function validateForm() {
+      var a = document.forms["Form"]["msg"].value;
+      if (a == null || a == "") {
+        document.getElementById("error-box").style.display = "block";
+        return false;
+      }
+      document.getElementById("error-box").style.display = "none";
+      return true;
+    }
+  </script>
 </head>
 
 
 <body>
-    <div class="container">
-        <h1 class="my-5">New Log Message</h1>
-        <div style="display: none;" id="error-box" class="alert alert-danger" role="alert">
-            Please Fill All Required Field
-        </div>
-        <form method="post" action="php/newlog.php" class="mt-5" name="Form" onsubmit="return validateForm();">
-            <div class=" form-group ">
-                <label for="inputName " class="bmd-label-floating ">Log Message</label>
-                <textarea name="msg" value="" class="form-control " placeholder="Type in log" type="text" rows=3></textarea>
-            </div>
-            <input type="submit" value="SUBMIT" class="btn btn-primary btn-raised ">
-        </form>
+  <div class="container">
+    <h1 class="my-5">New Log Message</h1>
+    <div style="display: none;" id="error-box" class="alert alert-danger" role="alert">
+      Please Fill All Required Field
     </div>
+    <form method="post" action="php/newlog.php" class="mt-5" name="Form" onsubmit="return validateForm();">
+      <div class=" form-group ">
+        <label for="inputName " class="bmd-label-floating ">Log Message</label>
+        <textarea name="msg" value="" class="form-control " placeholder="Type in log" type="text" rows=3></textarea>
+      </div>
+      <input type="submit" value="SUBMIT" class="btn btn-primary btn-raised ">
+    </form>
+  </div>
 
 </body>
 
