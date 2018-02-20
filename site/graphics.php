@@ -45,6 +45,15 @@
         echo '<img class="card-img" src="works/';
         echo $works->file;
         echo '" alt="Card image">';
+        if($works->link != "") {
+          echo '<a href="';
+          echo $works->link;
+          echo '" target="_blank">';
+          echo '<div class="detail">';
+          echo '<p>How is made</p>';
+          echo '</div>';
+          echo '</a>';
+        }
         echo '<div class="card-info">';
         echo '<h4 class="card-title">';
         echo $works->title;

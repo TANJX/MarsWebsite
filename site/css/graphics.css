@@ -38,6 +38,23 @@
   opacity: 0;
 }
 
+.card .detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: .3s;
+}
+
+.card .detail p {
+  font-size: 1em;
+  margin: 0;
+  padding: 2px 5px;
+  border-radius: 2px;
+  background-color: cornflowerblue;
+  color: white;
+}
+
 .card:hover .card-info {
   background-color: rgba(0, 0, 0, 0.7);
   height: 25%;
@@ -50,6 +67,10 @@
   opacity: 1;
 }
 
+.card:hover .detail {
+  opacity: 1;
+}
+
 .card img {
   transition: 0.2s;
 }
@@ -59,9 +80,24 @@
   transition: 0.2s;
 }
 
+@media (max-width: 1200px) {
+  .card h4.card-title {
+    font-size: 1rem;
+    margin-bottom: 3px;
+  }
+  .card .card-info {
+    font-size: .7rem;
+    margin-bottom: 0;
+  }
+}
+
+
 @media (max-width: 576px) {
   .cards {
     float: none;
+  }
+  .card .detail {
+    opacity: 1;
   }
 
   .card {

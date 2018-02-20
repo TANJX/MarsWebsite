@@ -1,5 +1,21 @@
 <collection>
   <works>
+    <title>Mars Inc, Rooted Tree</title>
+    <description></description>
+    <file>mars_brand.gif</file>
+    <date>2018-2-19</date>
+    <type>Animation</type>
+    <link>blog/2018/02/animation-rooted-tree/</link>
+  </works>
+  <works>
+    <title>Chinese New Year</title>
+    <description></description>
+    <file>newyear.gif</file>
+    <date>2018-2-14</date>
+    <type>Animation</type>
+    <link>blog/2018/02/gif-chinese-new-year/</link>
+  </works>
+  <works>
     <title>Back and Forth</title>
     <description></description>
     <file>rotating_sphere.gif</file>
