@@ -24,6 +24,7 @@
       </div>
     </div>
     <div class="filter container">
+      <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='graphics.php'">All</button>
       <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='graphics.php?filter=vector'">Vector Design</button>
       <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='graphics.php?filter=animation'">Animation</button>
       <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='poster.php'">Poster Design</button>
@@ -33,50 +34,122 @@
     <div class="container">
       <div class="cards">
         <?php
-      $filter = $_REQUEST['filter'];
-      $xml=simplexml_load_file("works/works.xml") or die("Error: Cannot create object");
-      foreach($xml->children() as $works) {
-        $name = $works->title;
-        if(!($filter == "" || 
-           ($filter=="vector" && $works->type =="Vector") ||
-           ($filter=="animation" && $works->type =="Animation") ||
-           ($filter=="others" && $works->type =="Graphics"))) continue;
-        echo '<div class="card bg-white text-white block">';
-        echo '<img class="card-img" src="works/';
-        echo $works->file;
-        echo '" alt="Card image">';
-        if($works->link != "") {
-          echo '<a href="';
-          echo $works->link;
-          echo '" target="_blank">';
-          echo '<div class="detail">';
-          echo '<p>How is made</p>';
+        $filter = $_REQUEST['filter'];
+        $page = 0;
+        if($_REQUEST['page'] != '') {
+          $page = (int)$_REQUEST['page'];
+        }
+        $xml=simplexml_load_file("works/works.xml") or die("Error: Cannot create object");
+        $items = $xml->children()->count();
+        $pages = $items / 9;
+        $i = 0;
+        foreach($xml->children() as $works) {
+          if(!($filter == "" || 
+               ($filter=="vector" && $works->type =="Vector") ||
+               ($filter=="animation" && $works->type =="Animation") ||
+               ($filter=="others" && $works->type =="Graphics"))) continue;
+          $i++;
+          if ($i <= $page * 9) continue;
+          if($i > $page * 9 + 9) break;
+          $name = $works->title;
+          echo '<div class="card bg-white text-white block">';
+          echo '<img class="card-img" src="works/';
+          echo $works->file;
+          echo '" alt="Card image">';
+          if($works->link != "") {
+            echo '<a href="';
+            echo $works->link;
+            echo '" target="_blank">';
+            echo '<div class="detail">';
+            echo '<p>How is made</p>';
+            echo '</div>';
+            echo '</a>';
+          }
+          echo '<div class="card-info">';
+          echo '<h4 class="card-title">';
+          echo $works->title;
+          echo '</h4>';
+          echo '<p class="card-text date">';
+          echo $works->date;
+          echo '</p>';
           echo '</div>';
+          echo '</div>';
+        }
+        if($filter != "") {
+          $items = 0;
+          foreach($xml->children() as $works) {
+            if(($filter=="vector" && $works->type =="Vector") ||
+               ($filter=="animation" && $works->type =="Animation") ||
+               ($filter=="others" && $works->type =="Graphics")) 
+              $items++;
+          }
+          $pages = $items / 9;
+        }
+        echo '</div><div class="clear"></div>';
+        if($pages > 1) {
+        echo '<nav><ul class="pagination justify-content-center">';
+        if($page==0) {
+            echo '<li class="page-item disabled">';
+            echo '<a class="page-link" href="graphics.php?filter=others" tabindex="-1">Previous</a>';
+        } else {
+          echo '<li class="page-item">';
+          echo '<a class="page-link" href="graphics.php?';
+          if($filter!="") {
+            echo 'filter=';
+            echo $filter;
+            echo '&';
+          }
+          echo 'page=';
+          echo $page - 1;
+          echo '" tabindex="-1">Previous</a>';
+        }
+        for($i = 0; $i<$pages; $i++) {
+          echo '</li>';
+          if($i==$page) {
+            echo '<li class="page-item disabled">';
+          } else {
+            echo '<li class="page-item">';
+          }
+          echo '<a class="page-link" href="graphics.php?';
+          if($filter!="") {
+            echo 'filter=';
+            echo $filter;
+            echo '&';
+          }
+          echo 'page=';
+          echo $i;
+          echo '" tabindex="-1">';
+          echo $i + 1;
           echo '</a>';
         }
-        echo '<div class="card-info">';
-        echo '<h4 class="card-title">';
-        echo $works->title;
-        echo '</h4>';
-        echo '<p class="card-text date">';
-        echo $works->date;
-        echo '</p>';
-        echo '</div>';
-        echo '</div>';
-      }
-      ?>
+        if ($page == $pages - 1){
+          echo '<li class="page-item disabled">';
+          echo '<a class="page-link" href="#">Next</a>';
+        } else {
+          echo '<li class="page-item">';
+            echo '<a class="page-link" href="graphics.php?';
+            if($filter!="") {
+              echo 'filter=';
+              echo $filter;
+              echo '&';
+            }
+            echo 'page=';
+            echo $page + 1;
+            echo '" tabindex="-1">Next</a>';
+        }
+        echo '</li></ul></nav>';
+        }
+        ?>
+
       </div>
 
-    </div>
-
-    <div class="clear"></div>
-    <?php
+      <?php
   $doc = new DOMDocument();
   $doc->loadHTMLFile("footer.htm");
   echo $doc->saveHTML();
   ?>
 
-      <script src="js/menu.js"></script>
+        <script src="js/menu.js"></script>
 </body>
 
 </html>

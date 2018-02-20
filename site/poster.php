@@ -23,6 +23,7 @@
       </div>
     </div>
     <div class="filter container">
+      <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='graphics.php'">All</button>
       <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='graphics.php?filter=vector'">Vector Design</button>
       <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='graphics.php?filter=animation'">Animation</button>
       <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='poster.php'">Poster Design</button>
