@@ -471,6 +471,18 @@ footer:hover p {
 }
 
 @media (max-width: 576px) {
+  .nav-bar {
+    margin-bottom: 20px;
+  }
+  .nav .nav-link {
+    padding: 0px 8px;
+  }
+  .nav .nav-link:after {
+    content: ' ';
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid orangered;
+  }
   .section-title h2 {
     margin-left: 35px;
   }
@@ -480,6 +492,7 @@ footer:hover p {
 }
 
 @media (max-width: 756px) {
+
   .section .block {
     float: none;
     width: 100%;

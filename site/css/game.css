@@ -1,3 +1,13 @@
+.head {
+  background-color: #222;
+  height: 500px;
+  padding-top: 180px;
+}
+
+.head img {
+  height: 100px;
+}
+
 .typing-text i {
   margin: 0 -4px;
   padding: 0;
@@ -6,6 +16,7 @@
   position: relative;
   font-size-adjust: none;
   width: 0;
+  color: white;
 }
 
 .typing-text h1 {
@@ -26,20 +37,46 @@
   display: none;
 }
 
-.typing-text-wrapper div:nth-child(1) h1 {}
-
 .selection {
-  background-color: #444;
-  color: white;
+  background-color: #666;
 }
 
 .typing-text h1 {
   border-radius: 2px;
   padding: 0 5px;
   padding-right: 7px;
-  animation: 1s blink;
+  animation: .9s blink;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+.section {
+  font-family: 'Source Sans Pro', sans-serif;
+  padding-top: 60px;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.section h2 {
+  font-weight: 700;
+}
+
+.section p {
+  margin-top: 30px;
+  color: #aaa;
+}
+
+.section button {
+  margin-top: 20px;
+}
+
+.section a {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+.line {
+  border-bottom: 1px solid #ccc;
 }
 
 @keyframes blink {

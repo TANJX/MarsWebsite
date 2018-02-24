@@ -18,6 +18,7 @@
     $(document).ready(function() {
       $('body').bootstrapMaterialDesign();
     });
+
   </script>
   <nav id="menu" class="menu" style="display: none">
     <div class="menu__brand">
@@ -28,8 +29,8 @@
     <ul class="menu__list">
       <li class="menu__item"><a href="/index" class="menu__link">Project</a></li>
       <li class="menu__item"><a href="/graphics" class="menu__link">Graphics</a></li>
-      <li class="menu__item"> <a href="/game" class="menu__link">Game</a> </li>
-      <li class="menu__item"> <a href="/about" class="menu__link">About</a> </li>
+      <li class="menu__item"> <a href="/game" class="menu__link">Dev</a> </li>
+      <li class="menu__item"> <a href="/about" class="menu__link">More</a> </li>
     </ul>
   </nav>
   <header>
@@ -50,7 +51,7 @@
             <a class="nav-link" href="/game">DEV</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about">ABOUT</a>
+            <a class="nav-link" href="/about">MORE</a>
           </li>
         </ul>
         <div class="burger">
@@ -65,6 +66,7 @@
 
   <div class="head">
     <div class="container ">
+      <img src="icon/code-white.svg">
       <div class="typing-text-wrapper">
         <div class="typing-text in">
           <h1>
@@ -117,8 +119,24 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="section web">
+    <div class="container">
+      <h2>Front End Web Development</h2>
+      <p>Coding with HTML, CSS, Javascript</p>
+      <button type="button" class="btn btn-primary disabled">See My Works</button>
+      <img src="img/game-web.svg" alt="minecraft">
+    </div>
+  </div>
 
+  <div class="container line"></div>
+
+
+  <div class="section minecraft">
+    <div class="container">
+      <h2>Minecraft Plugin Development</h2>
+      <p>Using <a href="https://www.spigotmc.org/" target="_blank">Spigot API</a>, I created a series of <a href="https://github.com/ISOTOPE-Studio/" target="_blank">Minecraft Server plugins</a> that expand and create the functionalities of the amazing community game by Mojang, Microsoft.</p>
+      <img src="img/game-minecraft.svg" alt="minecraft">
+    </div>
   </div>
 
   <div class="clear"></div>
@@ -142,6 +160,7 @@
 
 </html>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/sub.css">
 <link rel="stylesheet" href="css/menu.css">
