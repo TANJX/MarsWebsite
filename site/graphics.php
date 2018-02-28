@@ -148,8 +148,18 @@
   $doc->loadHTMLFile("footer.htm");
   echo $doc->saveHTML();
   ?>
-
         <script src="js/menu.js"></script>
+        <script>
+          var animation = bodymovin.loadAnimation({
+            container: document.getElementById('anime'),
+            path: 'animate/trojan.json',
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            name: "Hello World", // Name for future reference. Optional.
+          })
+
+        </script>
 </body>
 
 </html>

@@ -1,74 +1,57 @@
-.section {
-  /*  height: 100vh;*/
-  position: relative;
+.pieces {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.recent {
-  background-image: url(../img/working/2018-02-10.png);
-  background-size: cover;
-  background-position: 0% 50%;
-  background-repeat: no-repeat;
-  animation: b 10s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes b {
-  0% {
-    background-position: 0% 50%;
-  }
-  20% {
-    background-position: 0% 50%;
-  }
-  80% {
-    background-position: 80% 50%;
-  }
-  100% {
-    background-position: 80% 50%;
-  }
-}
-
-.recent h2 {
-  color: white;
-  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
-  margin-top: 10%;
-  font-size: 2.3rem;
-}
-
-.recent h3 {
-  color: #ccc;
-  margin-top: 1%;
-  font-size: 1.2rem;
-  display: block;
-}
-
-.recent p {
-  color: white;
-  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
-  margin-top: 1%;
-  font-size: 1rem;
-  background-color: deepskyblue;
-  padding: 2px 5px;
-  border-radius: 5px;
-  display: inline-block;
-}
-
-.section .top-img {
-  float: left;
-  height: 60%;
+.piece {
   width: 50%;
-  margin-top: 100px;
-  background-image: url('../img/video/football.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.section .top-img img {
-  height: 250px;
+.piece h4 {
+  font-size: 1.2rem;
 }
 
-.football .section-info {
-  float: right;
+.piece img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  transition: .2s;
+}
+
+
+.piece .info {
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+  color: white;
+  padding: 15px 15px;
+  opacity: 1;
+  transition: .2s;
+  bottom: -80px;
+  z-index: 10;
+}
+
+.piece:hover img {
+  opacity: 0.8;
+}
+
+.piece:hover .info {
+  bottom: 0px;
+}
+
+
+
+@media (max-width: 576px) {
+  .pieces {
+    display: block;
+  }
+  .piece {
+    width: 100%;
+  }
 }

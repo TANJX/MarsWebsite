@@ -1,12 +1,12 @@
 .head {
   background-color: #ffcebd;
+  padding-top: 100px;
+  height: 330px;
 }
 
 #anime {
-  height: 120px;
-  position: absolute;
-  top: -60px;
-  left: 0;
+  height: 150px;
+  width: 100%;
 }
 
 .item:hover {
@@ -20,7 +20,7 @@
 .card {
   width: 32%;
   display: inline-block;
-  margin-right: 1%;
+  margin-right: .6%;
   margin-bottom: 1%;
   position: relative;
   overflow: hidden;
@@ -93,6 +93,9 @@
 
 
 @media (max-width: 576px) {
+  .head {
+    padding-top: 70px;
+  }
   .cards {
     float: none;
   }
