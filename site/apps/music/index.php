@@ -2,45 +2,22 @@
 <html lang="en">
 
 <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <title>Scale Picker | Mars Inc.</title>
- <script>
-
-
- </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Scale Picker | Mars Inc.</title>
 </head>
 
 <body>
- <div class="title ">
-  <div class="container">
-   <h1>Scale Picker</h1>
-   <p>by Mars</p>
+  <div class="title ">
+    <div class="container">
+      <h1>Scale Picker</h1>
+      <p>by Mars</p>
+    </div>
   </div>
- </div>
- <div class="container">
-  <ul class="nav align-middle">
-   <li class="nav-item">
-    <a class="nav-link active" href="../index.html">Mars Inc.</a>
-   </li>
-   <li class="nav-item">
-    <a class="nav-link active" href="../memo/log.php">Log</a>
-   </li>
-   <li class="nav-item">
-    <a class="nav-link" href="../memo/event.php">Event</a>
-   </li>
-   <li class="nav-item">
-    <a class="nav-link" href="../memo/progress.php">Progress</a>
-   </li>
-   <li class="nav-item">
-    <a class="nav-link" href="../music/index.php">Scale Picker</a>
-   </li>
-   <li class="nav-item">
-    <a class="nav-link active" href="https://marstanjx.com/music/index.php">New Pick</a>
-   </li>
-  </ul>
-  <div class="section">
-   <?php
+  <div class="container">
+    <a class="nav-link active" href="http://apps.marstanjx.com/music/">New Pick</a>
+    <div class="section">
+      <?php
             function getRandomKey() {
                 $a = rand(0,11);
                 switch($a) {
@@ -374,24 +351,31 @@
             echo "</ul>";
             
 ?>
+    </div>
   </div>
- </div>
- <style>
-  .title {
-   background-color: black;
-   color: whitesmoke;
-  }
+  <style>
+    .title {
+      background-color: black;
+      color: whitesmoke;
+    }
 
-  .card {
-   text-align: center;
-   margin: 0 auto;
-  }
+    .card {
+      text-align: center;
+      margin: 0 auto;
+    }
 
- </style>
+  </style>
+  <?php
+    $doc = new DOMDocument();
+  $doc->loadHTMLFile("../menu.htm");
+  echo $doc->saveHTML();
+  ?>
 </body>
 
 </html>
 
-<link rel="stylesheet" href="../css/header.css">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
 <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/menu.css">

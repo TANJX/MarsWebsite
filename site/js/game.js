@@ -6,7 +6,7 @@ var stage = 0;
 var count = 0;
 
 function update() {
-  console.log(num + " " + stage + " " + count);
+  //  console.log(num + " " + stage + " " + count);
   switch (stage) {
     case (0):
       if (count < $('.typing-text-wrapper div:nth-child(' + num + ') h1').children().length) {

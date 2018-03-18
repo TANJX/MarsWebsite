@@ -28,26 +28,7 @@
     </div>
   </div>
   <div class="container">
-    <ul class="nav align-middle">
-      <li class="nav-item">
-        <a class="nav-link active" href="../index.html">Mars Inc.</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="log.php">Log</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="event.php">Event</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="../music/index.php">Scale Picker</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="../japanese/index.html">Japanese</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="newprogress.html">New Progress Bar</a>
-      </li>
-    </ul>
+    <a class="nav-link" href="newprogress.html">New Progress Bar</a>
     <div class="bar-wrapper">
       <?php
  $conn = mysql_connect('marstanjxcom.ipagemysql.com', 'mars', 'root'); 
@@ -80,6 +61,11 @@
  mysql_close($conn);  
 ?>
     </div>
+    <?php
+    $doc = new DOMDocument();
+  $doc->loadHTMLFile("../menu.htm");
+  echo $doc->saveHTML();
+  ?>
 </body>
 
 <style>
@@ -94,4 +80,5 @@
 <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
 
 <link rel="stylesheet" href="../css/header.css">
-<link rel="stylesheet" href="css/progress.css">
+<link rel="stylesheet" href="../css/menu.css">
+<link rel="stylesheet" href="progress.css">

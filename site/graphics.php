@@ -16,7 +16,7 @@
   $doc->loadHTMLFile("nav.htm");
   echo $doc->saveHTML();
   ?>
-    <script src="lib/lottie.js"></script>
+    <script src="js/lib/lottie.js"></script>
     <div class="head">
       <div class="container ">
         <div id="anime"></div>
@@ -39,7 +39,7 @@
         if($_REQUEST['page'] != '') {
           $page = (int)$_REQUEST['page'];
         }
-        $xml=simplexml_load_file("works/works.xml") or die("Error: Cannot create object");
+        $xml=simplexml_load_file("works/graphics/works.xml") or die("Error: Cannot create object");
         $items = $xml->children()->count();
         $pages = $items / 9;
         $i = 0;
@@ -53,7 +53,7 @@
           if($i > $page * 9 + 9) break;
           $name = $works->title;
           echo '<div class="card bg-white text-white block">';
-          echo '<img class="card-img" src="works/';
+          echo '<img class="card-img" src="works/graphics/';
           echo $works->file;
           echo '" alt="Card image">';
           if($works->link != "") {

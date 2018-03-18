@@ -39,11 +39,11 @@
     <div class="container">
       <div class="cards">
         <?php
-      $xml=simplexml_load_file("posters/works.xml") or die("Error: Cannot create object");
+      $xml=simplexml_load_file("works/posters/works.xml") or die("Error: Cannot create object");
       foreach($xml->children() as $works) {
         $name = $works->title; 
         echo '<div class="card bg-white text-white block">';
-        echo '<img class="card-img" src="posters/';
+        echo '<img class="card-img" src="works/posters/';
         echo $works->file;
         echo '" alt="Card image">';
         echo '<div class="card-info">';

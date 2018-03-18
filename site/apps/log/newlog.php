@@ -15,6 +15,6 @@ mysql_query("set names utf8;");
 //insert语句
 $insert = "insert into log (msg,time) values ('$msg',now())";
 $res_insert = mysql_query($insert);
-header("Location: ../log.php");
+header("Location: http://apps.marstanjx.com/log/");
 exit;
 ?>

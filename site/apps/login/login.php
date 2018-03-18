@@ -52,8 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     $result->free();
     $mysqli->close();
     $_SESSION["id"] = $user['id'];
-    $_SESSION["name"] = $user['name'];
-    header("Location: /memo/newprogress.html");
+    $_SESSION["name"] = $user['name'];  
+    header("Location: http://apps.marstanjx.com/");
     exit;
 }
-

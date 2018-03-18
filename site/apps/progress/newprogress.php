@@ -17,6 +17,6 @@ mysql_query("set names utf8;");
 //insert语句
 $insert = "insert into progress (name,start,end) values ('$type','$start','$end')";
 $res_insert = mysql_query($insert);
-header("Location: ../progress.php");
+header("Location: http://apps.marstanjx.com/progress/");
 exit;
 ?>

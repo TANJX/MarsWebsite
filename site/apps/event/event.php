@@ -25,29 +25,11 @@
     <div class="container">
       <h1>Event List</h1>
       <p>Mars' life</p>
+
     </div>
   </div>
   <div class="container">
-    <ul class="nav align-middle">
-      <li class="nav-item">
-        <a class="nav-link active" href="../index.html">Mars Inc.</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="log.php">Log</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="progress.php">Progress</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="../music/index.php">Scale Picker</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="../japanese/index.html">Japanese</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="newevent.html">New Event</a>
-      </li>
-    </ul>
+    <a class="nav-link" href="newevent.html">New Event</a>
 
     <div class="selection-checkboxes">
       <div>
@@ -114,6 +96,11 @@ mysql_close($conn);
 ?>
 
   </div>
+  <?php
+    $doc = new DOMDocument();
+  $doc->loadHTMLFile("../menu.htm");
+  echo $doc->saveHTML();
+  ?>
 </body>
 
 <script>
@@ -158,7 +145,8 @@ mysql_close($conn);
 </script>
 
 </html>
-<link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
 <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
-<link rel="stylesheet" href="css/event.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/menu.css">
+<link rel="stylesheet" href="event.css">

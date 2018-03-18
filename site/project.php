@@ -30,9 +30,9 @@
         if($_REQUEST['page'] != '') {
           $page = (int)$_REQUEST['page'];
         }
-        $xml=simplexml_load_file("projects/works.xml") or die("Error: Cannot create object");
+        $xml=simplexml_load_file("works/projects/works.xml") or die("Error: Cannot create object");
         $items = $xml->children()->count();
-        $pages = $items / 8;
+        $pages = (int) ($items / 8 + 1);
         $i = 0;
         foreach($xml->children() as $works) {
           if(!($filter == "" || 
@@ -44,7 +44,7 @@
           if($i > $page * 8 + 8) break;
           $name = $works->title;
           echo '<div class="piece">';
-          echo '<img src="projects/';
+          echo '<img src="works/projects/';
           echo $works->file;
           echo '" alt="Card image">';
           if($works->link != "") {
@@ -74,7 +74,7 @@
                ($filter=="others" && $works->type =="Graphics")) 
               $items++;
           }
-          $pages = $items / 8;
+          $pages = (int) ($items / 8 + 1);
         }
         echo '</div><div class="clear"></div>';
         if($pages > 1) {
@@ -113,7 +113,10 @@
           echo $i + 1;
           echo '</a>';
         }
-        if ($page == $pages - 1){
+        echo "<script>console.log(";
+          echo $pages;
+          echo ")</script>";
+        if ($page == $pages - 1) {
           echo '<li class="page-item disabled">';
           echo '<a class="page-link" href="#">Next</a>';
         } else {

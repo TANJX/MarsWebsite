@@ -289,7 +289,7 @@ ul li .drop-down li a:hover {
 .graphics .sub-block-3 {
   margin-top: 10px;
   background-color: aliceblue;
-  background-image: url(../icon/timeline.svg);
+  background-image: url(../img/icon/timeline.svg);
   height: 150px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -314,7 +314,7 @@ ul li .drop-down li a:hover {
   height: 100%;
   z-index: 1;
   opacity: 0.6;
-  background-image: url(../icon/github.svg);
+  background-image: url(../img/icon/github.svg);
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: 150px 50px;

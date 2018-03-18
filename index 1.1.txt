@@ -7,8 +7,6 @@ SquareOne
 ISOTOPE Studio
 ISOTOPE Studio, founded in 2015, dedicates our professional skills on digital arts (graphic and website design, video filming and editing) to provide free/paid services for our surroundings., including innovative students, school's clubs, and education agencies. 
 
-Recent (Blog intro)
-	Link
 	Chinese New Year
 	Ramen
 
@@ -19,8 +17,7 @@ Research: A Tale of Two Cities
 
 bookmarks
 calendar
-Posters
-- 贴海报 poster photos
+
 A+
 Urban City
 Twin city
@@ -41,6 +38,8 @@ Website design/web application
 
 *About
 Interests/Life
+Posters
+- 贴海报 poster photos
 Music and Piano
 	pieces working on
 Japanese
