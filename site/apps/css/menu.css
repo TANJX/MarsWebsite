@@ -1,5 +1,4 @@
 .menu {
-  -webkit-filter: url("#shadowed-goo");
   filter: url("#shadowed-goo");
 }
 

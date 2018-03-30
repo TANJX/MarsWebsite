@@ -1,6 +1,9 @@
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html
+
+RewriteRule ^game$ game.html [NC,L]
+RewriteRule ^index$ index.html [NC,L]
+RewriteRule ^about$ about.html [NC,L]
+RewriteRule ^poster$ poster.php [NC,L]
+RewriteRule ^project$ project.php [NC,L]
+RewriteRule ^graphics$ graphics.php [NC,L]
+RewriteRule "^project-(.*)$" "project.php?name=$1"

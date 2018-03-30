@@ -1,5 +1,13 @@
 <collection>
   <works>
+    <title>Nike ad: Late No More</title>
+    <description>In Progress</description>
+    <file>nike.jpg</file>
+    <date>2018-3-24</date>
+    <type>Film</type>
+	<link>nike</link>
+  </works>
+  <works>
     <title>"Blockchain SC" Landing Page</title>
     <description>In Progress</description>
     <file>blockchain.png</file>
@@ -26,6 +34,7 @@
     <file>football.jpg</file>
     <date>2017-8-16</date>
     <type>Documentary</type>
+	<link>soccer</link>
   </works>
   <works>
     <title>Calendar 2017-2018</title>
@@ -40,6 +49,7 @@
     <file>aplus.png</file>
     <date>2016-11-27</date>
     <type>Animation</type>
+	<link>aplus</link>
   </works>
   <works>
     <title>Bookmark Collection 2016</title>
@@ -54,6 +64,7 @@
     <file>urbancity.jpg</file>
     <date>2016-10-18</date>
     <type>Documentary</type>
+	<link>village</link>
   </works>
   <works>
     <title>Documentary: Make difference</title>
@@ -61,6 +72,7 @@
     <file>drone.jpg</file>
     <date>2016-8-9</date>
     <type>Documentary</type>
+	<link>drone</link>
   </works>
    <works>
     <title>"ISOTOPE Studio" Landing Page</title>
@@ -75,6 +87,7 @@
     <file>twincity.jpg</file>
     <date>2016-2-18</date>
     <type>Documentary</type>
+	<link>twin</link>
   </works>
   <works>
     <title>Bookmark Collection 2015</title>

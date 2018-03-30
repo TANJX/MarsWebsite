@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+
 .title {
   background-color: springgreen;
   padding: 1px 0px 0px 0px;
@@ -40,7 +58,7 @@
   transition: .5s;
 }
 
-ul li {
+.nav-bar ul li {
   list-style: none;
   float: left;
   position: relative;
