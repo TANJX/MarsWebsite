@@ -78,7 +78,11 @@
         echo '<a href="project-';
         echo $works->link;
         echo '">';
-      }
+      } else if($works->olink != "") {
+        echo '<a href="';
+        echo $works->olink;
+        echo '" target="_blank">';
+      } 
       echo '<img src="works/projects/';
       echo $works->file;
       echo '" alt="Card image">';

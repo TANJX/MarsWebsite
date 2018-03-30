@@ -3,9 +3,9 @@
   padding: 0;
   margin: 0;
   padding-top: 15px;
-  background-color: #f4507f;
+  background-color: rgba(0, 0, 0, 0);
   border-bottom: 0;
-  position: relative;
+  position: absolute;
 }
 
 .nav-bar-2 ul li a {
@@ -33,13 +33,17 @@
 }
 
 .head {
-  padding-top: 80px;
+  padding-top: 160px;
   background-color: #f4507f;
   color: white;
   height: auto;
   padding-bottom: 50px;
   font-weight: 700;
   margin-bottom: 75px;
+}
+
+.head .container img {
+  margin-bottom: 50px;
 }
 
 .video-wrapper {
@@ -59,7 +63,7 @@
   height: 100%;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   #project-title {
     font-size: 1.5rem;
   }
@@ -77,7 +81,27 @@
 }
 
 h2 {
-  margin: 50px 0;
+  margin: 50px 0 0px;
+}
+
+.quote-wrapper {
+  width: 70%;
+  margin: 0 auto;
+
+}
+
+.quote-wrapper p {
+  margin: 0;
+}
+
+.quote-wrapper .quote::before,
+.quote::after {
+  content: '"';
+}
+
+.quote-wrapper .quote-author {
+  font-weight: 700;
+  color: #f4507f;
 }
 
 .credit-section {
@@ -86,10 +110,17 @@ h2 {
   text-align: center;
   line-height: 2.2;
   max-width: 638px;
-  width: 46.625%;
+  width: 48%;
   margin: 0 auto;
   font-size: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  .credit-section {
+    width: 85%;
+  }
+}
+
 
 .credit-section h4 {
   font-size: 1.1rem;

@@ -13,13 +13,7 @@
     <file>blockchain.png</file>
     <date>2018-2-17</date>
     <type>Web Design</type>
-  </works>
-  <works>
-    <title>Animation: Ramen</title>
-    <description>In Progress</description>
-    <file>ramen.png</file>
-    <date>2018-2-10</date>
-    <type>Animation</type>
+	<olink>http://blockchainsc.org/</olink>
   </works>
   <works>
     <title>"SquareOne Studio" Landing Page</title>
@@ -27,6 +21,7 @@
     <file>squareonewebsite.png</file>
     <date>2018-1-24</date>
     <type>Web Design</type>
+	<olink>http://appsquareone.com</olink>
   </works>
   <works>
     <title>Documentary: Soccer in SZMS</title>
@@ -42,6 +37,7 @@
     <file>calendar.jpg</file>
     <date>2017-5-15</date>
     <type>Printed</type>
+    <link>calendar</link>
   </works>
   <works>
     <title>"A Plus" Concept Video</title>
@@ -57,6 +53,7 @@
     <file>bookmark2016.jpg</file>
     <date>2016-11-21</date>
     <type>Printed</type>
+    <link>bookmark</link>
   </works>
   <works>
     <title>Documentary: Urban City in Shenzhen</title>
@@ -80,6 +77,15 @@
     <file>isotopewebsite.png</file>
     <date>2016-6-4</date>
     <type>Web Design</type>
+	<olink>http://isotopestudio.cc</olink>
+  </works>
+   <works>
+    <title>SZMS 2016 Yearbook</title>
+    <description></description>
+    <file>yearbook.jpg</file>
+    <date>2016-6-3</date>
+    <type>Printed</type>
+	<link>yearbook</link>
   </works>
   <works>
     <title>Documentary: Tale of Twin City</title>
@@ -95,5 +101,6 @@
     <file>bookmark2015.jpg</file>
     <date>2016-1-30</date>
     <type>Printed</type>
+    <link>bookmark</link>
   </works>
 </collection>

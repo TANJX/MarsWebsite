@@ -1,4 +1,4 @@
-@media screen and (min-width: 856px) {
+@media screen and (min-width: 500px) {
   #menu {
     display: none;
   }
@@ -7,7 +7,7 @@
   }
 }
 
-@media screen and (max-width: 857px) {
+@media screen and (max-width: 499px) {
   .nav-bar-2 ul {
     display: none;
   }
@@ -181,7 +181,7 @@
   transition-delay: 0.6s;
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 700px) {
   ul.menu__list,
   div.menu__brand {
     float: none;
