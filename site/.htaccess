@@ -6,4 +6,11 @@ RewriteRule ^about$ about.html [NC,L]
 RewriteRule ^poster$ poster.php [NC,L]
 RewriteRule ^project$ project.php [NC,L]
 RewriteRule ^graphics$ graphics.php [NC,L]
-RewriteRule "^project-(.*)$" "project.php?name=$1"
+RewriteRule "^project/(.*)$" "project.php?name=$1"
+RewriteRule "^project-(.*)$" "project.php?page=$1"
+RewriteRule "^printed-project-(.*)$" "project.php?filter=printed&page=$1"
+RewriteRule "^printed-project$" "project.php?filter=printed"
+RewriteRule "^web-project-(.*)$" "project.php?filter=web&page=$1"
+RewriteRule "^web-project$" "project.php?filter=web"
+RewriteRule "^video-project-(.*)$" "project.php?filter=video&page=$1"
+RewriteRule "^video-project$" "project.php?filter=video"

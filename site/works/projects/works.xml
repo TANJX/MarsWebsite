@@ -4,7 +4,7 @@
     <description>In Progress</description>
     <file>nike.jpg</file>
     <date>2018-3-24</date>
-    <type>Film</type>
+    <type>video</type>
 	<link>nike</link>
   </works>
   <works>
@@ -12,7 +12,7 @@
     <description>In Progress</description>
     <file>blockchain.png</file>
     <date>2018-2-17</date>
-    <type>Web Design</type>
+    <type>web</type>
 	<olink>http://blockchainsc.org/</olink>
   </works>
   <works>
@@ -20,7 +20,7 @@
     <description>In Progress</description>
     <file>squareonewebsite.png</file>
     <date>2018-1-24</date>
-    <type>Web Design</type>
+    <type>web</type>
 	<olink>http://appsquareone.com</olink>
   </works>
   <works>
@@ -28,7 +28,7 @@
     <description></description>
     <file>football.jpg</file>
     <date>2017-8-16</date>
-    <type>Documentary</type>
+    <type>video</type>
 	<link>soccer</link>
   </works>
   <works>
@@ -36,7 +36,7 @@
     <description></description>
     <file>calendar.jpg</file>
     <date>2017-5-15</date>
-    <type>Printed</type>
+    <type>printed</type>
     <link>calendar</link>
   </works>
   <works>
@@ -44,7 +44,7 @@
     <description></description>
     <file>aplus.png</file>
     <date>2016-11-27</date>
-    <type>Animation</type>
+    <type>video</type>
 	<link>aplus</link>
   </works>
   <works>
@@ -52,7 +52,7 @@
     <description></description>
     <file>bookmark2016.jpg</file>
     <date>2016-11-21</date>
-    <type>Printed</type>
+    <type>printed</type>
     <link>bookmark</link>
   </works>
   <works>
@@ -60,7 +60,7 @@
     <description></description>
     <file>urbancity.jpg</file>
     <date>2016-10-18</date>
-    <type>Documentary</type>
+    <type>video</type>
 	<link>village</link>
   </works>
   <works>
@@ -68,7 +68,7 @@
     <description></description>
     <file>drone.jpg</file>
     <date>2016-8-9</date>
-    <type>Documentary</type>
+    <type>video</type>
 	<link>drone</link>
   </works>
    <works>
@@ -76,7 +76,7 @@
     <description></description>
     <file>isotopewebsite.png</file>
     <date>2016-6-4</date>
-    <type>Web Design</type>
+    <type>web</type>
 	<olink>http://isotopestudio.cc</olink>
   </works>
    <works>
@@ -84,7 +84,7 @@
     <description></description>
     <file>yearbook.jpg</file>
     <date>2016-6-3</date>
-    <type>Printed</type>
+    <type>printed</type>
 	<link>yearbook</link>
   </works>
   <works>
@@ -92,7 +92,7 @@
     <description></description>
     <file>twincity.jpg</file>
     <date>2016-2-18</date>
-    <type>Documentary</type>
+    <type>video</type>
 	<link>twin</link>
   </works>
   <works>
@@ -100,7 +100,7 @@
     <description></description>
     <file>bookmark2015.jpg</file>
     <date>2016-1-30</date>
-    <type>Printed</type>
+    <type>printed</type>
     <link>bookmark</link>
   </works>
 </collection>

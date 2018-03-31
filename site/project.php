@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
   <title>Project | Mars Inc.</title>
+  <base href="http://marstanjx.com/">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116224796-1"></script>
   <script>
@@ -45,18 +46,41 @@
     $valid = true;
   }
   if ($valid) {
+    $filter = $_REQUEST['filter'];
+    $page = 0;
+    
     echo '<div class="head">';
     echo '<div class="container ">';
     echo '<h1>Projects and Collaboration</h1>';
+    if($filter != "") {
+      echo '<h3 style="font-size: 1.1rem; margin-top: 10px">';
+      switch($filter) {
+          case("web"):
+            echo "Web Design";
+            break;
+          case("printed"):
+            echo "Printed";
+            break;
+          case("video"):
+            echo "Video and Documentary";
+            break;
+      }
+      echo '</h3>';
+    }
     echo '</div>';
     echo '</div>';
-    echo '<div class="container">';
+    
+    echo '<div class="container">';    
+    echo '<div class="filter">';
+    echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'project\'">All</button>';
+    echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'web-project\'">Web Design</button>';
+    echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'video-project\'">Video and Documentary</button>';
+    echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'printed-project\'">Printed</button>';
+    echo '</div>';
     echo '<div class="pieces">';
   
-    $filter = $_REQUEST['filter'];
-    $page = 0;
     if($_REQUEST['page'] != '') {
-      $page = (int)$_REQUEST['page'];
+      $page = (int)$_REQUEST['page']-1;
     }
     $xml=simplexml_load_file("works/projects/works.xml") or die("Error: Cannot create object");
     $items = $xml->children()->count();
@@ -64,9 +88,9 @@
     $i = 0;
     foreach($xml->children() as $works) {
       if(!($filter == "" || 
-           ($filter=="vector" && $works->type =="Vector") ||
-           ($filter=="animation" && $works->type =="Animation") ||
-           ($filter=="others" && $works->type =="Graphics"))) continue;
+           ($filter=="web" && $works->type =="web") ||
+           ($filter=="video" && $works->type =="video") ||
+           ($filter=="printed" && $works->type =="printed"))) continue;
       $i++;
       if ($i <= $page * 8) continue;
       if($i > $page * 8 + 8) break;
@@ -75,7 +99,7 @@
 
       echo '<div class="piece">';
       if($works->link != "") {
-        echo '<a href="project-';
+        echo '<a href="project/';
         echo $works->link;
         echo '">';
       } else if($works->olink != "") {
@@ -104,9 +128,9 @@
     if($filter != "") {
       $items = 0;
       foreach($xml->children() as $works) {
-        if(($filter=="vector" && $works->type =="Vector") ||
-           ($filter=="animation" && $works->type =="Animation") ||
-           ($filter=="others" && $works->type =="Graphics")) 
+        if(($filter=="web" && $works->type =="web") ||
+           ($filter=="video" && $works->type =="video") ||
+           ($filter=="printed" && $works->type =="printed")) 
           $items++;
       }
       $pages = (int) ($items / 8 + 1);
@@ -116,17 +140,20 @@
     echo '<nav><ul class="pagination justify-content-center">';
     if($page==0) {
         echo '<li class="page-item disabled">';
-        echo '<a class="page-link" href="graphics.php?filter=others" tabindex="-1">Previous</a>';
+        echo '<a class="page-link" href="#" tabindex="-1">Previous</a>';
     } else {
       echo '<li class="page-item">';
-      echo '<a class="page-link" href="project.php?';
+      echo '<a class="page-link" href="';
       if($filter!="") {
-        echo 'filter=';
         echo $filter;
-        echo '&';
+        echo '-project';
+      } else {
+        echo 'project';
       }
-      echo 'page=';
-      echo $page - 1;
+      if($page>1) {
+        echo '-';
+        echo $page;
+      }
       echo '" tabindex="-1">Previous</a>';
     }
     for($i = 0; $i<$pages; $i++) {
@@ -136,34 +163,36 @@
       } else {
         echo '<li class="page-item">';
       }
-      echo '<a class="page-link" href="project.php?';
+      echo '<a class="page-link" href="';
       if($filter!="") {
-        echo 'filter=';
         echo $filter;
-        echo '&';
+        echo '-project';
+      } else {
+        echo 'project';
       }
-      echo 'page=';
-      echo $i;
+      if($i > 0) {
+        echo '-';
+        echo $i+1;
+      }
       echo '" tabindex="-1">';
       echo $i + 1;
       echo '</a>';
+      
     }
-    echo "<script>console.log(";
-      echo $pages;
-      echo ")</script>";
     if ($page == $pages - 1) {
       echo '<li class="page-item disabled">';
       echo '<a class="page-link" href="#">Next</a>';
     } else {
       echo '<li class="page-item">';
-        echo '<a class="page-link" href="project.php?';
+        echo '<a class="page-link" href="';
         if($filter!="") {
-          echo 'filter=';
           echo $filter;
-          echo '&';
+          echo '-project';
+        } else {
+          echo 'project';
         }
-        echo 'page=';
-        echo $page + 1;
+        echo '-';
+        echo $page + 2;
         echo '" tabindex="-1">Next</a>';
     }
     echo '</li></ul></nav>';
