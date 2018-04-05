@@ -64,8 +64,8 @@
         <a class="nav-link" href="/graphics">GRAPHIC</a>
         <span class="accent"></span>
         <ul class="drop-down">
-          <li><a href="graphics.php?filter=vector">Vector</a></li>
-          <li><a href="graphics.php?filter=animation">Animation</a></li>
+          <li><a href="vector">Vector</a></li>
+          <li><a href="animation">Animation</a></li>
           <li><a href="poster">Poster</a></li>
         </ul>
       </li>
@@ -161,7 +161,7 @@
         <img class="title-icon" src="img/icon/pen.svg">
         <h2>Graphic Deisgn & Animation</h2>
       </div>
-      <a href="graphics.php?filter=vector">
+      <a href="vector">
         <div class="block block-l">
           <div class="block-inner">
             <h3>Illustration</h3>
@@ -172,14 +172,14 @@
       <div class="block block-m graphics-img">
       </div>
       <div class="block block-r">
-        <a href="poster.php">
+        <a href="poster">
           <div class="sub-block-1">
             <div class="block-inner">
               <h3>Poster Design</h3>
             </div>
           </div>
         </a>
-        <a href="graphics.php?filter=animation">
+        <a href="animation">
           <div class="sub-block-2">
             <div class="block-inner">
               <h3>Motion Graphics</h3>
@@ -375,7 +375,7 @@
 
     function animation() {
       document.getElementById("rocket").style.animation = "rocket-float 1.6s ease-in-out alternate infinite";
-    };
+    }
 
     // project view slide show
     var i = 0;
@@ -408,7 +408,7 @@
       i++;
       if (i >= 3) i = 0;
       setTimeout(project_animation, 6000);
-    };
+    }
 
     // japanese phases animation
     setTimeout(japanese_animation, 1000);
