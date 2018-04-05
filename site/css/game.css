@@ -1,3 +1,23 @@
+.nav-bar-2 {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.nav-bar-2 ul li a {
+  color: white;
+  position: relative;
+}
+
+.nav-bar-2 ul li:hover a::after {
+  content: ' ';
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  border-bottom: 1px white solid;
+  left: 0;
+}
+
 .head {
   background-color: #222;
   height: 500px;
@@ -43,8 +63,7 @@
 
 .typing-text h1 {
   border-radius: 2px;
-  padding: 0 5px;
-  padding-right: 7px;
+  padding: 0 7px 0 5px;
   animation: .9s blink;
   animation-iteration-count: infinite;
   animation-direction: alternate;

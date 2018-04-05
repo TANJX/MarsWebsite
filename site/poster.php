@@ -41,12 +41,6 @@
       <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='poster.php'">Poster Design</button>
       <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='graphics.php?filter=others'">Others</button>
     </div>
-    <div class="head">
-      <div class="container ">
-        <div id="anime"></div>
-        <h1>Graphics Design and Animation</h1>
-      </div>
-    </div>
 
     <div class="container">
       <div class="cards">

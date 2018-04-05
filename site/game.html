@@ -15,7 +15,6 @@
     }
     gtag('js', new Date());
     gtag('config', 'UA-116224796-1');
-
   </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
   <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
@@ -30,9 +29,8 @@
     $(document).ready(function() {
       $('body').bootstrapMaterialDesign();
     });
-
   </script>
-  <nav id="menu" class="menu" style="display: none">
+  <div id="menu" class="menu" style="display: none">
     <div class="menu__brand">
       <a href="/index">
       <img src="img/logo/logo-text.svg">
@@ -44,11 +42,11 @@
       <li class="menu__item"> <a href="/game" class="menu__link">Dev</a> </li>
       <li class="menu__item"> <a href="/about" class="menu__link">More</a> </li>
     </ul>
-  </nav>
+  </div>
   <header>
     <div class="nav-bar-2">
       <div class="container clearfix">
-        <a href="/index"><img src="img/logo/logo.svg" alt="mars-logo"></a>
+        <a href="/index"><img src="img/logo/logo2.svg" alt="mars-logo"></a>
         <ul class="justify-content-center">
           <li class="nav-item">
             <a class="nav-link" href="/index">HOME</a>
@@ -135,7 +133,7 @@
     <div class="container">
       <h2>Front End Web Development</h2>
       <p>Coding with HTML, CSS, Javascript</p>
-      <button type="button" class="btn btn-primary disabled">See My Works</button>
+      <button type="button" class="btn btn-primary" onclick="location.href='web-project'">See My Works</button>
       <img src="img/game-web.svg" alt="minecraft">
     </div>
   </div>
