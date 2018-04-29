@@ -50,7 +50,7 @@ if ($valid) {
     $filter = $_REQUEST['filter'];
     $page = 0;
 
-    echo '<div class="head">';
+    echo '<div class="head main-head">';
     echo '<div class="container ">';
     echo '<h1>Projects and Collaboration</h1>';
     if ($filter != "") {
@@ -68,16 +68,16 @@ if ($valid) {
         }
         echo '</h3>';
     }
-    echo '</div>';
-    echo '</div>';
-
-    echo '<div class="container">';
-    echo '<div class="filter">';
+      echo '<div class="filter">';
     echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'project\'">All</button>';
     echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'web-project\'">Web Design</button>';
     echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'video-project\'">Video and Documentary</button>';
     echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'printed-project\'">Printed</button>';
     echo '</div>';
+    echo '</div>';
+    echo '</div>';
+
+    echo '<div class="container">';
     echo '<div class="pieces">';
 
     if ($_REQUEST['page'] != '') {

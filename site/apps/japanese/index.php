@@ -70,9 +70,16 @@
   <?php
   if ($_REQUEST['page'] != '') {
     $notes = explode(",", $_REQUEST['page']);
-    foreach ($notes as $id) {
-      if ($id > 132 || $id < 1) continue;
-      echo "<div id='c$id'></div>";
+    foreach ($notes as $entry) {
+      $ids = explode("-", $entry);
+      if (count($ids) > 1) {
+        for ($i = $ids[0]; $i <= $ids[1]; $i++) {
+          echo "<div id='c$i'></div>";
+        }
+      } else {
+        if ($entry > 132 || $entry < 1) continue;
+        echo "<div id='c$entry'></div>";
+      }
     }
   } else {
     for ($i = 1; $i <= 131; $i++) {

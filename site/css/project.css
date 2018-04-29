@@ -1,4 +1,23 @@
+.main-head {
+  background: #ffffff url('../img/project-header.svg') no-repeat bottom;
+  background-size: cover;
+  height: 380px;
+}
+
+.head h1 {
+  /*  color: white;*/
+}
+
+.head .filter {
+  margin-top: 80px;
+}
+
+.head .filter .btn {
+  color: white;
+}
+
 .pieces {
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
 }

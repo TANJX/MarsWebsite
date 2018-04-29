@@ -33,12 +33,17 @@
 
 .head {
   padding-top: 160px;
-  background-color: #f4507f;
+  background: #ffffff url('../img/project-inheader.svg') no-repeat bottom;
   color: white;
   height: auto;
-  padding-bottom: 50px;
+  padding-bottom: 90px;
   font-weight: 700;
   margin-bottom: 75px;
+}
+
+
+.sub-head {
+  background-size: cover;
 }
 
 .head .container img {
