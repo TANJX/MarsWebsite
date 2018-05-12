@@ -13,6 +13,11 @@ a {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+::selection {
+  background: #fd82a5;
+  color: white;
+}
+
 h1,
 h2,
 h3 {

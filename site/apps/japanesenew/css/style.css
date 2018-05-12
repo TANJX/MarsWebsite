@@ -1,0 +1,36 @@
+.yellow-bg {
+	background-color: #FFFF66;
+}
+
+.green-bg {
+	background-color: lightgreen;
+}
+
+.example::before {
+	background-color: #BAD9AD;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	display: inline;
+	content: ' ';
+	left: -20px;
+	top: 2.5px;
+}
+
+
+.example {
+	color: gray;
+}
+
+.example-cont {
+	color: gray;
+}
+
+p {
+	position: relative;
+}
+
+.container {
+	margin:  0 50px;
+}
