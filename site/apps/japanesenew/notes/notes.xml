@@ -1,0 +1,24 @@
+<notes>
+  <chapter id="1" name="第一单元">
+    <class id="1" name="第1课">
+      <lecture id="1">
+        <name>出会い（生词表1・会话・语法与表达1）</name>
+        <date>Jan 13, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>出会い（生词表2・语法与表达1）</name>
+        <date>Jan 17, 2018</date>
+      </lecture>
+    </class>
+    <class id="3" name="第3课">
+      <lecture id="2">
+        <name>顔合わせ（生词表2・语法与表达1）</name>
+        <date>May 12, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>名字（生词表3・课文）</name>
+        <date>May 13, 2018</date>
+      </lecture>
+    </class>
+  </chapter>
+</notes>

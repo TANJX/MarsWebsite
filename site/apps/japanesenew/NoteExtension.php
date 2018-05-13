@@ -5,22 +5,52 @@ class NoteExtension extends Parsedown
 
     function __construct()
     {
-        $this->InlineTypes['{'][]= 'GreenBackground';
-        $this->InlineTypes['{'][]= 'YellowBackground';
+        $this->InlineTypes['^'][]= 'GreenBackground';
+        $this->InlineTypes['%'][]= 'YellowBackground';
         $this->InlineTypes['&'][]= 'ExampleCont';
         $this->InlineTypes['&'][]= 'Example';
+        $this->InlineTypes['$'][]= 'Important';
+        $this->InlineTypes['!'][]= 'OrangeText';
 
         $this->BlockTypes['/'][] = 'QuickTable'; 
 
-        $this->inlineMarkerList .= '{';
+        $this->inlineMarkerList .= '^';
+        $this->inlineMarkerList .= '%';
         $this->inlineMarkerList .= '&';
+        $this->inlineMarkerList .= '$';
         $this->blockMarkerList .= '&';
 
     }
 
+    protected function inlineOrangeText($excerpt)
+    {
+        if (preg_match('/^\!(.*?)\!/', $excerpt['text'], $matches))
+        {
+            return array(
+
+                // How many characters to advance the Parsedown's
+                // cursor after being done processing this tag.
+                'extent' => strlen($matches[0]), 
+                'element' => array(
+                    'name' => 'span',
+                    'text' => $matches[1],
+                    'attributes' => array(
+                        'class' => 'orange-text',
+                    ),
+                    'handler' => array(
+                        'function' => 'lineElements',
+                        'argument' => $matches[1],
+                        'destination' => 'elements',
+                    )
+                ),
+
+            );
+        }
+    }
+
     protected function inlineGreenBackground($excerpt)
     {
-        if (preg_match('/^{bg}(.*?){b}/', $excerpt['text'], $matches))
+        if (preg_match('/^\^(.*?)$/', $excerpt['text'], $matches))
         {
             return array(
 
@@ -33,6 +63,11 @@ class NoteExtension extends Parsedown
                     'attributes' => array(
                         'class' => 'green-bg',
                     ),
+                    'handler' => array(
+                        'function' => 'lineElements',
+                        'argument' => $matches[1],
+                        'destination' => 'elements',
+                    )
                 ),
 
             );
@@ -41,7 +76,7 @@ class NoteExtension extends Parsedown
 
     protected function inlineYellowBackground($excerpt)
     {
-        if (preg_match('/^{by}(.*?){b}/', $excerpt['text'], $matches))
+        if (preg_match('/^\%(.*?)$/', $excerpt['text'], $matches))
         {
             return array(
 
@@ -54,6 +89,11 @@ class NoteExtension extends Parsedown
                     'attributes' => array(
                         'class' => 'yellow-bg',
                     ),
+                    'handler' => array(
+                        'function' => 'lineElements',
+                        'argument' => $matches[1],
+                        'destination' => 'elements',
+                    )
                 ),
 
             );
@@ -75,6 +115,37 @@ class NoteExtension extends Parsedown
                     'attributes' => array(
                         'class' => 'example',
                     ),
+                    'handler' => array(
+                        'function' => 'lineElements',
+                        'argument' => $matches[1],
+                        'destination' => 'elements',
+                    )
+                ),
+
+            );
+        }
+    }
+
+    protected function inlineImportant($excerpt)
+    {
+        if (preg_match('/^\$(.*?)$/', $excerpt['text'], $matches))
+        {
+            return array(
+
+                // How many characters to advance the Parsedown's
+                // cursor after being done processing this tag.
+                'extent' => strlen($matches[0]), 
+                'element' => array(
+                    'name' => 'span',
+                    'text' => $matches[1],
+                    'attributes' => array(
+                        'class' => 'important',
+                    ),
+                    'handler' => array(
+                        'function' => 'lineElements',
+                        'argument' => $matches[1],
+                        'destination' => 'elements',
+                    )
                 ),
 
             );
@@ -97,6 +168,11 @@ class NoteExtension extends Parsedown
                     'attributes' => array(
                         'class' => 'example-cont',
                     ),
+                    'handler' => array(
+                        'function' => 'lineElements',
+                        'argument' => $matches[1],
+                        'destination' => 'elements',
+                    )
                 ),
 
             );
@@ -163,12 +239,12 @@ class NoteExtension extends Parsedown
             return;
         }
 
-        if (preg_match('/\//', $line['text']))
-        {
-            $block['element']['elements'][0]['elements'] []= $this->lineTable($line);
-            $block['complete'] = true;
-            return $block;
-        }
+        // if (preg_match('/\//', $line['text']))
+        // {
+        //     $block['element']['elements'][0]['elements'] []= $this->lineTable($line);
+        //     $block['complete'] = true;
+        //     return $block;
+        // }
         
         $block['element']['elements'][0]['elements'] []= $this->lineTable($line);
         return $block;
