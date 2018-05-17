@@ -21,6 +21,11 @@
 
   </script>
   <script src="lib/jquery-3.2.1.min.js"></script>
+  <!-- <script src="lib/jquery-ui.min.js"></script> -->
+  
+  <link rel="stylesheet" href="lib/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="css/github.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -34,7 +39,7 @@
       var i = 1;
       $(".content h2").each(function() {
         $(this).nextUntil("h2, h1").wrapAll('<div class="section"></div>');
-        $(this).wrap('<a href="#" id="t'+ i 
+        $(this).wrap('<a id="t'+ i 
           + '" class="fold open" onclick="fold(' + i++ + ')"></a>');
       });
     });
@@ -150,8 +155,3 @@
 </body>
 
 </html>
-<script src="lib/jquery-ui.min.js"></script>
-
-<link rel="stylesheet" href="lib/bootstrap-material-design.min.css">
-<link rel="stylesheet" href="css/github.css">
-<link rel="stylesheet" href="css/style.css">
