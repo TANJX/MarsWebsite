@@ -52,6 +52,10 @@ body {
   padding: 0;
 }
 
+.side-menu .chapter-item  {
+  margin-top: 10px;
+}
+
 .side-menu .chapter-item > a {
   color: black;
   font-size: 1em;
