@@ -72,8 +72,12 @@
   <chapter id="2" name="第二单元">
     <class id="1" name="第1课">
       <lecture id="1">
-        <name>出会い（生词表1・会话・语法与表达1）</name>
+        <name>商品紹介（生词表1・会话・语法与表达1）</name>
         <date>May 20, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>商品紹介（生词表2・语法与表达1）</name>
+        <date>May 21, 2018</date>
       </lecture>
     </class>
   </chapter>

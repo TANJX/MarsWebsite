@@ -70,7 +70,6 @@
             $('#menu-main').fadeIn("500", function () {
             });
             $("a").on("click", function () {
-                console.log(menu);
                 if (menu) {
                     menufold();
                 }
@@ -91,6 +90,31 @@
             $('#main-text').delay("300").fadeIn("500", function () {
             });
             updateField();
+            $(document).scroll(function () {
+                var scroll = $(window).scrollTop();
+                var elements = $(".content .lecture");
+                var el;
+                for (var i = elements.length - 1; i >= 0; i--) {
+                    el = $(elements[i]);
+                    var offset = el.offset();
+                    var pos = offset.top - $(document).scrollTop();
+                    if (pos < 350) {
+                        var course = el.children().first().attr("name");
+                        var courses = $("#menu-main .lecture-item a");
+                        for (var j = 0; j < courses.length; j++) {
+                            el = $(courses[j]);
+                            if (el.attr("href") === "#" + course) {
+                                if (!el.hasClass("scroll-selected")) {
+                                    el.addClass("scroll-selected");
+                                }
+                            } else if (el.hasClass("scroll-selected")) {
+                                el.removeClass("scroll-selected");
+                            }
+                        }
+                        break;
+                    }
+                }
+            });
         });
         xmlhttp.open("GET", "getNotes.php?chapter=" + unit, true);
         xmlhttp.send();
@@ -99,7 +123,7 @@
     function updateField() {
         var i = 1;
         $(".content h1").each(function () {
-            $(this).wrap('<a name="lecture' + i++ + '"></a>');
+            $(this).before('<a class="anchor" name="lecture' + i++ + '"></a>');
         });
         i = 1;
         $(".content h2").each(function () {
@@ -121,7 +145,8 @@
             this.next(".section").css('display', 'block');
             this.addClass("open");
         }
-    };
+    }
+
     var menu = false;
 
     function menufold() {
