@@ -137,6 +137,11 @@ ul li .drop-down li a:hover {
   text-align: justify;
 }
 
+.intro a {
+	color: white;
+	text-decoration: underline;
+}
+
 .section {
   padding-top: 30px;
   padding-bottom: 100px;

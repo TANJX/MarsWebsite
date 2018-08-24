@@ -1,7 +1,23 @@
 <collection>
   <works>
-    <title>Nike ad: Late No More</title>
+    <title>"AARDVARC" UI</title>
     <description>In Progress</description>
+    <file>aardvarc-ui.png</file>
+    <date>2018-8-23</date>
+    <type>web</type>
+	<link>aardvarc</link>
+  </works>
+  <works>
+    <title>"AARDVARC" Landing Page</title>
+    <description>In Progress</description>
+    <file>aardvarc-landing.png</file>
+    <date>2018-8-23</date>
+    <type>web</type>
+	<olink>http://apps.marstanjx.com/aardvarc/</olink>
+  </works>
+  <works>
+    <title>Nike ad: Late No More</title>
+    <description></description>
     <file>nike.jpg</file>
     <date>2018-3-24</date>
     <type>video</type>
@@ -9,7 +25,7 @@
   </works>
   <works>
     <title>"Blockchain SC" Landing Page</title>
-    <description>In Progress</description>
+    <description></description>
     <file>blockchain.png</file>
     <date>2018-2-17</date>
     <type>web</type>
