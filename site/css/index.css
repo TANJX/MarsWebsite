@@ -24,12 +24,15 @@ h3 {
   font-weight: 600;
 }
 
+.page-link, .page-link:hover {
+  color: #ed3368;
+}
 
 .title {
   /*  background-color: springgreen;*/
   /*  background-color: #72e5f2;*/
   background-color: rgb(255, 234, 150);
-  padding: 1px 0px 0px 0px;
+  padding: 1px 0 0 0;
   display: block;
   color: white;
 }
@@ -113,7 +116,7 @@ ul li .drop-down li a:hover {
 }
 
 .accent {
-  width: 0%;
+  width: 0;
   height: 100%;
   background: #ddd;
   position: absolute;
@@ -134,7 +137,7 @@ ul li .drop-down li a:hover {
   background-color: #F95F8B;
   display: block;
   color: white;
-  padding: 30px 0px 10px 0px;
+  padding: 30px 0 10px 0;
   text-align: justify;
 }
 

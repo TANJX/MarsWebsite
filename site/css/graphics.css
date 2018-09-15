@@ -1,11 +1,15 @@
 .head {
-  background-color: #ffcebd;
+  background-color: #eeeeee;
   padding-top: 100px;
-  height: 330px;
+  height: 400px;
+}
+
+.head .filter {
+  margin-top: 40px;
 }
 
 #anime {
-  height: 150px;
+  height: 175px;
   width: 100%;
 }
 
@@ -14,6 +18,7 @@
 }
 
 .cards {
+  margin-top: 50px;
   float: left;
 }
 
@@ -85,20 +90,22 @@
     font-size: 1rem;
     margin-bottom: 3px;
   }
+
   .card .card-info {
     font-size: .7rem;
     margin-bottom: 0;
   }
 }
 
-
 @media (max-width: 576px) {
   .head {
     padding-top: 70px;
   }
+
   .cards {
     float: none;
   }
+
   .card .detail {
     opacity: 1;
   }

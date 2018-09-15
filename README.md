@@ -47,20 +47,21 @@ videos and documentaries
 	Computer languages and programs can improve efficiency by greatly reducing routine work. 
 	I've worked for managers of game servers to develop plugins and add new features to the game.
 
+- Room Temperature
 - Minecraft
 - Java applets
 - Website design/web application
 	isotope/personal web/poke
 
 ## About
-- nterests/Life
+- interests/Life
 - Posters
 
 	贴海报 poster photos
 - Music and Piano
 
 	pieces working on
-- apanese
+- Japanese
 - Drama
 - Reading
 - Resume

@@ -1,5 +1,12 @@
 <collection>
   <works>
+    <title>Mandalas: Minecraft</title>
+    <description></description>
+    <file>minecraft_mandala.svg</file>
+    <date>2018-9-6</date>
+    <type>Vector</type>
+  </works>
+  <works>
     <title>Sleep, GPA, or Social Life</title>
     <description></description>
     <file>threes.gif</file>

@@ -1,19 +1,24 @@
 .main-head {
-  background: #ffffff url('../img/project-header.svg') no-repeat bottom;
+  background: #f4f4f4;
   background-size: cover;
-  height: 380px;
+  height: 450px;
 }
 
-.head h1 {
-  /*  color: white;*/
+.head {
+  padding-top: 120px;
+}
+
+.head img {
+  width: 150px;
+  margin-bottom: 25px;
 }
 
 .head .filter {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .head .filter .btn {
-  color: white;
+  /*color: white;*/
 }
 
 .pieces {
@@ -41,7 +46,6 @@
   transition: .2s;
 }
 
-
 .piece .info {
   position: absolute;
   height: 80px;
@@ -64,12 +68,16 @@
   bottom: 0px;
 }
 
-
-
 @media (max-width: 576px) {
+
+  .head img {
+    width: 100px;
+  }
+
   .pieces {
     display: block;
   }
+
   .piece {
     width: 100%;
   }
