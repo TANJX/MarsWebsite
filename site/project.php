@@ -144,7 +144,7 @@ if ($valid) {
   }
   echo '</div><div class="clear"></div>';
   if ($pages > 1) {
-    echo '<nav><ul class="pagination justify-content-center">';
+    echo '<nav class="page-control"><ul class="pagination justify-content-center">';
     if ($page == 0) {
       echo '<li class="page-item disabled">';
       echo '<a class="page-link" href="#" tabindex="-1">Previous</a>';

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | Mars Inc.</title>
+</head>
+
+<body>
+  <div class="container">
+    <img src="img/404.svg" alt="404">
+    <div>
+      <button type="button" onclick="window.location = 'http://marstanjx.com'">Back to Mars Inc.</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
+<style>
+  .container {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  img {
+    padding-top: 300px;
+    max-width: 512px;
+  }
+  
+  button {
+    margin-top: 30px;
+    width: 150px;
+    height: 50px;
+    background-color: #eee;
+    font-size: 1rem;
+    box-shadow: none;
+    border: none;
+    transition: .2s;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .container {
+      width: 70%;
+    }
+    img {
+      padding-top: 150px;
+    }
+  }
+  
+  @media screen and (orientation: landscape) and (max-width: 1023px) {
+    .container {
+      width: 70%;
+    }
+    img {
+      padding-top: 40px;
+      max-width: 300px;
+    }
+  }
+</style>

@@ -1,5 +1,7 @@
 RewriteEngine on
 
+ErrorDocument 404 /404.html
+
 RewriteRule ^resume$ files/resume.pdf [NC,L]
 RewriteRule ^game$ game.html [NC,L]
 RewriteRule ^index$ index.html [NC,L]
