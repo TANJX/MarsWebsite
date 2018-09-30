@@ -1,0 +1,54 @@
+.nav-bar-2 {
+  position: relative;
+}
+
+#main h1 {
+  text-align: center;
+  margin: 100px auto 0;
+}
+
+#main h1 + p {
+  text-align: center;
+  margin: 10px auto 100px;
+}
+
+.inner-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  color: rgb(29, 29, 29);
+}
+
+.inner-wrapper img {
+  max-width: 100%;
+  margin: 25px auto;
+}
+
+.inner-wrapper img.icon {
+  margin: 0;
+}
+
+.inner-wrapper h2 {
+  color: #e85a80;
+  margin: 25px 0 10px;
+}
+
+.inner-wrapper h3 {
+  color: #e85a80;
+  font-size: 1.2rem;
+  margin: 25px 0 10px;
+}
+
+.inner-wrapper h3 a {
+  color: #e85a80;
+}
+
+.inner-wrapper a {
+  color: #d0556d;
+  text-decoration: underline;
+  transition: .3s;
+}
+
+.inner-wrapper a:hover {
+  color: #ea5e7c;
+  text-decoration: none;
+}

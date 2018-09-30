@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -116,7 +116,7 @@ if ($valid) {
     }
     echo '<img src="works/projects/';
     echo $works->file;
-    echo '" alt="Card image">';
+    echo '" alt="' . $works->title . '">';
 
     echo '<div class="info">';
     echo '<h4>';
