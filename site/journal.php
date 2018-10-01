@@ -70,6 +70,9 @@ echo $doc->saveHTML();
 <script>
     $('#main h1').next().nextUntil('footer').wrapAll('<div class="inner-wrapper"></div>');
     $('#main a').attr('target', '_blank');
+    $('#main img').each(function () {
+        $(this).parent().next().addClass('img-info');
+    });
 </script>
 </body>
 
