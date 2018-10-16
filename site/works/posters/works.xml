@@ -1,37 +1,44 @@
 <collection>
-<works>
-<title>A Midsummer's Night Dream</title>
-<description></description>
-<file>msnd.svg</file>
-<date>2017-05-31</date>
-<type>Poster</type>
-</works>
-<works>
-<title>Anime Concert</title>
-<description></description>
-<file>concert-poster.png</file>
-<date>2017-05-30</date>
-<type>Poster</type>
-</works>
-<works>
-<title>Romeo and Juliet</title>
-<description></description>
-<file>RNJ.svg</file>
-<date>2017-02-15</date>
-<type>Poster</type>
-</works>
-<works>
-<title>Classical Music</title>
-<description></description>
-<file>classical music.png</file>
-<date>2016-09-15</date>
-<type>Poster</type>
-</works>
-<works>
-<title>Chamber Music</title>
-<description></description>
-<file>chamber music.png</file>
-<date>2016-01-06</date>
-<type>Poster</type>
-</works>
+  <work>
+    <title>Stop Gentrification</title>
+    <description></description>
+    <file>wondros.svg</file>
+    <date>2018-10-1</date>
+    <type>Poster</type>
+  </work>
+  <work>
+    <title>A Midsummer's Night Dream</title>
+    <description></description>
+    <file>msnd.svg</file>
+    <date>2017-05-31</date>
+    <type>Poster</type>
+  </work>
+  <work>
+    <title>Anime Concert</title>
+    <description></description>
+    <file>concert-poster.png</file>
+    <date>2017-05-30</date>
+    <type>Poster</type>
+  </work>
+  <work>
+    <title>Romeo and Juliet</title>
+    <description></description>
+    <file>RNJ.svg</file>
+    <date>2017-02-15</date>
+    <type>Poster</type>
+  </work>
+  <work>
+    <title>Classical Music</title>
+    <description></description>
+    <file>classical music.png</file>
+    <date>2016-09-15</date>
+    <type>Poster</type>
+  </work>
+  <work>
+    <title>Chamber Music</title>
+    <description></description>
+    <file>chamber music.png</file>
+    <date>2016-01-06</date>
+    <type>Poster</type>
+  </work>
 </collection>

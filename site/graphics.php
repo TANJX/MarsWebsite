@@ -84,22 +84,22 @@ $xml = simplexml_load_file("works/graphics/works.xml") or die("Error: Cannot cre
 $items = $xml->children()->count();
 $pages = $items / 9;
 $i = 0;
-foreach ($xml->children() as $works) {
+foreach ($xml->children() as $work) {
   if (!($filter == "" ||
-      ($filter == "vector" && $works->type == "Vector") ||
-      ($filter == "animation" && $works->type == "Animation") ||
-      ($filter == "others" && $works->type == "Graphics"))) continue;
+      ($filter == "vector" && $work->type == "Vector") ||
+      ($filter == "animation" && $work->type == "Animation") ||
+      ($filter == "others" && $work->type == "Graphics"))) continue;
   $i++;
   if ($i <= $page * 9) continue;
   if ($i > $page * 9 + 9) break;
-  $name = $works->title;
+  $name = $work->title;
   echo '<div class="card bg-white text-white block">';
   echo '<img class="card-img" src="works/graphics/';
-  echo $works->file;
+  echo $work->file;
   echo '" alt="Card image">';
-  if ($works->link != "") {
+  if ($work->link != "") {
     echo '<a href="';
-    echo $works->link;
+    echo $work->link;
     echo '" target="_blank">';
     echo '<div class="detail">';
     echo '<p>How is made</p>';
@@ -108,20 +108,20 @@ foreach ($xml->children() as $works) {
   }
   echo '<div class="card-info">';
   echo '<h4 class="card-title">';
-  echo $works->title;
+  echo $work->title;
   echo '</h4>';
   echo '<p class="card-text date">';
-  echo $works->date;
+  echo $work->date;
   echo '</p>';
   echo '</div>';
   echo '</div>';
 }
 if ($filter != "") {
   $items = 0;
-  foreach ($xml->children() as $works) {
-    if (($filter == "vector" && $works->type == "Vector") ||
-        ($filter == "animation" && $works->type == "Animation") ||
-        ($filter == "others" && $works->type == "Graphics"))
+  foreach ($xml->children() as $work) {
+    if (($filter == "vector" && $work->type == "Vector") ||
+        ($filter == "animation" && $work->type == "Animation") ||
+        ($filter == "others" && $work->type == "Graphics"))
       $items++;
   }
   $pages = $items / 9;

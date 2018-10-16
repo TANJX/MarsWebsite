@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport"
-        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Journal | Mars Inc.</title>
   <base href="http://marstanjx.com/">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -38,6 +37,7 @@ $doc = new DOMDocument();
 $doc->loadHTMLFile("nav.htm");
 echo $doc->saveHTML();
 ?>
+
 <div class="container" id="main">
   <?php
   if ($_REQUEST['journal'] == '') {
@@ -57,9 +57,7 @@ echo $doc->saveHTML();
     }
   }
   ?>
-
 </div>
-
 
 <?php
 $doc = new DOMDocument();
@@ -70,7 +68,7 @@ echo $doc->saveHTML();
 <script>
     $('#main h1').next().nextUntil('footer').wrapAll('<div class="inner-wrapper"></div>');
     $('#main a').attr('target', '_blank');
-    $('#main img').each(function () {
+    $('#main img:not(.icon)').each(function () {
         $(this).parent().next().addClass('img-info');
     });
 </script>
