@@ -20,6 +20,8 @@
 .cards {
   margin-top: 50px;
   float: left;
+  position: relative;
+  width: 100%;
 }
 
 .card {
@@ -83,6 +85,18 @@
 .card:hover img {
   transform: scale(0.95);
   transition: 0.2s;
+}
+
+.vertical-text {
+  position: absolute;
+  transform: rotate(-90deg) translate(90px, -110px);
+  transform-origin: right bottom 0;
+  font-size: 4rem;
+  top: 0;
+  left: 0;
+  color: #bbb;
+  background-color: white;
+  z-index: -5;
 }
 
 @media (max-width: 1200px) {

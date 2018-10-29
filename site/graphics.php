@@ -84,6 +84,9 @@ $xml = simplexml_load_file("works/graphics/works.xml") or die("Error: Cannot cre
 $items = $xml->children()->count();
 $pages = $items / 9;
 $i = 0;
+$count = 0;
+$year = 9999;
+// gen cards
 foreach ($xml->children() as $work) {
   if (!($filter == "" ||
       ($filter == "vector" && $work->type == "Vector") ||
@@ -115,7 +118,16 @@ foreach ($xml->children() as $work) {
   echo '</p>';
   echo '</div>';
   echo '</div>';
+  $myyear = intval(explode('-', $work->date)[0]);
+  if ($year > $myyear) {
+    $pos = 375 * intval($count / 3);
+    echo '<p class="vertical-text" style="top: ' . $pos . 'px">' . $myyear . '</p>';
+    $year = $myyear;
+  }
+  $count++;
 }
+echo '</div><div class="clear"></div>';
+// calculate page numbers
 if ($filter != "") {
   $items = 0;
   foreach ($xml->children() as $work) {
@@ -126,7 +138,7 @@ if ($filter != "") {
   }
   $pages = $items / 9;
 }
-echo '</div><div class="clear"></div>';
+// gen page numbers
 if ($pages > 1) {
   echo '<nav><ul class="pagination justify-content-center">';
   if ($page == 0) {

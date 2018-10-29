@@ -1,5 +1,12 @@
 <collection>
   <work>
+    <title>soft drink comparison</title>
+    <description></description>
+    <file>drinks.jpg</file>
+    <date>2018-10-25</date>
+    <type>Poster</type>
+  </work>
+  <work>
     <title>Stop Gentrification</title>
     <description></description>
     <file>wondros.svg</file>
@@ -16,7 +23,7 @@
   <work>
     <title>Anime Concert</title>
     <description></description>
-    <file>concert-poster.png</file>
+    <file>concert-poster.jpg</file>
     <date>2017-05-30</date>
     <type>Poster</type>
   </work>
