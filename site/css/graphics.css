@@ -114,6 +114,7 @@
 @media (max-width: 576px) {
   .head {
     padding-top: 70px;
+    height: 450px;
   }
 
   .cards {
@@ -129,5 +130,11 @@
     display: block;
     margin-right: 0;
     margin-bottom: 2%;
+  }
+
+  .vertical-text {
+    position: relative;
+    transform: none;
+    top: 0 !important;
   }
 }

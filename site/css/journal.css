@@ -21,6 +21,7 @@
 .inner-wrapper img {
   max-width: 100%;
   margin: 25px auto 0;
+  display: block;
 }
 
 .inner-wrapper .img-info {
@@ -58,4 +59,14 @@
 .inner-wrapper a:hover {
   color: #ea5e7c;
   text-decoration: none;
+}
+
+@media (max-width: 440px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
 }

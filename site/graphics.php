@@ -95,6 +95,14 @@ foreach ($xml->children() as $work) {
   $i++;
   if ($i <= $page * 9) continue;
   if ($i > $page * 9 + 9) break;
+  // year
+  $myyear = intval(explode('-', $work->date)[0]);
+  if ($year > $myyear) {
+    $pos = 375 * intval($count / 3);
+    echo '<p class="vertical-text" style="top: ' . $pos . 'px">' . $myyear . '</p>';
+    $year = $myyear;
+  }
+  // card
   $name = $work->title;
   echo '<div class="card bg-white text-white block">';
   echo '<img class="card-img" src="works/graphics/';
@@ -118,12 +126,6 @@ foreach ($xml->children() as $work) {
   echo '</p>';
   echo '</div>';
   echo '</div>';
-  $myyear = intval(explode('-', $work->date)[0]);
-  if ($year > $myyear) {
-    $pos = 375 * intval($count / 3);
-    echo '<p class="vertical-text" style="top: ' . $pos . 'px">' . $myyear . '</p>';
-    $year = $myyear;
-  }
   $count++;
 }
 echo '</div><div class="clear"></div>';
