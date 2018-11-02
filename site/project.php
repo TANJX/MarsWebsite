@@ -55,7 +55,7 @@ if ($valid) {
 
   echo '<div class="head main-head">';
   echo '<div class="container ">';
-  echo '<img src="img/icon/project.svg">';
+  echo '<img src="/img/icon/project.svg">';
   echo '<h1>Projects and Collaboration</h1>';
 
   echo '<h3 style="font-size: 1.1rem; margin-top: 10px">';

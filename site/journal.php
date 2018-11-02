@@ -24,11 +24,11 @@
         href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css"
         integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/sub.css">
-  <link rel="stylesheet" href="css/menu.css">
-  <link rel="stylesheet" href="css/journal.css">
-  <script src='js/lib/jquery.min.js'></script>
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/sub.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/journal.css">
+  <script src='/js/lib/jquery.min.js'></script>
 </head>
 
 <body>
@@ -68,7 +68,7 @@ echo $doc->saveHTML();
 <script>
     $('#main h1').next().nextUntil('footer').wrapAll('<div class="inner-wrapper"></div>');
     $('#main a').attr('target', '_blank');
-    $('#main img:not(.icon)').each(function () {
+    $('#main img:not(.no-subtitle):not(.icon)').each(function () {
         $(this).parent().next().addClass('img-info');
     });
 </script>

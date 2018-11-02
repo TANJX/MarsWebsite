@@ -102,6 +102,7 @@ ul li .drop-down {
   left: 0;
   z-index: 5;
   background-color: white;
+  min-width: 100%;
 }
 
 ul li .drop-down li {
