@@ -24,11 +24,19 @@
         href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css"
         integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
-  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/core.css">
   <link rel="stylesheet" href="/css/sub.css">
   <link rel="stylesheet" href="/css/menu.css">
   <link rel="stylesheet" href="/css/journal.css">
-  <script src='/js/lib/jquery.min.js'></script>
+  <script src='js/lib/jquery.min.js'></script>
+  <script src='js/lib/popper.js'></script>
+  <script src='js/lib/bootstrap-material-design.js'></script>
+  <script>
+      $(document).ready(function() {
+          $('body').bootstrapMaterialDesign();
+      });
+
+  </script>
 </head>
 
 <body>

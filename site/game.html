@@ -3,176 +3,199 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
   <title>Game | Mars Inc.</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116224796-1"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-116224796-1');
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'UA-116224796-1');
   </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css" integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
+  <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
 
-</head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/core.css">
+  <link rel="stylesheet" href="css/sub.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/game.css">
 
-<body>
   <script src='js/lib/jquery.min.js'></script>
   <script src='js/lib/popper.js'></script>
   <script src='js/lib/bootstrap-material-design.js'></script>
   <script>
-    $(document).ready(function() {
-      $('body').bootstrapMaterialDesign();
-    });
+      $(document).ready(function () {
+          $('body').bootstrapMaterialDesign();
+      });
   </script>
-  <div id="menu" class="menu" style="display: none">
-    <div class="menu__brand">
-      <a href="/index">
+</head>
+
+<body>
+<div id="menu" class="menu" style="display: none">
+  <div class="menu__brand">
+    <a href="/index">
       <img src="img/logo/logo-text.svg">
+    </a>
+  </div>
+  <ul class="menu__list">
+    <li class="menu__item"><a href="/index" class="menu__link">Project</a></li>
+    <li class="menu__item"><a href="/graphics" class="menu__link">Graphics</a></li>
+    <li class="menu__item"><a href="/game" class="menu__link">Dev</a></li>
+    <li class="menu__item"><a href="/journal" class="menu__link">Journal</a></li>
+  </ul>
+</div>
+<header>
+  <div class="nav-bar-2">
+    <div class="container clearfix">
+      <a href="/index"><img src="img/logo/logo2.svg" alt="mars-logo"></a>
+      <ul class="justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="/index">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/project">PROJECT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/graphics">GRAPHIC</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/game">DEV</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/journal">JOURNAL</a>
+        </li>
+      </ul>
+      <div class="burger">
+        <div class="burger__patty"></div>
+        <div class="burger__patty"></div>
+        <div class="burger__patty"></div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="head">
+  <div class="container ">
+    <img src="img/icon/code-white.svg">
+    <div class="typing-text-wrapper">
+      <div class="typing-text in">
+        <h1>
+          <i class="tout">G</i>
+          <i class="tout">a</i>
+          <i class="tout">m</i>
+          <i class="tout">e</i>
+          <i class="space tout"> </i>
+          <i class="tout">D</i>
+          <i class="tout">e</i>
+          <i class="tout">s</i>
+          <i class="tout">i</i>
+          <i class="tout">g</i>
+          <i class="tout">n</i>
+        </h1>
+      </div>
+      <div class="typing-text out">
+        <h1>
+          <i class="tout">W</i>
+          <i class="tout">e</i>
+          <i class="tout">b</i>
+          <i class="space tout"> </i>
+          <i class="tout">D</i>
+          <i class="tout">e</i>
+          <i class="tout">v</i>
+          <i class="tout">e</i>
+          <i class="tout">l</i>
+          <i class="tout">o</i>
+          <i class="tout">p</i>
+          <i class="tout">m</i>
+          <i class="tout">e</i>
+          <i class="tout">n</i>
+          <i class="tout">t</i>
+        </h1>
+      </div>
+      <div class="typing-text out">
+        <h1>
+          <i class="tout">M</i>
+          <i class="tout">i</i>
+          <i class="tout">n</i>
+          <i class="tout">e</i>
+          <i class="tout">c</i>
+          <i class="tout">r</i>
+          <i class="tout">a</i>
+          <i class="tout">f</i>
+          <i class="tout">t</i>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section web">
+  <div class="container">
+    <h2>Front End Web Development</h2>
+    <p>Coding with HTML, CSS, Javascript</p>
+    <button type="button" class="btn btn-primary" onclick="location.href='web-project'">See My Works</button>
+    <img src="img/game-web.svg" alt="minecraft">
+  </div>
+</div>
+
+<div class="container line"></div>
+
+<div class="section minecraft">
+  <div class="container">
+    <h2>Minecraft Plugin Development</h2>
+    <p>Using
+      <a href="https://www.spigotmc.org/" target="_blank">Spigot API</a>
+      , I created a series of
+      <a href="https://github.com/ISOTOPE-Studio/" target="_blank">Minecraft Server plugins</a>
+      that expand and create the functionalities of the amazing community game by Mojang, Microsoft.</p>
+    <img src="img/game-minecraft.svg" alt="minecraft">
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <img class="logo" src="img/logo/logo-text.svg">
+    <div class="social">
+      <a href="https://www.facebook.com/mars.tanjx" target="_blank">
+        <img class="social-icon" src="img/icon/fb.svg"
+             data-toggle="tooltip" data-placement="bottom" title="@mars.tanjx">
       </a>
+      <a href="https://www.instagram.com/mars.tanjx/" target="_blank">
+        <img class="social-icon" src="img/icon/ins.svg"
+             data-toggle="tooltip" data-placement="bottom" title="@mars.tanjx">
+      </a>
+      <a href="https://dribbble.com/marstanjx" target="_blank">
+        <img class="social-icon" src="img/icon/dribbble.svg"
+             data-toggle="tooltip" data-placement="bottom" title="@marstanjx">
+      </a>
+      <a href="https://github.com/TANJX" target="_blank">
+        <img class="social-icon" src="img/icon/github.svg"
+             data-toggle="tooltip" data-placement="bottom" title="@TANJX">
+      </a>
+      <a href="https://marstanjx.com/blog" target="_blank">
+        <img class="social-icon" src="img/icon/wordpress.svg"
+             data-toggle="tooltip" data-placement="bottom" title="@TANJX">
+      </a>
+      <img class="social-icon" src="img/icon/wechat.svg"
+           data-toggle="tooltip" data-placement="bottom" title="@TANJX424">
     </div>
-    <ul class="menu__list">
-      <li class="menu__item"><a href="/index" class="menu__link">Project</a></li>
-      <li class="menu__item"><a href="/graphics" class="menu__link">Graphics</a></li>
-      <li class="menu__item"> <a href="/game" class="menu__link">Dev</a> </li>
-      <li class="menu__item"> <a href="/journal" class="menu__link">Journal</a> </li>
-    </ul>
+    <p>Mars. 2018. <a href="https://github.com/TANJX/MarsWebsite">GitHub</a>.</p>
   </div>
-  <header>
-    <div class="nav-bar-2">
-      <div class="container clearfix">
-        <a href="/index"><img src="img/logo/logo2.svg" alt="mars-logo"></a>
-        <ul class="justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link" href="/index">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/project">PROJECT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/graphics">GRAPHIC</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/game">DEV</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/journal">JOURNAL</a>
-          </li>
-        </ul>
-        <div class="burger">
-          <div class="burger__patty"></div>
-          <div class="burger__patty"></div>
-          <div class="burger__patty"></div>
-        </div>
-      </div>
+</footer>
 
-    </div>
-  </header>
-
-  <div class="head">
-    <div class="container ">
-      <img src="img/icon/code-white.svg">
-      <div class="typing-text-wrapper">
-        <div class="typing-text in">
-          <h1>
-            <i class="tout">G</i>
-            <i class="tout">a</i>
-            <i class="tout">m</i>
-            <i class="tout">e</i>
-            <i class="space tout"> </i>
-            <i class="tout">D</i>
-            <i class="tout">e</i>
-            <i class="tout">s</i>
-            <i class="tout">i</i>
-            <i class="tout">g</i>
-            <i class="tout">n</i>
-          </h1>
-        </div>
-        <div class="typing-text out">
-          <h1>
-            <i class="tout">W</i>
-            <i class="tout">e</i>
-            <i class="tout">b</i>
-            <i class="space tout"> </i>
-            <i class="tout">D</i>
-            <i class="tout">e</i>
-            <i class="tout">v</i>
-            <i class="tout">e</i>
-            <i class="tout">l</i>
-            <i class="tout">o</i>
-            <i class="tout">p</i>
-            <i class="tout">m</i>
-            <i class="tout">e</i>
-            <i class="tout">n</i>
-            <i class="tout">t</i>
-          </h1>
-        </div>
-        <div class="typing-text out">
-          <h1>
-            <i class="tout">M</i>
-            <i class="tout">i</i>
-            <i class="tout">n</i>
-            <i class="tout">e</i>
-            <i class="tout">c</i>
-            <i class="tout">r</i>
-            <i class="tout">a</i>
-            <i class="tout">f</i>
-            <i class="tout">t</i>
-          </h1>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section web">
-    <div class="container">
-      <h2>Front End Web Development</h2>
-      <p>Coding with HTML, CSS, Javascript</p>
-      <button type="button" class="btn btn-primary" onclick="location.href='web-project'">See My Works</button>
-      <img src="img/game-web.svg" alt="minecraft">
-    </div>
-  </div>
-
-  <div class="container line"></div>
-
-
-  <div class="section minecraft">
-    <div class="container">
-      <h2>Minecraft Plugin Development</h2>
-      <p>Using <a href="https://www.spigotmc.org/" target="_blank">Spigot API</a>, I created a series of <a href="https://github.com/ISOTOPE-Studio/" target="_blank">Minecraft Server plugins</a> that expand and create the functionalities of the amazing community game by Mojang, Microsoft.</p>
-      <img src="img/game-minecraft.svg" alt="minecraft">
-    </div>
-  </div>
-
-  <div class="clear"></div>
-  <footer>
-    <div class="container">
-      <img class="logo" src="img/logo/logo-text.svg">
-      <div class="social">
-        <a href="https://www.facebook.com/mars.tanjx" target="_blank"><img class="social-icon" src="img/icon/fb.svg" data-toggle="tooltip" data-placement="bottom" title="@mars.tanjx"></a>
-        <a href="https://www.instagram.com/mars.tanjx/" target="_blank"><img class="social-icon" src="img/icon/ins.svg" data-toggle="tooltip" data-placement="bottom" title="@mars.tanjx"></a>
-        <a href="https://dribbble.com/marstanjx" target="_blank"><img class="social-icon" src="img/icon/dribbble.svg" data-toggle="tooltip" data-placement="bottom" title="@marstanjx"></a>
-        <a href="https://github.com/TANJX" target="_blank"><img class="social-icon" src="img/icon/github.svg" data-toggle="tooltip" data-placement="bottom" title="@TANJX"></a>
-        <a href="https://marstanjx.com/blog" target="_blank"><img class="social-icon" src="img/icon/wordpress.svg" data-toggle="tooltip" data-placement="bottom" title="@TANJX"></a>
-        <img class="social-icon" src="img/icon/wechat.svg" data-toggle="tooltip" data-placement="bottom" title="@TANJX424">
-      </div>
-      <p>Mars. 2018. <a href="https://github.com/TANJX/MarsWebsite">GitHub</a>.</p>
-    </div>
-  </footer>
-
-  <script src="js/menu.js"></script>
-  <script src="js/game.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/game.js"></script>
 </body>
 
 </html>
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-<link rel="stylesheet" href="css/index.css">
-<link rel="stylesheet" href="css/sub.css">
-<link rel="stylesheet" href="css/menu.css">
-<link rel="stylesheet" href="css/game.css">

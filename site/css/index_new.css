@@ -1,0 +1,274 @@
+/* season banner */
+.title {
+  /*  background-color: springgreen;*/
+  /*  background-color: #72e5f2;*/
+  background-color: rgb(255, 234, 150);
+  padding: 1px 0 0 0;
+  display: block;
+  color: white;
+}
+
+.title p {
+  margin: 0;
+}
+
+.title p:first-of-type {
+  float: left;
+}
+
+.title p:last-of-type {
+  float: right;
+}
+
+/* index nav bar */
+.nav-bar {
+  margin: 0 auto;
+}
+
+.nav-bar .nav {
+  margin: 0 auto;
+}
+
+.nav a {
+  color: orangered;
+  text-align: center;
+  transition: .5s;
+}
+
+.nav a:hover {
+  color: palevioletred;
+  transition: .5s;
+}
+
+.nav-bar ul li {
+  list-style: none;
+  float: left;
+  position: relative;
+}
+
+.nav-main ul li a {
+  text-transform: uppercase;
+  position: relative;
+  color: #ed3368;
+  padding: 10px 13px 10px 13px;
+  display: block;
+  z-index: 10;
+  font-size: .8em;
+}
+
+ul li a i {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+}
+
+ul li .drop-down {
+  position: absolute;
+  padding: 0;
+  display: none;
+  margin: 0;
+  left: 0;
+  z-index: 5;
+  background-color: white;
+  min-width: 100%;
+}
+
+ul li .drop-down li {
+  position: relative;
+  float: none;
+}
+
+ul li .drop-down li a:hover {
+  background: #fd82a5;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.accent {
+  width: 0;
+  height: 100%;
+  background: #ddd;
+  position: absolute;
+  transition: 0.3s ease;
+}
+
+/* logo */
+.logo {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.logo-main {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+/* intro banner */
+.intro {
+  background-color: #F95F8B;
+  display: block;
+  color: white;
+  padding: 30px 0 10px 0;
+  text-align: justify;
+}
+
+.intro a {
+  color: white;
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .nav-bar {
+    margin-bottom: 20px;
+  }
+
+  .nav .nav-link {
+    padding: 0 8px;
+  }
+
+  .nav .nav-link:after {
+    content: ' ';
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid orangered;
+  }
+}
+
+.main {
+  margin-top: 50px;
+}
+
+.blocks {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(3, 270px);
+}
+
+.blocks img {
+  width: 100%;
+  transition: .5s;
+}
+
+.block {
+  overflow: hidden;
+  position: relative;
+  transition: .5s;
+}
+
+.block h2 {
+  margin-top: -8px;
+}
+
+.block__big__left {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.block__big__right {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.block:hover img {
+  transform: scale(1.2, 1.2);
+  transform-origin: center;
+}
+
+.block__big__left img, .block__big__right img {
+  transform: scale(1.2, 1.2);
+  transform-origin: center;
+}
+
+.block__big__left:hover img, .block__big__right:hover img {
+  transform: scale(1.0, 1.0);
+}
+
+.block--img {
+  overflow: hidden;
+}
+
+.block--title {
+  position: absolute;
+  left: 3rem;
+  top: 3rem;
+}
+
+.block--subtitle {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+}
+
+.block--title__small {
+  position: absolute;
+  top: 2rem;
+  left: 1.5rem;
+  transition: .5s;
+  opacity: 0;
+}
+
+.block:hover .block--title__small {
+  opacity: 1;
+}
+
+.block--title__small h2 {
+  font-size: 1.2rem;
+}
+
+.img-alt--static {
+  position: absolute;
+  z-index: 0;
+  transition: 80ms;
+}
+
+.img-alt--static:hover {
+  opacity: 0;
+}
+
+.img-alt--gif {
+  position: absolute;
+  z-index: -1;
+}
+
+@media (max-width: 1080px) {
+  .blocks {
+    grid-template-rows: repeat(3, 233px);
+  }
+}
+@media (max-width: 992px) {
+  .blocks {
+    grid-template-rows: repeat(3, 173px);
+  }
+}
+
+@media (max-width: 768px) {
+  .blocks {
+    grid-template-rows: repeat(3, 233px);
+  }
+}
+
+@media (max-width: 576px) {
+  .blocks {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(6, 125px);
+  }
+
+  .block__big__left {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .block__big__right {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+  }
+}
