@@ -85,26 +85,19 @@ if ($_REQUEST['journal'] == '') {
   $next_name = '';
   $last_name = '';
 
-  echo '<script>console.log("this page: ' . $_REQUEST['journal'] . '")</script>';
   foreach ($xml->children() as $work) {
-    echo '<script>console.log("looping: ' . $work->file . '")</script>';
     if ($current) {
-      echo '<script>console.log("next")</script>';
       $next = $work->file;
       $next_name = $work->title;
       break;
     } else if (strcmp($work->file, $_REQUEST['journal']) == 0) {
       $current = true;
-      echo '<script>console.log("equal")</script>';
     } else {
-      echo '<script>console.log("last")</script>';
       $last = $work->file;
       $last_name = $work->title;
     }
   }
 
-  echo '<script>console.log("last: ' . $last . '")</script>';
-  echo '<script>console.log("next: ' . $next . '")</script>';
   if ($last != '') {
     echo sprintf('<a href="/journal/%s">', $last);
     echo '<div class="next-control">';

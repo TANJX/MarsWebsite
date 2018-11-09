@@ -1,7 +1,7 @@
 @import "core";
-@import "control";
 @import "sub";
 @import "sub_menu";
+@import "control";
 
 .nav-bar-2 {
   position: relative;
@@ -49,10 +49,10 @@
     color: #e85a80;
     font-size: 1.2rem;
     margin: 25px 0 10px;
-  }
 
-  h3 a {
-    color: #e85a80;
+    a {
+      color: #e85a80;
+    }
   }
 
   a {
