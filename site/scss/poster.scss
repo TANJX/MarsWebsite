@@ -1,6 +1,10 @@
+@import "core";
+@import "sub";
+@import "sub_menu";
+
 .head {
-  background-color: dodgerblue;
-  color: white;
+  background-color: #ffe57b;
+  color: #252525;
 }
 
 p {
@@ -17,7 +21,7 @@ p {
 }
 
 .card-info {
-  background-color: black;
+  background-color: #1f1f1f;
   height: 25%;
   position: absolute;
   bottom: 0;

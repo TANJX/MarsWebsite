@@ -1,0 +1,162 @@
+
+.blocks {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(3, 270px);
+
+  img {
+    width: 100%;
+    transition: .5s;
+  }
+}
+
+.block {
+  overflow: hidden;
+  position: relative;
+  transition: .5s;
+}
+
+.block h2 {
+  margin-top: -8px;
+}
+
+.block__big__left {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.block__big__right {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.block--img {
+  overflow: hidden;
+}
+
+.block--title {
+  position: absolute;
+  left: 3rem;
+  top: 3rem;
+}
+
+.block--subtitle {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+}
+
+.block--title__small {
+  position: absolute;
+  top: 2rem;
+  left: 1.5rem;
+  transition: .5s;
+  opacity: 0;
+}
+
+.block:hover .block--title__small {
+  opacity: 1;
+}
+
+.block--title__small h2 {
+  font-size: 1.2rem;
+}
+
+.zoom-out img {
+  transform: scale(1.2, 1.2);
+  transform-origin: center;
+}
+
+.zoom-out:hover img {
+  transform: scale(1.0, 1.0);
+}
+
+.zoom-in img {
+  transform: scale(1.0, 1.0);
+  transform-origin: center;
+}
+
+.zoom-in:hover img {
+  transform: scale(1.2, 1.2);
+}
+
+.img-alt--static {
+  position: absolute;
+  z-index: 0;
+  transition: 80ms;
+}
+
+.img-alt--static:hover {
+  opacity: 0;
+}
+
+.img-alt--gif {
+  position: absolute;
+  z-index: -1;
+}
+
+@media (max-width: 1199px) {
+  .blocks {
+    grid-template-rows: repeat(3, 233px);
+  }
+
+  .block--title {
+    left: 2rem;
+    top: 2rem;
+  }
+
+  .block h2 {
+    margin-top: -14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .blocks {
+    grid-template-rows: repeat(3, 173px);
+  }
+
+  .block--title {
+    left: 1.5rem;
+    top: 1.5rem;
+  }
+
+  .block p {
+    font-size: 0.8rem;
+  }
+
+  .block h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .blocks {
+    grid-template-rows: repeat(3, 113px);
+  }
+}
+
+@media (max-width: 575px) {
+  .blocks {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(6, calc(50vw - 30px));
+  }
+
+  .block__big__left {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .block__big__right {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+  }
+}
