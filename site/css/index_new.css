@@ -1,3 +1,43 @@
+
+.prev-control {
+  position: fixed;
+  height: 80px;
+  top: calc(50vh - 40px);
+  bottom: 0;
+  left: -220px;
+  width: 300px;
+  background-color: #dcdcdc;
+  transition: .8s;
+  transition-timing-function: cubic-bezier(.09,.56,.49,.98);
+}
+
+.prev-control:hover {
+  left: 0;
+}
+
+.prev-control div {
+  margin-top: 15px;
+  padding: 0 15px 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row-reverse;
+}
+
+.prev-control div img {
+  height: 50px;
+}
+
+.prev-control div p {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: .16667em;
+  margin: 0;
+  font-weight: bold;
+  color: #1c1c1c;
+}
+
+
 /* season banner */
 .title {
   /*  background-color: springgreen;*/
@@ -5,7 +45,7 @@
   background-color: rgb(255, 234, 150);
   padding: 1px 0 0 0;
   display: block;
-  color: white;
+  color: #1a1a1a;
 }
 
 .title p {
@@ -174,20 +214,6 @@ ul li .drop-down li a:hover {
   grid-row-end: 4;
 }
 
-.block:hover img {
-  transform: scale(1.2, 1.2);
-  transform-origin: center;
-}
-
-.block__big__left img, .block__big__right img {
-  transform: scale(1.2, 1.2);
-  transform-origin: center;
-}
-
-.block__big__left:hover img, .block__big__right:hover img {
-  transform: scale(1.0, 1.0);
-}
-
 .block--img {
   overflow: hidden;
 }
@@ -220,6 +246,24 @@ ul li .drop-down li a:hover {
   font-size: 1.2rem;
 }
 
+.zoom-out img {
+  transform: scale(1.2, 1.2);
+  transform-origin: center;
+}
+
+.zoom-out:hover img {
+  transform: scale(1.0, 1.0);
+}
+
+.zoom-in img {
+  transform: scale(1.0, 1.0);
+  transform-origin: center;
+}
+
+.zoom-in:hover img {
+  transform: scale(1.2, 1.2);
+}
+
 .img-alt--static {
   position: absolute;
   z-index: 0;
@@ -235,27 +279,50 @@ ul li .drop-down li a:hover {
   z-index: -1;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1199px) {
   .blocks {
     grid-template-rows: repeat(3, 233px);
   }
+
+  .block--title {
+    left: 2rem;
+    top: 2rem;
+  }
+
+  .block h2 {
+    margin-top: -14px;
+  }
 }
-@media (max-width: 992px) {
+
+@media (max-width: 991px) {
   .blocks {
     grid-template-rows: repeat(3, 173px);
   }
-}
 
-@media (max-width: 768px) {
-  .blocks {
-    grid-template-rows: repeat(3, 233px);
+  .block--title {
+    left: 1.5rem;
+    top: 1.5rem;
+  }
+
+  .block p {
+    font-size: 0.8rem;
+  }
+
+  .block h2 {
+    font-size: 1.1rem;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
+  .blocks {
+    grid-template-rows: repeat(3, 113px);
+  }
+}
+
+@media (max-width: 575px) {
   .blocks {
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(6, 125px);
+    grid-template-rows: repeat(6, calc(50vw - 30px));
   }
 
   .block__big__left {

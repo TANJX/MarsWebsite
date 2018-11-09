@@ -28,6 +28,43 @@ h3 {
   color: #ed3368;
 }
 
+.next-control {
+  position: fixed;
+  height: 80px;
+  top: calc(50vh - 40px);
+  bottom: 0;
+  right: -220px;
+  width: 300px;
+  background-color: #dcdcdc;
+  transition: .8s;
+  transition-timing-function: cubic-bezier(.09,.56,.49,.98);
+}
+
+.next-control:hover {
+  right: 0;
+}
+
+.next-control div {
+  margin-top: 15px;
+  padding: 0 50px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.next-control div img {
+  height: 50px;
+}
+
+.next-control div p {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: .16667em;
+  margin: 0;
+  font-weight: bold;
+  color: #1c1c1c;
+}
+
 .title {
   /*  background-color: springgreen;*/
   /*  background-color: #72e5f2;*/
@@ -281,7 +318,6 @@ ul li .drop-down li a:hover {
   transition: opacity .5s;
 }
 
-
 /* squareone */
 
 .project .block-r .sub-block-3 {
@@ -512,18 +548,22 @@ footer:hover p {
   .nav-bar {
     margin-bottom: 20px;
   }
+
   .nav .nav-link {
     padding: 0px 8px;
   }
+
   .nav .nav-link:after {
     content: ' ';
     width: 100%;
     display: block;
     border-bottom: 1px solid orangered;
   }
+
   .section-title h2 {
     margin-left: 35px;
   }
+
   .section-title .title-icon {
     left: 0px;
   }
