@@ -31,12 +31,11 @@
 
 .typing-text {
   i {
-    margin: 0 -4px;
+    margin: 0 .02em;
     padding: 0;
     font-style: normal;
     white-space: nowrap;
     position: relative;
-    font-size-adjust: none;
     width: 0;
     color: white;
   }
@@ -44,14 +43,10 @@
   h1 {
     display: inline;
     border-radius: 2px;
-    padding: 0 7px 0 5px;
-    animation: .9s blink;
+    padding: 0 3px 0 3px;
+    animation: .5s blink;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-  }
-
-  .space {
-    margin: 0 7px;
   }
 }
 
@@ -104,7 +99,13 @@
   0% {
     border-right: 2px white solid;
   }
+  20% {
+    border-right: 2px white solid;
+  }
   80% {
-    border-right: 2px #444 solid;
+    border-right: 2px transparent solid;
+  }
+  100% {
+    border-right: 2px transparent solid;
   }
 }

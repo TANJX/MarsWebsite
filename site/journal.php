@@ -31,7 +31,7 @@
     echo '<link rel="stylesheet" href="/css/journal.css">';
   }
   ?>
-  <script src='js/lib/jquery.min.js'></script>
+  <script src='js/lib/jquery-3.3.1.min.js'></script>
   <script src='js/lib/popper.js'></script>
   <script src='js/lib/bootstrap-material-design.js'></script>
   <script>

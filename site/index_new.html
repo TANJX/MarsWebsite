@@ -24,7 +24,7 @@
         integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
 
   <link rel="stylesheet" href="/css/index-new.css">
-  <script src='js/lib/jquery.min.js'></script>
+  <script src='js/lib/jquery-3.3.1.min.js'></script>
   <script src='js/lib/popper.js'></script>
   <script src='js/lib/bootstrap-material-design.js'></script>
   <script>
@@ -406,15 +406,13 @@
     </div>
   </div>
 </div>
-
 <footer>
   <div class="container">
     <img class="logo" src="/img/logo/logo-text.svg">
     <div class="social">
       <a href="https://www.facebook.com/mars.tanjx" target="_blank">
         <img class="social-icon" src="/img/icon/fb.svg" data-toggle="tooltip" data-placement="bottom"
-             title="@mars.tanjx">
-      </a>
+             title="@mars.tanjx"></a>
       <a href="https://www.instagram.com/mars.tanjx/" target="_blank">
         <img class="social-icon" src="/img/icon/ins.svg" data-toggle="tooltip" data-placement="bottom"
              title="@mars.tanjx"></a>
@@ -425,7 +423,8 @@
         <img class="social-icon" src="/img/icon/github.svg" data-toggle="tooltip" data-placement="bottom"
              title="@TANJX"></a>
       <a href="https://marstanjx.com/blog" target="_blank">
-        <img class="social-icon" src="/img/icon/wordpress.svg" data-toggle="tooltip" data-placement="bottom"
+        <img class="social-icon" src="/img/icon/wordpress.svg"
+             data-toggle="tooltip" data-placement="bottom"
              title="@TANJX"></a>
       <img class="social-icon" src="/img/icon/wechat.svg" data-toggle="tooltip" data-placement="bottom"
            title="@TANJX424">
@@ -435,6 +434,7 @@
 </footer>
 <script src="/js/index.js"></script>
 <script>
+  // gif, img alt
     $('.img-alt--static').mouseover(function () {
         console.log(1);
         const $next = $(this).next('.img-alt--gif');
