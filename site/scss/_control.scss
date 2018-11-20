@@ -15,6 +15,7 @@
     justify-content: space-between;
     img {
       height: 50px;
+      width: 50px;
     }
     p {
       text-transform: uppercase;
@@ -23,24 +24,25 @@
       margin: 0;
       font-weight: bold;
       color: #1c1c1c;
+      max-width: 190px;
     }
   }
 }
 
 .next-control {
-  right: -220px;
+  right: -230px;
 
   &:hover {
     right: 0;
   }
 
   div {
-    padding: 15px 50px 0 15px;
+    padding: 15px 40px 0 15px;
   }
 }
 
 .prev-control {
-  left: -220px;
+  left: -230px;
 
   &:hover {
     left: 0;
@@ -48,7 +50,7 @@
 
   div {
     flex-flow: row-reverse;
-    padding: 15px 15px 0 50px;
+    padding: 15px 15px 0 40px;
   }
 }
 
