@@ -1,8 +1,14 @@
 <collection>
   <journal>
+    <title>November 2018 Log</title>
+    <file>2018-11</file>
+    <img>2018-11/bg.jpg</img>
+    <date>2018-12-1</date>
+  </journal>
+  <journal>
     <title>October 2018 Log</title>
     <file>2018-10</file>
-    <img>2018-10/triangulation-2.png</img>
+    <img>2018-10/bg.jpg</img>
     <date>2018-11-1</date>
   </journal>
   <journal>
