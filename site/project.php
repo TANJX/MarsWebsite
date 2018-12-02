@@ -30,7 +30,7 @@
   <script src='js/lib/popper.js'></script>
   <script src='js/lib/bootstrap-material-design.js'></script>
   <script>
-      $(document).ready(function() {
+      $(document).ready(function () {
           $('body').bootstrapMaterialDesign();
       });
 
@@ -45,12 +45,13 @@ echo $doc->saveHTML();
 $project = $_REQUEST['name'];
 $valid = false;
 if ($project != '') {
-  $doc->loadHTMLFile("projects/$project.htm");
-  if ($doc == false) {
-    $valid = true;
-  } else {
+  if (file_exists("projects/$project.htm")) {
+    $doc->loadHTMLFile("projects/$project.htm");
     echo '<link rel="stylesheet" href="/css/projects.css">';
     echo $doc->saveHTML();
+  } else {
+//    echo "not found";
+    $valid = true;
   }
 } else {
   $valid = true;

@@ -23,21 +23,21 @@
         href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css"
         integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="/css/index-new.css">
-  <script src='js/lib/jquery-3.3.1.min.js'></script>
-  <script src='js/lib/popper.js'></script>
-  <script src='js/lib/bootstrap-material-design.js'></script>
-  <script>
-      $(document).ready(function () {
-          $('body').bootstrapMaterialDesign();
-      });
-
-  </script>
+  <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
+<script src='js/lib/jquery-3.3.1.min.js'></script>
+<script src='js/lib/popper.js'></script>
+<script src='js/lib/bootstrap-material-design.js'></script>
+<script>
+    $(document).ready(function () {
+        $('body').bootstrapMaterialDesign();
+    });
+
+</script>
 <header>
-  <div class="title">
+  <div class="title clearfix">
     <div class="container">
       <p>FALL 2018</p>
       <p>Week <span></span></p>
@@ -46,10 +46,10 @@
 </header>
 
 <a href="/">
-  <div class="prev-control">
+  <div class="next-control">
     <div>
-      <img src="/img/icon/arrow_left.svg">
-      <p>Old Landing Page</p>
+      <img src="/img/icon/arrow_right.svg">
+      <p>New Landing Page!</p>
     </div>
   </div>
 </a>
@@ -284,128 +284,212 @@
 </div>
 <div class="intro">
   <div class="container">
-    <p>This is Mars, a student majored in
-      <a href="http://iovine-young.usc.edu/" target="_blank">Jimmy Iovine and Andre Young Academy</a>
-      for Arts, Technology and the Business of Innovation at University of Southern California. </p>
+    <p>This is Mars, a student majored in <a href="http://iovine-young.usc.edu/" target="_blank">Jimmy Iovine and Andre
+      Young Academy</a> for Arts, Technology and the Business of Innovation at University of Southern California. </p>
   </div>
 </div>
 
-<div class="main container">
-  <div class="blocks">
-    <!--top left big-->
-    <div class="block block__big__left zoom-out">
-      <div class="block--img">
-        <img src="/img/index/aardvarc.jpg" alt="aardvarc home">
-      </div>
-      <div class="block--title">
-        <p>Recent Project</p>
-        <h2>AARDVARC</h2>
-      </div>
-      <div class="block--subtitle">
-        <p>View Website</p>
-      </div>
+<div class="section project">
+  <div class="container">
+    <div class="section-title">
+      <img class="title-icon" src="/img/icon/camera.svg">
+      <h2>Project & Collaboration</h2>
     </div>
-    <!--top right 1-->
-    <div class="block">
-      <div class="block--img">
-        <img src="/img/index/connect.png" alt="connector" class="img-alt--static">
-        <img src="/works/graphics/connector.gif" alt="connector" class="img-alt--gif">
+    <a href="http://isotopestudio.cc" target="_blank">
+      <div class="block block-l">
+        <div class="block-inner">
+          <h3>ISOTOPE Studio</h3>
+          <p>ISOTOPE Studio, founded in 2015, dedicates our professional skills on digital arts (graphic and website
+            design, video filming and editing) to provide free/paid services for our surroundings., including innovative
+            students, school's clubs, and education agencies.</p>
+        </div>
       </div>
+    </a>
+
+    <div class="block block-m">
+      <a href="project/soccer" class="project-link">
+        <div class="sub-block-1" id="project-text-wrapper">
+          <div class="block-inner">
+            <h3 id="project-text">Football</h3>
+          </div>
+        </div>
+      </a>
+      <a href="project/soccer" class="project-link">
+        <div class="sub-block-2" id="project-view">
+        </div>
+      </a>
     </div>
-    <!--top right 2-->
-    <div class="block zoom-in">
-      <div class="block--img">
-        <img src="/img/index/calendar.jpg" alt="web app">
-      </div>
-    </div>
-    <!--bottom left 1-->
-    <div class="block">
-      <div class="block--img">
-        <img src="/img/index/apps.svg" alt="web app" class="img-alt--static">
-        <img src="/img/index/apps.png" alt="web app" class="img-alt--gif">
-      </div>
-    </div>
-    <!--bottom left 2-->
-    <div class="block">
-      <div class="block--img">
-        <img src="/img/index/ramen.png" alt="connector" class="img-alt--static">
-        <img src="/works/graphics/ramen.gif" alt="connector" class="img-alt--gif">
-      </div>
-    </div>
-    <!--bottom right big-->
-    <div class="block block__big__right zoom-out">
-      <div class="block--img">
-        <img src="/img/index/graphics.jpg" alt="motion graphics">
-      </div>
-      <div class="block--title">
-        <p>Design and Animation</p>
-        <h2>Motion Graphics</h2>
-      </div>
-      <div class="block--subtitle">
-        <p>View Works</p>
-      </div>
+    <div class="block block-r">
+      <a href="project/calendar">
+        <div class="sub-block-1" id="calendar-view">
+          <div class="block-inner">
+            <h3>Calendar Design</h3>
+          </div>
+          <div class="block-img" id="calendar-image"></div>
+        </div>
+      </a>
+      <a href="project/bookmark">
+        <div class="sub-block-2" id="bookmark-view">
+          <div class="block-inner">
+            <h3>Bookmark Design</h3>
+          </div>
+          <div class="block-img" id="bookmark-image"></div>
+        </div>
+      </a>
+      <a href="http://appsquareone.com" target="_blank">
+        <div class="sub-block-3" id="squareone-view">
+          <div class="block-inner">
+            <h3>SquareOne Studio</h3>
+            <p>A group of college students assists high students in China preparing for U.S college. Paid services
+              including summer school application, activity planning, college research and application.</p>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
+</div>
+<div class="clear"></div>
 
-  <div class="blocks">
-    <!--top left big-->
-    <div class="block block__big__left zoom-out">
-      <div class="block--img">
-        <img src="/img/index/drinks.jpg" alt="drinks">
-      </div>
-      <div class="block--title">
-        <p>Poster Design</p>
-        <h2>soft drink comparison</h2>
-      </div>
-      <div class="block--subtitle">
-        <p>View Works</p>
-      </div>
+
+<div class="section graphics">
+  <div class="container">
+    <div class="section-title">
+      <img class="title-icon" src="/img/icon/pen.svg">
+      <h2>Graphic Deisgn & Animation</h2>
     </div>
-    <!--top right 1-->
-    <div class="block zoom-in">
-      <div class="block--img">
-        <img src="/img/index/2018-10.jpg" alt="web app">
+    <a href="vector">
+      <div class="block block-l">
+        <div class="block-inner">
+          <h3>Illustration</h3>
+          <p>I enjoy using professional tools such as Adobe Illustrator to convey a complex or abstract concept and
+            information with minimum and straightforward vector design.</p>
+        </div>
       </div>
-      <div class="block--title__small">
-        <h2>October 2018 Log</h2>
-      </div>
+    </a>
+    <div class="block block-m graphics-img">
     </div>
-    <!--top right 2-->
-    <div class="block zoom-in">
-      <div class="block--img">
-        <img src="/img/index/2018-9.jpg" alt="web app">
-      </div>
-      <div class="block--title__small">
-        <h2>September 2018 Log</h2>
-      </div>
-    </div>
-    <!--bottom left 1-->
-    <div class="block zoom-in">
-      <div class="block--img">
-        <img src="/img/index/isotope.jpg" alt="isotope">
-      </div>
-    </div>
-    <!--bottom left 2-->
-    <div class="block">
-      <div class="block--img zoom-in">
-        <img src="/img/index/vitamins.jpg" alt="vitamins">
-      </div>
-    </div>
-    <!--bottom right big-->
-    <div class="block block__big__right zoom-out">
-      <div class="block--img">
-        <img src="/img/index/japanese.jpg" alt="japanese">
-      </div>
-      <div class="block--title">
-        <p>Web Application</p>
-        <h2>Japanese Notes</h2>
-      </div>
-      <div class="block--subtitle">
-        <p>View Website</p>
+    <div class="block block-r">
+      <a href="poster">
+        <div class="sub-block-1">
+          <div class="block-inner">
+            <h3>Poster Design</h3>
+          </div>
+        </div>
+      </a>
+      <a href="animation">
+        <div class="sub-block-2">
+          <div class="block-inner">
+            <h3>Motion Graphics</h3>
+            <p>I am an enthusiast at motion graphic by its vivid characters, smooth animation, and effective
+              communication.</p>
+          </div>
+        </div>
+      </a>
+      <div class="sub-block-3">
       </div>
     </div>
   </div>
 </div>
+<div class="clear"></div>
+
+
+<div class="section coding">
+  <div class="container">
+    <div class="section-title">
+      <img class="title-icon" src="/img/icon/code.svg">
+      <h2>Programming & Game Development</h2>
+    </div>
+    <div class="block block-l">
+      <div class="block-inner">
+        <h3>Computer Languages</h3>
+        <p>Computer languages and programs can improve efficiency by greatly reducing routine work. </p>
+        <p>I've worked for managers of game servers to develop plugins and add new features to the game.</p>
+      </div>
+    </div>
+    <a href="/game">
+      <div class="block block-m">
+        <div class="block-inner">
+          <h3>Minecraft:</h3>
+          <h3>Plugin Development</h3>
+        </div>
+      </div>
+    </a>
+    <div class="block block-r">
+      <a href="https://github.com/TANJX" target="_blank">
+        <div class="sub-block-1">
+          <div class="block-inner">
+            <h3>GitHub</h3>
+            <p>TANJX</p>
+          </div>
+        </div>
+      </a>
+      <a href="/game">
+        <div class="sub-block-2">
+          <div class="block-inner">
+            <h3>Web Design/Application</h3>
+            <p>I designed and coded ISOTOPE Studio and this personal website. Also, I wrote a few simple web application
+              to note down thoughts and important dates of my life.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+
+
+<div class="section about">
+  <div class="container">
+    <div class="section-title">
+      <img class="title-icon" src="/img/icon/music.svg">
+      <h2>Mars</h2>
+    </div>
+    <div class="block block-l">
+      <div class="block-inner">
+        <p>"The work you do while you procrastinate is probably the work you should be doing for the rest of your life"
+          - Steal Like An Artist</p>
+      </div>
+    </div>
+    <div class="block block-m">
+      <div class="sub-block-1">
+        <div class="block-inner">
+          <h3>Music with Piano</h3>
+        </div>
+      </div>
+      <div class="sub-block-2"></div>
+    </div>
+    <div class="block block-r">
+      <div class="sub-block-1">
+        <div class="block-inner">
+          <h3>Drama</h3>
+          <p>A Midsummer's Night Dream</p>
+        </div>
+      </div>
+      <div class="sub-block-2">
+        <div class="block-inner">
+          <h3>Japanese</h3>
+        </div>
+        <div id="japanese-text">
+          <span>大好きです</span>
+          <span>日本語</span>
+          <span>すごい</span>
+          <span>勉強する</span>
+          <span>愛</span>
+          <span>アメリカ</span>
+          <span>砂霧</span>
+          <span>コンビニ</span>
+          <span>大学生</span>
+          <span>マーズ</span>
+          <span>行きますよ</span>
+          <span>ないでもないよ</span>
+          <span>付き合って！</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+
 <footer>
   <div class="container">
     <img class="logo" src="/img/logo/logo-text.svg">
@@ -433,14 +517,7 @@
   </div>
 </footer>
 <script src="/js/index.js"></script>
-<script>
-  // gif, img alt
-    $('.img-alt--static').mouseover(function () {
-        console.log(1);
-        const $next = $(this).next('.img-alt--gif');
-        $next.attr('src', $next.attr('src'));
-    });
-</script>
+<script src="/js/index_old.js"></script>
 </body>
 
 </html>
