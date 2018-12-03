@@ -49,6 +49,11 @@ if ($project != '') {
     $doc->loadHTMLFile("projects/$project.htm");
     echo '<link rel="stylesheet" href="/css/projects.css">';
     echo $doc->saveHTML();
+    echo '<a href="/project">';
+    echo '<div class="prev-control"><div>';
+    echo '<img src="/img/icon/arrow_left.svg">';
+    echo '<p>BACK TO PROJECTS</p>';
+    echo '</div></div></a>';
   } else {
 //    echo "not found";
     $valid = true;
