@@ -137,3 +137,38 @@
     border-bottom: 1px solid orangered;
   }
 }
+
+.status {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #393939;
+  color: white;
+  z-index: 100;
+  padding-top: 10px;
+  transition: .4s;
+  transition-timing-function: cubic-bezier(.65, 0, .29, .99);
+
+  &.show {
+    bottom: -100px;
+  }
+
+  h4 {
+    font-weight: lighter;
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: .3rem;
+  }
+  i {
+    margin-left: auto;
+    font-size: .8rem;
+  }
+  .line {
+    display: flex;
+    align-items: baseline;
+  }
+}
