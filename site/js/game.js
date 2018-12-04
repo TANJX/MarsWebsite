@@ -7,8 +7,6 @@ let count = 0;
 
 $('.typing-text h1').each(function () {
     const text = $(this).text();
-    console.log($(this));
-    console.log(text);
     $(this).text('');
     for (let i = 0; i < text.length; i++) {
         let $e = $("<i></i>").text(text.charAt(i)).addClass('tout');
@@ -48,15 +46,13 @@ function update() {
                 count++;
             } else {
                 $h1.removeClass('selection');
-                $h1_div.removeClass('in');
-                $h1_div.addClass('out');
+                $h1_div.removeClass('in').addClass('out');
                 $h1.children().addClass('tout');
                 stage = 0;
                 num++;
                 count = 0;
                 if (num === size) num = 1;
-                $h1_div.addClass('in');
-                $h1_div.removeClass('out');
+                $('.typing-text-wrapper div:nth-child(' + num + ')').addClass('in').removeClass('out');
             }
             break;
     }
