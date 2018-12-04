@@ -1,0 +1,47 @@
+extends _main
+block font
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700')
+
+block styles
+    link(rel='stylesheet' href='/css/game.css')
+
+
+block body
+    include nav2.htm
+    .head
+        .container
+            img(src='/img/icon/code-white.svg')
+            .typing-text-wrapper
+                .typing-text.in: h1 Game Design
+                .typing-text.out: h1 Full-Stack Web Development
+                .typing-text.out: h1 Minecraft
+
+    .section.web
+        .container
+            h2 Front End Web Development
+            p Coding with HTML, CSS, Javascript
+            button(type='button' class='btn btn-primary' onclick="location.href='web-project'") See My Works
+            img(src='/img/game-web.svg' alt='minecraft')
+
+    .container.line
+
+    .section.web
+        .container
+            h2 Minecraft Plugin Development
+            p
+                | Using
+                |
+                a(href='https://www.spigotmc.org/' target='_blank') Spigot API
+                | , I created a series of
+                |
+                a(href='https://github.com/ISOTOPE-Studio/' target='_blank') Minecraft Server plugins
+                |
+                | that expand and create the functionalities of the amazing community game by Mojang, Microsoft.
+            img(src='/img/game-minecraft.svg' alt='minecraft')
+
+
+block scripts_after
+    script(src='/js/menu.js')
+    script(src='/js/game.js')
