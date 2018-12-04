@@ -1,0 +1,63 @@
+mixin prev_control(text, link)
+    a(href=link)
+        .prev-control
+            div
+                img(src='/img/icon/arrow_left.svg')
+                p= text
+
+mixin next_control(text, link)
+    a(href=link)
+        .next-control
+            div
+                img(src='/img/icon/arrow_left.svg')
+                p= text
+
+mixin index_nav(name, link, ...sub_menu)
+    li(class='nav-item')
+        a(class='nav-link' href=link)= name
+        if sub_menu.length > 0
+            span(class='accent')
+            ul(class='drop-down')
+                each sub in sub_menu
+                    li: a(href=sub.link)= sub.name
+
+
+mixin block(basic, option, info)
+    - var class_block=['block']
+    if option.zoom !== null
+    - class_block.push("zoom-"+option.zoom)
+    if option.pos !== null
+    - class_block.push("block__"+option.pos)
+    div(class=class_block)
+        if basic.link !== null
+            a(href= basic.link)
+                +block_img(basic)
+                +block_text(info)
+        else
+            +block_img(basic)
+            +block_text(info)
+
+
+mixin block_img(basic)
+    .block--img
+        if basic.gif == null
+            img(src=basic.img)
+        else
+            img(src=basic.img, class='img-alt--static')
+            img(src=basic.gif, class='img-alt--gif')
+
+
+mixin block_text(info)
+    if info.type === 'small'
+        .block--title__small
+            h2= info.name
+    else
+        if info.type != null && info.name != null
+            .block--title
+                if info.type != null
+                    p= info.type
+                if info.name != null
+                    h2= info.name
+        if info.more != null
+            .block--subtitle
+                p= info.more
