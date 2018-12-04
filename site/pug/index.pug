@@ -1,0 +1,173 @@
+extends _main
+block styles
+    link(rel='stylesheet' href='/css/index-new.css')
+
+block body
+    header
+        .title
+            .container
+                p FALL 2018
+                p Week
+                    span
+
+    +prev_control('Old Landing Page','/index_old.html')
+
+    .logo
+        include ../img/logo/avatar-18rocket.svg
+
+    .nav-bar
+        ul(class='nav nav-main justify-content-center')
+            +index_nav('PROJECT', '/project')
+
+            +index_nav('GRAPHIC', '/graphics',
+            {name: 'Vector', link: 'vector'},
+            {name: 'Animation', link: 'animation'},
+            {name: 'poster', link: 'Poster'})
+
+            +index_nav('DEV','/game')
+
+            +index_nav('JOURNAL','/journal',
+            {name: 'Nov 2018', link: '/journal/2018-11'},
+            {name: 'Oct 2018', link: '/journal/2018-10'},
+            {name: 'Sep 2018', link: '/journal/2018-9'})
+
+            +index_nav('TOOL','//apps.marstanjx.com',
+            {name: 'Event', link: '//apps.marstanjx.com/event/'},
+            {name: 'Log', link: '//apps.marstanjx.com/log/'},
+            {name: 'Progress', link: '//apps.marstanjx.com/progress/'},
+            {name: 'Scale Picker', link: '//apps.marstanjx.com/music/'},
+            {name: 'Japanese', link: '//apps.marstanjx.com/japanese/'})
+
+    .intro
+        .container
+            p
+                | This is Mars, a student majored in
+                |
+                a(href='http://iovine-young.usc.edu/' target='_blank') Jimmy Iovine and Andre Young Academy
+                |
+                | for Arts, Technology and the Business of Innovation at University of Southern California.
+
+    .main.container
+        .blocks
+            // top left big
+            +block({
+                img: '/img/index/aardvarc.jpg',
+                link: '/project/aardvarc'
+            }, {
+                zoom: 'out',
+                pos: 'big__left'
+            }, {
+                type: 'Recent Project',
+                name: 'AARDVARC',
+                more: 'View Website'
+            })
+
+            // top right 1
+            +block({
+                img: '/img/index/connect.png',
+                gif: '/works/graphics/connector.gif'
+            }, {}, {})
+
+            // top right 2
+            +block({
+                img: '/img/index/vitamins-render.jpg',
+                gif: '/img/index/vitamins.jpg'
+            }, {}, {})
+
+            // bottom left 1
+            +block({
+                img: '/img/index/apps.svg',
+                link: '//apps.marstanjx.com'
+            }, {
+                zoom: 'in'
+            }, {
+                type: 'small',
+                name: 'Web Apps'
+            })
+
+            // bottom left 2
+            +block({
+                img: '/img/index/ramen.png',
+                gif: '/works/graphics/ramen.gif'
+            }, {}, {})
+
+            // bottom right big
+            +block({
+                img: '/img/index/graphics.jpg',
+                link: '/graphics'
+            }, {
+                zoom: 'out',
+                pos: 'big__right'
+            }, {
+                type: 'Design and Animation',
+                name: 'Motion Graphics',
+                more: 'View Works'
+            })
+
+        .blocks
+            // top left big
+            +block({
+                img: '/img/index/drinks.jpg',
+                link: '/poster'
+            }, {
+                zoom: 'out',
+                pos: 'big__left'
+            }, {
+                type: 'Poster Design',
+                name: 'soft drink comparison',
+                more: 'View Works'
+            })
+
+            // top right 1
+            +block({
+                img: '/img/index/2018-10.jpg',
+                link: '/journal/2018-10',
+            }, {
+                zoom: 'in'
+            }, {
+                type: 'small',
+                name: 'October 2018 Log'
+            })
+
+            // top right 2
+            +block({
+                img: '/img/index/2018-9.jpg',
+                link: '/journal/2018-9',
+            }, {
+                zoom: 'in'
+            }, {
+                type: 'small',
+                name: 'September 2018 Log'
+            })
+
+            // bottom left 1
+            +block({
+                img: '/img/index/isotope.jpg',
+                link: '//isotopestudio.cc'
+            }, {
+                zoom: 'in'
+            }, {})
+
+            // bottom left 2
+            +block({
+                img: '/img/index/calendar.jpg',
+                link: '/project/calendar'
+            }, {}, {})
+
+            // bottom right big
+            +block({
+                img: '/img/index/japanese.jpg',
+                link: '//notes.marstanjx.com'
+            }, {
+                zoom: 'out',
+                pos: 'big__right'
+            }, {
+                type: 'Web Application',
+                name: 'Japanese Notes',
+                more: 'View Website'
+            })
+
+
+block scripts_after
+    script(src='/js/index.js')
+    script(src='/js/index_new.js')
