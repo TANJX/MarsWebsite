@@ -1,6 +1,6 @@
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
-    var difference = new Date() - Date.parse("19 Aug 2018 00:00:00 -0400");
+    var difference = new Date() - Date.parse("6 Jan 2019 00:00:00 -0400");
     $('.title p span').text(Math.floor(difference / 1000 / 60 / 60 / 24 / 7) + 1);
     // rocket floating animation
     setTimeout(animation, 3000);
