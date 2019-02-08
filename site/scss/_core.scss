@@ -40,22 +40,27 @@ footer {
   height: 250px;
   background-color: $primary-color;
   position: relative;
+
   .logo {
     padding-top: 20px;
     width: 250px;
   }
+
   .social {
     display: block;
     margin-top: 20px;
   }
+
   .social-icon {
     height: 25px;
     margin-right: 10px;
     transition: 0.2s;
   }
+
   .social-icon:hover {
     opacity: 0.7;
   }
+
   p {
     position: absolute;
     color: white;
@@ -64,13 +69,49 @@ footer {
     display: none;
     text-align-last: center;
   }
+
   a {
     color: aliceblue;
     text-decoration: underline;
   }
+
   &:hover p {
     display: block;
   }
 }
 
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
 
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .container {
+    max-width: 1700px;
+  }
+}

@@ -2,7 +2,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(3, 270px);
+  grid-template-rows: repeat(3, 417.5px);
 
   img {
     width: 100%;
@@ -101,6 +101,20 @@
 .img-alt--gif {
   position: absolute;
   z-index: -1;
+}
+
+// 1500 - 2000px
+@media (max-width: 1999px) {
+  .blocks {
+    grid-template-rows: repeat(3, 317.5px);
+  }
+}
+
+// 1200 - 1500px
+@media (max-width: 1499px) {
+  .blocks {
+    grid-template-rows: repeat(3, 277.5px);
+  }
 }
 
 @media (max-width: 1199px) {
