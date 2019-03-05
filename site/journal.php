@@ -59,7 +59,11 @@ if ($_REQUEST['journal'] == '') {
   foreach ($xml->children() as $work) {
     echo sprintf("<a href='/journal/%s'>", $work->file);
     echo sprintf('<div class="journal" style="background-image: url(\'/journal/img/%s\')">', $work->img);
-    echo "<h3>" . $work->title . "</h3>";
+    $color = $work->color;
+    if ($color != '') {
+      $color = ' style="color: ' . $color . ';"';
+    }
+    echo "<h3 " . $color . ">" . $work->title . "</h3>";
     echo "</div></a>";
   }
   echo '</div>';
