@@ -3,9 +3,10 @@
 @import "sub_menu";
 
 .journal {
+  max-width: 1024px;
   width: 100%;
   height: 250px;
-  margin: 25px 0;
+  margin: 25px auto;
   border: 1px solid #ddd;
   overflow: hidden;
   background-size: cover;
@@ -21,6 +22,7 @@
     right: 0;
     color: black;
   }
+
   &:hover h3 {
     color: white;
   }
