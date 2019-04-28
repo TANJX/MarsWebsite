@@ -9,14 +9,14 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116224796-1"></script>
   <script>
-      window.dataLayer = window.dataLayer || [];
+  window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-          dataLayer.push(arguments);
-      }
+  function gtag() {
+    dataLayer.push(arguments);
+  }
 
-      gtag('js', new Date());
-      gtag('config', 'UA-116224796-1');
+  gtag('js', new Date());
+  gtag('config', 'UA-116224796-1');
 
   </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
@@ -35,9 +35,9 @@
   <script src='js/lib/popper.js'></script>
   <script src='js/lib/bootstrap-material-design.js'></script>
   <script>
-      $(document).ready(function () {
-          $('body').bootstrapMaterialDesign();
-      });
+  $(document).ready(function () {
+    $('body').bootstrapMaterialDesign();
+  });
   </script>
 </head>
 
@@ -58,7 +58,10 @@ if ($_REQUEST['journal'] == '') {
   echo '<div class="container journals">';
   foreach ($xml->children() as $work) {
     echo sprintf("<a href='/journal/%s'>", $work->file);
-    echo sprintf('<div class="journal" style="background-image: url(\'/journal/img/%s\')">', $work->img);
+    if ($work->img == '')
+      echo sprintf('<div class="journal">');
+    else
+      echo sprintf('<div class="journal" style="background-image: url(\'/journal/img/%s\')">', $work->img);
     $color = $work->color;
     if ($color != '') {
       $color = ' style="color: ' . $color . ';"';
@@ -134,11 +137,11 @@ echo $doc->saveHTML();
 
 <script src="js/menu.js"></script>
 <script>
-    $('#main h1').next().nextUntil('footer').wrapAll('<div class="inner-wrapper"></div>');
-    $('#main a').attr('target', '_blank');
-    $('#main img:not(.no-subtitle):not(.icon)').each(function () {
-        $(this).parent().next().addClass('img-info');
-    });
+$('#main h1').next().nextUntil('footer').wrapAll('<div class="inner-wrapper"></div>');
+$('#main a').attr('target', '_blank');
+$('#main img:not(.no-subtitle):not(.icon)').each(function () {
+  $(this).parent().next().addClass('img-info');
+});
 </script>
 </body>
 

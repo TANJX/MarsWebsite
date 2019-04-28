@@ -47,7 +47,16 @@
   <journal>
     <title>ASCJ 200: Media Conglomerate</title>
     <file>ascj-200-diy-3</file>
-    <img>ascj-200-diy-3/cover.png</img>
     <date>2018-4-2</date>
+  </journal>
+  <journal>
+    <title>ASCJ 200: Surveillance</title>
+    <file>ascj-200-blog-3</file>
+    <date>2018-3-26</date>
+  </journal>
+  <journal>
+    <title>ASCJ 200: Infographics</title>
+    <file>ascj-200-diy-2</file>
+    <date>2018-3-5</date>
   </journal>
 </collection>
