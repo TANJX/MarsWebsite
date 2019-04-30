@@ -29,26 +29,28 @@ block body
 
     .nav-bar
         ul(class='nav nav-main justify-content-center')
-            +index_nav('PROJECT', '/project')
+            +index_nav('PROJECT', '/project', false)
 
-            +index_nav('GRAPHIC', '/graphics',
-            {name: 'Vector', link: 'vector'},
-            {name: 'Animation', link: 'animation'},
-            {name: 'poster', link: 'Poster'})
+            +index_nav('GRAPHIC', '/graphics', false,
+              { name: 'Vector', link: 'vector' },
+              { name: 'Animation', link: 'animation' },
+              { name: 'poster', link: 'Poster' })
 
             +index_nav('DEV','/game')
 
-            +index_nav('JOURNAL','/journal',
-            {name: 'Mar 2018', link: '/journal/2019-3'},
-            {name: 'Feb 2018', link: '/journal/2019-2'},
-            {name: 'Jan 2018', link: '/journal/2019-1'})
+            +index_nav('JOURNAL','/journal', false,
+              { name: 'Mar 2018', link: '/journal/2019-3', external: false },
+              { name: 'Feb 2018', link: '/journal/2019-2', external: false },
+              { name: 'Jan 2018', link: '/journal/2019-1', external: false })
 
-            +index_nav('TOOL','//apps.marstanjx.com',
-            {name: 'Event', link: '//apps.marstanjx.com/event/'},
-            {name: 'Log', link: '//apps.marstanjx.com/log/'},
-            {name: 'Progress', link: '//apps.marstanjx.com/progress/'},
-            {name: 'Scale Picker', link: '//apps.marstanjx.com/music/'},
-            {name: 'Japanese', link: '//apps.marstanjx.com/japanese/'})
+            +index_nav('TOOL','//apps.marstanjx.com', true,
+              { name: 'Event', link: '//apps.marstanjx.com/event/', external: true },
+              { name: 'Log', link: '//apps.marstanjx.com/log/', external: true },
+              { name: 'Progress', link: '//apps.marstanjx.com/progress/', external: true },
+              { name: 'Scale Picker', link: '//apps.marstanjx.com/music/', external: true },
+              { name: 'Japanese', link: '//apps.marstanjx.com/japanese/', external: true })
+
+            +index_nav('RESUME','/resume', true)
 
     .intro
         .container
@@ -63,120 +65,120 @@ block body
         .blocks
             // top left big
             +block({
-                img: '/img/index/aardvarc.jpg',
-                link: '/project/aardvarc'
+              img: '/img/index/aardvarc.jpg',
+              link: '/project/aardvarc'
             }, {
-                zoom: 'out',
-                pos: 'big__left'
+              zoom: 'out',
+              pos: 'big__left'
             }, {
-                type: 'Recent Project',
-                name: 'AARDVARC',
-                more: 'View Website'
+              type: 'Recent Project',
+              name: 'AARDVARC',
+              more: 'View Website'
             })
 
             // top right 1
             +block({
-                img: '/img/index/connect.png',
-                gif: '/works/graphics/connector.gif'
+              img: '/img/index/connect.png',
+              gif: '/works/graphics/connector.gif'
             }, {}, {})
 
             // top right 2
             +block({
-                img: '/img/index/vitamins-render.jpg',
-                gif: '/img/index/vitamins.jpg'
+              img: '/img/index/vitamins-render.jpg',
+              gif: '/img/index/vitamins.jpg'
             }, {}, {})
 
             // bottom left 1
             +block({
-                img: '/img/index/apps.svg',
-                link: '//apps.marstanjx.com'
+              img: '/img/index/apps.svg',
+              link: '//apps.marstanjx.com'
             }, {
-                zoom: 'in'
+              zoom: 'in'
             }, {
-                type: 'small',
-                name: 'Web Apps'
+              type: 'small',
+              name: 'Web Apps'
             })
 
             // bottom left 2
             +block({
-                img: '/img/index/ramen.png',
-                gif: '/works/graphics/ramen.gif'
+              img: '/img/index/ramen.png',
+              gif: '/works/graphics/ramen.gif'
             }, {}, {})
 
             // bottom right big
             +block({
-                img: '/img/index/graphics.jpg',
-                link: '/graphics'
+              img: '/img/index/graphics.jpg',
+              link: '/graphics'
             }, {
-                zoom: 'out',
-                pos: 'big__right'
+              zoom: 'out',
+              pos: 'big__right'
             }, {
-                type: 'Design and Animation',
-                name: 'Motion Graphics',
-                more: 'View Works'
+              type: 'Design and Animation',
+              name: 'Motion Graphics',
+              more: 'View Works'
             })
 
         .blocks
             // top left big
             +block({
-                img: '/img/index/drinks.jpg',
-                link: '/poster'
+              img: '/img/index/drinks.jpg',
+              link: '/poster'
             }, {
-                zoom: 'out',
-                pos: 'big__left'
+              zoom: 'out',
+              pos: 'big__left'
             }, {
-                type: 'Poster Design',
-                name: 'soft drink comparison',
-                more: 'View Works'
+              type: 'Poster Design',
+              name: 'soft drink comparison',
+              more: 'View Works'
             })
 
             // top right 1
             +block({
-                img: '/img/index/2019-3.jpg',
-                link: '/journal/2019-3'
+              img: '/img/index/2019-3.jpg',
+              link: '/journal/2019-3'
             }, {
-                zoom: 'in'
+              zoom: 'in'
             }, {
-                type: 'small',
-                name: 'March 2019 Log'
+              type: 'small',
+              name: 'March 2019 Log'
             })
 
             // top right 2
             +block({
-                img: '/img/index/2019-2.jpg',
-                link: '/journal/2012-9'
+              img: '/img/index/2019-2.jpg',
+              link: '/journal/2012-9'
             }, {
-                zoom: 'in'
+              zoom: 'in'
             }, {
-                type: 'small',
-                name: 'February 2019 Log'
+              type: 'small',
+              name: 'February 2019 Log'
             })
 
             // bottom left 1
             +block({
-                img: '/img/index/isotope.jpg',
-                link: '//isotopestudio.cc'
+              img: '/img/index/isotope.jpg',
+              link: '//isotopestudio.cc'
             }, {
-                zoom: 'in'
+              zoom: 'in'
             }, {})
 
             // bottom left 2
             +block({
-                img: '/img/index/calendar.jpg',
-                link: '/project/calendar'
+              img: '/img/index/calendar.jpg',
+              link: '/project/calendar'
             }, {}, {})
 
             // bottom right big
             +block({
-                img: '/img/index/japanese.jpg',
-                link: '//notes.marstanjx.com'
+              img: '/img/index/japanese.jpg',
+              link: '//notes.marstanjx.com'
             }, {
-                zoom: 'out',
-                pos: 'big__right'
+              zoom: 'out',
+              pos: 'big__right'
             }, {
-                type: 'Web Application',
-                name: 'Japanese Notes',
-                more: 'View Website'
+              type: 'Web Application',
+              name: 'Japanese Notes',
+              more: 'View Website'
             })
 
 

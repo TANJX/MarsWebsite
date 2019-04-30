@@ -12,14 +12,20 @@ mixin next_control(text, link)
                 img(src='/img/icon/arrow_left.svg')
                 p= text
 
-mixin index_nav(name, link, ...sub_menu)
+mixin index_nav(name, link, ex, ...sub_menu)
     li(class='nav-item')
-        a(class='nav-link' href=link)= name
+        if ex
+            a(class='nav-link' href=link target='_blank')= name
+        else
+            a(class='nav-link' href=link)= name
         if sub_menu.length > 0
             span(class='accent')
             ul(class='drop-down')
                 each sub in sub_menu
-                    li: a(href=sub.link)= sub.name
+                    if sub.external
+                        li: a(href=sub.link target='_blank')= sub.name
+                    else
+                        li: a(href=sub.link)= sub.name
 
 
 mixin block(basic, option, info)
