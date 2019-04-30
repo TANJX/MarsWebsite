@@ -1,7 +1,7 @@
 # We Are Helping Build An Intelligence We Won’t Understand Anymore
 March 26, 2018
 
-<img src="/journal/img/ascj-200-blog-3/cover.png" class="no-subtitle">
+<img src="/journal/img/ascj-200-blog-3/cover-color.png" class="no-subtitle">
 
 I was shocked when I took some time to how my online activities are tracked and used to change my online experience.
 

@@ -47,16 +47,49 @@
   <journal>
     <title>ASCJ 200: Media Conglomerate</title>
     <file>ascj-200-diy-3</file>
+    <img>ascj-200-diy-3/cover.png</img>
     <date>2018-4-2</date>
   </journal>
   <journal>
     <title>ASCJ 200: Surveillance</title>
     <file>ascj-200-blog-3</file>
+    <img>ascj-200-blog-3/cover.png</img>
     <date>2018-3-26</date>
   </journal>
   <journal>
     <title>ASCJ 200: Infographics</title>
     <file>ascj-200-diy-2</file>
+    <img>ascj-200-diy-2/cover.png</img>
     <date>2018-3-5</date>
+  </journal>
+  <journal>
+    <title>Animation: Expression Control</title>
+    <file>process-2</file>
+    <img>process-2/cover.png</img>
+    <date>2018-2-19</date>
+  </journal>
+  <journal>
+    <title>GIF: HAPPY CHINESE NEW YEAR</title>
+    <file>process-1</file>
+    <img>process-1/cover.png</img>
+    <date>2018-2-16</date>
+  </journal>
+  <journal>
+    <title>ASCJ 200: Image Manipulation</title>
+    <file>ascj-200-diy-1</file>
+    <img>ascj-200-diy-1/cover.jpg</img>
+    <date>2018-2-11</date>
+  </journal>
+  <journal>
+    <title>ASCJ 200: SMELL Test</title>
+    <file>ascj-200-blog-2</file>
+    <img>ascj-200-blog-2/cover.png</img>
+    <date>2018-2-5</date>
+  </journal>
+  <journal>
+    <title>ASCJ 200: Off the grid</title>
+    <file>ascj-200-blog-1</file>
+    <img>ascj-200-blog-1/cover.jpg</img>
+    <date>2018-1-21</date>
   </journal>
 </collection>

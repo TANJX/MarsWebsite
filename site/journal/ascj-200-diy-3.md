@@ -1,6 +1,8 @@
 # Audio Study: Is Media Conglomerate Really An Issue?
 April 2, 2018
 
+<img src="/journal/img/ascj-200-diy-3/cover-color.png" class="no-subtitle">
+
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/424045890&color=%23f72a2f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 ## Scripts

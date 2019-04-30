@@ -1,6 +1,8 @@
 # Infographics: Homelessness in Los Angeles County
 March 5, 2018
 
+<img src="/journal/img/ascj-200-diy-2/cover-color.png" class="no-subtitle">
+
 <img src="/journal/img/ascj-200-diy-2/homeless.png" class="no-subtitle">
 
 ## The Story
