@@ -29,12 +29,16 @@
 // index nav bar
 .nav-bar {
   margin: 0 auto;
+
   .nav {
     margin: 0 auto;
+    padding: 0 20px;
   }
-}
 
-.nav-bar {
+  .nav-item {
+    margin: 15px 3px 10px;
+  }
+
   li {
     list-style: none;
     float: left;
@@ -62,6 +66,7 @@
     li {
       position: relative;
       float: none;
+
       a:hover {
         background: $primary-color-thin;
         color: white;
@@ -75,11 +80,13 @@
       color: orangered;
       text-align: center;
       transition: .5s;
+
       &:hover {
         color: palevioletred;
         transition: .5s;
       }
     }
+
     ul li a {
       text-transform: uppercase;
       position: relative;
@@ -88,6 +95,7 @@
       display: block;
       z-index: 10;
       font-size: .8em;
+
       i {
         position: absolute;
         right: 10px;
@@ -115,6 +123,7 @@
   color: white;
   padding: 30px 0 10px 0;
   text-align: justify;
+
   a {
     color: white;
     text-decoration: underline;
@@ -159,14 +168,17 @@
     font-weight: lighter;
     font-size: 1rem;
   }
+
   p {
     font-size: 1.2rem;
     margin-bottom: .3rem;
   }
+
   i {
     margin-left: auto;
     font-size: .8rem;
   }
+
   .line {
     display: flex;
     align-items: baseline;
