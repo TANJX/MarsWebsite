@@ -13,7 +13,7 @@
   background-position: center;
   position: relative;
 
-  h3 {
+  h3, p {
     text-align: center;
     margin-top: 110px;
     z-index: 2;
@@ -23,7 +23,12 @@
     color: black;
   }
 
-  &:hover h3 {
+  p {
+    margin-top: 200px;
+    font-size: .8rem;
+  }
+
+  &:hover h3, &:hover p {
     color: white;
   }
 
@@ -47,4 +52,66 @@
     top: 0;
     left: 0;
   }
+}
+
+.selection-checkboxes {
+  display: flex;
+  justify-content: center;
+
+  & > div {
+    margin-right: 15px;
+  }
+}
+
+.styled-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.styled-checkbox + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.styled-checkbox + label:before {
+  content: '';
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  border: 1px solid #999;
+}
+
+.styled-checkbox:hover + label:before {
+  background-color: #ff7dbe;
+}
+
+.styled-checkbox:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.styled-checkbox:checked + label:before {
+  background-color: #ff0071;
+  border: 0 solid #999;
+}
+
+.styled-checkbox:checked + label:after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white,
+  4px 0 0 white,
+  4px -2px 0 white,
+  4px -4px 0 white,
+  4px -6px 0 white,
+  4px -8px 0 white;
+  transform: rotate(45deg);
 }

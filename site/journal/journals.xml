@@ -1,6 +1,7 @@
 <collection>
   <journal>
     <title>March 2019 Log</title>
+    <type>log</type>
     <file>2019-3</file>
     <img>2019-3/banner.jpg</img>
     <date>2019-3-1</date>
@@ -8,6 +9,7 @@
   </journal>
   <journal>
     <title>February 2019 Log</title>
+    <type>log</type>
     <file>2019-2</file>
     <img>2019-2/banner.jpg</img>
     <date>2019-2-1</date>
@@ -15,12 +17,14 @@
   </journal>
   <journal>
     <title>December 2018, January 2019 Log</title>
+    <type>log</type>
     <file>2019-1</file>
     <img>2019-1/sky-1.jpg</img>
     <date>2019-1-1</date>
   </journal>
   <journal>
     <title>November 2018 Log</title>
+    <type>log</type>
     <file>2018-11</file>
     <img>2018-11/banner.jpg</img>
     <date>2018-12-1</date>
@@ -28,66 +32,77 @@
   </journal>
   <journal>
     <title>October 2018 Log</title>
+    <type>log</type>
     <file>2018-10</file>
     <img>2018-10/banner.jpg</img>
     <date>2018-11-1</date>
   </journal>
   <journal>
     <title>September 2018 Log</title>
+    <type>log</type>
     <file>2018-9</file>
     <img>2018-9/drawing-1.jpg</img>
     <date>2018-10-1</date>
   </journal>
   <journal>
     <title>ASCJ 200: Climate Denial, Why?</title>
+    <type>ascj</type>
     <file>ascj-200-diy-4</file>
     <img>ascj-200-diy-4/cover.png</img>
     <date>2018-5-6</date>
   </journal>
   <journal>
     <title>ASCJ 200: Media Conglomerate</title>
+    <type>ascj</type>
     <file>ascj-200-diy-3</file>
     <img>ascj-200-diy-3/cover.png</img>
     <date>2018-4-2</date>
   </journal>
   <journal>
     <title>ASCJ 200: Surveillance</title>
+    <type>ascj</type>
     <file>ascj-200-blog-3</file>
     <img>ascj-200-blog-3/cover.png</img>
     <date>2018-3-26</date>
   </journal>
   <journal>
     <title>ASCJ 200: Infographics</title>
+    <type>ascj</type>
     <file>ascj-200-diy-2</file>
     <img>ascj-200-diy-2/cover.png</img>
     <date>2018-3-5</date>
   </journal>
   <journal>
     <title>Animation: Expression Control</title>
+    <type>process</type>
     <file>process-2</file>
     <img>process-2/cover.png</img>
     <date>2018-2-19</date>
   </journal>
   <journal>
     <title>GIF: HAPPY CHINESE NEW YEAR</title>
+    <type>process</type>
     <file>process-1</file>
     <img>process-1/cover.png</img>
     <date>2018-2-16</date>
   </journal>
   <journal>
     <title>ASCJ 200: Image Manipulation</title>
+    <type>ascj</type>
     <file>ascj-200-diy-1</file>
     <img>ascj-200-diy-1/cover.jpg</img>
     <date>2018-2-11</date>
   </journal>
   <journal>
     <title>ASCJ 200: SMELL Test</title>
+    <type>ascj</type>
     <file>ascj-200-blog-2</file>
     <img>ascj-200-blog-2/cover.png</img>
     <date>2018-2-5</date>
   </journal>
   <journal>
     <title>ASCJ 200: Off the grid</title>
+    <type>ascj</type>
     <file>ascj-200-blog-1</file>
     <img>ascj-200-blog-1/cover.jpg</img>
     <date>2018-1-21</date>

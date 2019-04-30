@@ -42,35 +42,62 @@
 </head>
 
 <body>
+
 <?php
 // nav
 $doc = new DOMDocument();
 $doc->loadHTMLFile("nav.htm");
 echo $doc->saveHTML();
 
-// journal
 if ($_REQUEST['journal'] == '') {
+  // journals list
   echo '<div class="head">';
   echo '<h1>Journals</h1>';
   echo '</div>';
 
+  $journal_div = '';
+  $types = array();
+
   $xml = simplexml_load_file("journal/journals.xml") or die("Error: Cannot create object");
-  echo '<div class="container journals">';
+  $journal_div .= '<div class="container journals">';
   foreach ($xml->children() as $work) {
-    echo sprintf("<a href='/journal/%s'>", $work->file);
+    $type = (string)$work->type;
+    if (!in_array($type, $types)) {
+      $types[] = $type;
+    }
+
+    $journal_div .= sprintf("<a href='/journal/%s' class='%s'>", $work->file, $type);
     if ($work->img == '')
-      echo sprintf('<div class="journal">');
+      $journal_div .= sprintf('<div class="journal">');
     else
-      echo sprintf('<div class="journal" style="background-image: url(\'/journal/img/%s\')">', $work->img);
+      $journal_div .= sprintf('<div class="journal" style="background-image: url(\'/journal/img/%s\')">', $work->img);
     $color = $work->color;
     if ($color != '') {
       $color = ' style="color: ' . $color . ';"';
     }
-    echo "<h3 " . $color . ">" . $work->title . "</h3>";
-    echo "</div></a>";
+    $journal_div .= "<h3 " . $color . ">" . $work->title . "</h3>";
+    if ($type != 'log')
+      $journal_div .= "<p " . $color . ">" . $work->date . "</h3>";
+    $journal_div .= "</div></a>";
+  }
+  $journal_div .= '</div>';
+
+  echo '<div class="container selection-checkboxes">';
+  foreach ($types as $type) {
+    echo '<div>';
+    if ($type == 'ascj')
+      echo sprintf('<input class="styled-checkbox type-select" id="type-%s" type="checkbox" value="%s" onclick="update();">', $type, $type);
+    else
+      echo sprintf('<input class="styled-checkbox type-select" id="type-%s" type="checkbox" value="%s" onclick="update();" checked>', $type, $type);
+    echo sprintf('<label for="type-%s">%s</label>', $type, $type);
+    echo '</div>';
   }
   echo '</div>';
+
+  echo $journal_div;
+  echo '<script src="js/journals_filter.js"></script>';
 } else {
+  // journal
   echo '<div class="container" id="main">';
   require 'journal/php/Parsedown.php';
   $filename = 'journal/' . $_REQUEST['journal'] . '.md';
