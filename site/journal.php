@@ -55,11 +55,13 @@ if ($_REQUEST['journal'] == '') {
   echo '<h1>Journals</h1>';
   echo '</div>';
 
+  echo '<div class="container">';
+
   $journal_div = '';
   $types = array();
 
   $xml = simplexml_load_file("journal/journals.xml") or die("Error: Cannot create object");
-  $journal_div .= '<div class="container journals">';
+  $journal_div .= '<div class="journals">';
   foreach ($xml->children() as $work) {
     $type = (string)$work->type;
     if (!in_array($type, $types)) {
@@ -82,7 +84,7 @@ if ($_REQUEST['journal'] == '') {
   }
   $journal_div .= '</div>';
 
-  echo '<div class="container selection-checkboxes">';
+  echo '<div class="selection-checkboxes">';
   foreach ($types as $type) {
     echo '<div>';
     if ($type == 'ascj')
@@ -95,6 +97,9 @@ if ($_REQUEST['journal'] == '') {
   echo '</div>';
 
   echo $journal_div;
+
+  echo '<div class="yes"><p>Yes. I know the filter is working.</p></div>';
+  echo '</div>';
   echo '<script src="js/journals_filter.js"></script>';
 } else {
   // journal
