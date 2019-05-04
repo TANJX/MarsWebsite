@@ -25,9 +25,9 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
   <link rel="stylesheet" href="/css/poster.css">
-  <script src='js/lib/jquery-3.3.1.min.js'></script>
-  <script src='js/lib/popper.js'></script>
-  <script src='js/lib/bootstrap-material-design.js'></script>
+  <script src='/js/lib/jquery-3.3.1.min.js'></script>
+  <script src='/js/lib/popper.js'></script>
+  <script src='/js/lib/bootstrap-material-design.js'></script>
   <script>
       $(document).ready(function () {
           $('body').bootstrapMaterialDesign();
@@ -63,7 +63,7 @@ echo $doc->saveHTML();
     foreach ($xml->children() as $works) {
       $name = $works->title;
       echo '<div class="card bg-white text-white block">';
-      echo '<img class="card-img" src="works/posters/';
+      echo '<img class="card-img" src="/works/posters/';
       echo $works->file;
       echo '" alt="Card image">';
       echo '<div class="card-info">';
@@ -86,7 +86,7 @@ $doc = new DOMDocument();
 $doc->loadHTMLFile("pug/footer.htm");
 echo $doc->saveHTML();
 ?>
-<script src="js/menu.js"></script>
+<script src="/js/menu.js"></script>
 </body>
 
 </html>

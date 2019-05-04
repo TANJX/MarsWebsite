@@ -31,9 +31,9 @@
     echo '<link rel="stylesheet" href="/css/journal.css">';
   }
   ?>
-  <script src='js/lib/jquery-3.3.1.min.js'></script>
-  <script src='js/lib/popper.js'></script>
-  <script src='js/lib/bootstrap-material-design.js'></script>
+  <script src='/js/lib/jquery-3.3.1.min.js'></script>
+  <script src='/js/lib/popper.js'></script>
+  <script src='/js/lib/bootstrap-material-design.js'></script>
   <script>
   $(document).ready(function () {
     $('body').bootstrapMaterialDesign();
@@ -100,7 +100,7 @@ if ($_REQUEST['journal'] == '') {
 
   echo '<div class="yes"><p>Yes. I know the filter is working.</p></div>';
   echo '</div>';
-  echo '<script src="js/journals_filter.js"></script>';
+  echo '<script src="/js/journals_filter.js"></script>';
 } else {
   // journal
   echo '<div class="container" id="main">';
@@ -167,7 +167,7 @@ $doc->loadHTMLFile("pug/footer.htm");
 echo $doc->saveHTML();
 ?>
 
-<script src="js/menu.js"></script>
+<script src="/js/menu.js"></script>
 <script>
 $('#main h1').next().nextUntil('footer').wrapAll('<div class="inner-wrapper"></div>');
 $('#main a').attr('target', '_blank');

@@ -22,10 +22,10 @@
         integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-  <link rel="stylesheet" href="css/graphics.css">
-  <script src='js/lib/jquery-3.3.1.min.js'></script>
-  <script src='js/lib/popper.js'></script>
-  <script src='js/lib/bootstrap-material-design.js'></script>
+  <link rel="stylesheet" href="/css/graphics.css">
+  <script src='/js/lib/jquery-3.3.1.min.js'></script>
+  <script src='/js/lib/popper.js'></script>
+  <script src='/js/lib/bootstrap-material-design.js'></script>
   <script>
       $(document).ready(function () {
           $('body').bootstrapMaterialDesign();
@@ -42,7 +42,7 @@ echo $doc->saveHTML();
 
 $filter = $_REQUEST['filter'];
 
-echo '<script src="js/lib/lottie.js"></script>';
+echo '<script src="/js/lib/lottie.js"></script>';
 echo '<div class="head">';
 echo '<div class="container ">';
 echo '<div id="anime"></div>';
@@ -68,11 +68,11 @@ switch ($filter) {
 };
 echo '</h1>';
 echo '<div class="filter">';
-echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'graphics\'">All</button>';
-echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'vector\'">Vector Design</button>';
-echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'animation\'">Animation</button>';
-echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'poster\'">Poster Design</button>';
-echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'graphics-others\'">Others</button>';
+echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'/graphics\'">All</button>';
+echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'/vector\'">Vector Design</button>';
+echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'/animation\'">Animation</button>';
+echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'/poster\'">Poster Design</button>';
+echo '<button type="button" class="btn btn-secondary btn-sm" onclick="location.href=\'/graphics-others\'">Others</button>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
@@ -111,9 +111,9 @@ foreach ($xml->children() as $work) {
   echo '<div class="card bg-white text-white block">';
   $file = $work->file;
   if (endsWith($file, ".mp4")) {
-    echo '<video  class="card-img" src="works/graphics/' . $file . '" muted="" loop="" autoplay="" preload="true" playsinline=""></video>';
+    echo '<video  class="card-img" src="/works/graphics/' . $file . '" muted="" loop="" autoplay="" preload="true" playsinline=""></video>';
   } else {
-    echo '<img class="card-img" src="works/graphics/';
+    echo '<img class="card-img" src="/works/graphics/';
     echo $file;
     echo '" alt="Card image">';
   }
@@ -213,11 +213,11 @@ function endsWith($haystack, $needle)
 }
 
 ?>
-<script src="js/menu.js"></script>
+<script src="/js/menu.js"></script>
 <script>
-    var animation = bodymovin.loadAnimation({
+    const animation = bodymovin.loadAnimation({
         container: document.getElementById('anime'),
-        path: 'animate/trojan.json',
+        path: '/animate/trojan.json',
         renderer: 'svg',
         loop: true,
         autoplay: true,
