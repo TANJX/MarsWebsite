@@ -37,7 +37,7 @@
 <body>
 <?php
 $doc = new DOMDocument();
-$doc->loadHTMLFile("nav.htm");
+$doc->loadHTMLFile("pug/nav.htm");
 echo $doc->saveHTML();
 
 $filter = $_REQUEST['filter'];
@@ -198,7 +198,7 @@ if ($pages > 1) {
 
 echo '</div>';
 $doc = new DOMDocument();
-$doc->loadHTMLFile("footer.htm");
+$doc->loadHTMLFile("pug/footer.htm");
 echo $doc->saveHTML();
 
 

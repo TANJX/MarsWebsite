@@ -39,7 +39,7 @@
 <body>
 <?php
 $doc = new DOMDocument();
-$doc->loadHTMLFile("nav.htm");
+$doc->loadHTMLFile("pug/nav.htm");
 echo $doc->saveHTML();
 ?>
 <div class="head">
@@ -83,7 +83,7 @@ echo $doc->saveHTML();
 <div class="clear"></div>
 <?php
 $doc = new DOMDocument();
-$doc->loadHTMLFile("footer.htm");
+$doc->loadHTMLFile("pug/footer.htm");
 echo $doc->saveHTML();
 ?>
 <script src="js/menu.js"></script>

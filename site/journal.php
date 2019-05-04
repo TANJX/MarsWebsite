@@ -46,7 +46,7 @@
 <?php
 // nav
 $doc = new DOMDocument();
-$doc->loadHTMLFile("nav.htm");
+$doc->loadHTMLFile("pug/nav.htm");
 echo $doc->saveHTML();
 
 if ($_REQUEST['journal'] == '') {
@@ -163,7 +163,7 @@ if ($_REQUEST['journal'] == '') {
 
 // footer
 $doc = new DOMDocument();
-$doc->loadHTMLFile("footer.htm");
+$doc->loadHTMLFile("pug/footer.htm");
 echo $doc->saveHTML();
 ?>
 

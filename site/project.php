@@ -40,7 +40,7 @@
 <body>
 <?php
 $doc = new DOMDocument();
-$doc->loadHTMLFile("nav.htm");
+$doc->loadHTMLFile("pug/nav.htm");
 echo $doc->saveHTML();
 $project = $_REQUEST['name'];
 $valid = false;
@@ -220,7 +220,7 @@ if ($valid) {
 }
 
 $doc = new DOMDocument();
-$doc->loadHTMLFile("footer.htm");
+$doc->loadHTMLFile("pug/footer.htm");
 echo $doc->saveHTML();
 ?>
 <script src="js/menu.js"></script>
