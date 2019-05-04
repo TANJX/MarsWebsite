@@ -6,7 +6,7 @@
   <meta name="viewport"
         content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
   <title>Project | Mars Inc.</title>
-  <base href="http://marstanjx.com/">
+  <base href="https://marstanjx.com/">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116224796-1"></script>
   <script>
