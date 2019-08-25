@@ -1,5 +1,13 @@
 <collection>
   <journal>
+    <title>May, June 2019 Log</title>
+    <type>log</type>
+    <file>2019-6</file>
+    <img>2019-6/banner.jpg</img>
+    <date>2019-6-1</date>
+    <color>#222</color>
+  </journal>
+  <journal>
     <title>April 2019 Log</title>
     <type>log</type>
     <file>2019-4</file>

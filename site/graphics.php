@@ -154,10 +154,10 @@ if ($pages > 1) {
   echo '<nav><ul class="pagination justify-content-center">';
   if ($page == 0) {
     echo '<li class="page-item disabled">';
-    echo '<a class="page-link" href="graphics.php?filter=others" tabindex="-1">Previous</a>';
+    echo '<a class="page-link" href="#" tabindex="-1">Previous</a>';
   } else {
     echo '<li class="page-item">';
-    echo '<a class="page-link" href="';
+    echo '<a class="page-link" href="/';
     echo $filter_link;
     if ($page > 1) {
       echo '-';
@@ -172,7 +172,7 @@ if ($pages > 1) {
     } else {
       echo '<li class="page-item">';
     }
-    echo '<a class="page-link" href="';
+    echo '<a class="page-link" href="/';
     echo $filter_link;
     if ($i > 0) {
       echo '-';
@@ -187,7 +187,7 @@ if ($pages > 1) {
     echo '<a class="page-link" href="#">Next</a>';
   } else {
     echo '<li class="page-item">';
-    echo '<a class="page-link" href="';
+    echo '<a class="page-link" href="/';
     echo $filter_link;
     echo '-';
     echo $page + 2;
