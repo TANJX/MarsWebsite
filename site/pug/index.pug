@@ -14,13 +14,6 @@ block body
 
     +prev_control('Old Landing Page','old_html/index_old.html')
 
-    .status
-        .container
-            h4 京アニ火灾におきまして、亡くなられた方々のご冥福をお祈り申し上げます。
-            .line
-                p Pray for Kyoto Animation.
-                i Jul 18, 2019
-
     .logo
         include ../img/logo/avatar-18rocket.svg
 
@@ -36,16 +29,17 @@ block body
             +index_nav('DEV','/game')
 
             +index_nav('JOURNAL','/journal', false,
+              { name: 'Jun 2019', link: '/journal/2019-6', external: false },
               { name: 'Apr 2019', link: '/journal/2019-4', external: false },
               { name: 'Mar 2019', link: '/journal/2019-3', external: false },
               { name: 'Feb 2019', link: '/journal/2019-2', external: false },
               { name: 'Jan 2019', link: '/journal/2019-1', external: false })
 
             +index_nav('TOOL','http://apps.marstanjx.com', true,
-              { name: 'Event', link: 'http://apps.marstanjx.com/event/', external: true },
-              { name: 'Log', link: 'http://apps.marstanjx.com/log/', external: true },
-              { name: 'Progress', link: 'http://apps.marstanjx.com/progress/', external: true },
-              { name: 'Scale Picker', link: 'http://apps.marstanjx.com/music/', external: true },
+              { name: 'Event', link: 'http://apps.marstanjx.com/#/event/', external: true },
+              { name: 'Log', link: 'http://apps.marstanjx.com/#/log/', external: true },
+              { name: 'Progress', link: 'http://apps.marstanjx.com/#/progress/', external: true },
+              { name: 'Scale Picker', link: 'http://apps.marstanjx.com/#/music/', external: true },
               { name: 'Japanese', link: 'http://apps.marstanjx.com/japanese/', external: true })
 
             +index_nav('RESUME','/resume', true)
@@ -132,13 +126,13 @@ block body
 
             // top right 1
             +block({
-              img: '/img/index/2019-3.jpg',
-              link: '/journal/2019-3'
+              img: '/img/index/2019-6.jpg',
+              link: '/journal/2019-6'
             }, {
               zoom: 'in'
             }, {
               type: 'small',
-              name: 'March 2019 Log'
+              name: 'May-June 2019 Log'
             })
 
             // top right 2
