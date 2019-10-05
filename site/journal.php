@@ -4,7 +4,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Journal | Mars Inc.</title>
+  <?php
+  if ($_REQUEST['journal'] == '') {
+    echo '<title>Journal | Mars Inc.</title>';
+  } else {
+    $xml = simplexml_load_file("journal/journals.xml") or die("Error: Cannot create object");
+    $found = false;
+    foreach ($xml->children() as $work) {
+      if (strcmp($work->file, $_REQUEST['journal']) == 0) {
+        $title = $work->title;
+        echo '<title>' . $title . ' | Mars Inc.</title>';
+        $found = true;
+      }
+    }
+    if (!$found) {
+      echo '<title>Journal | Mars Inc.</title>';
+    }
+  }
+  ?>
   <base href="https://marstanjx.com/">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116224796-1"></script>
