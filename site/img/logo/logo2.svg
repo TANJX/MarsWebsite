@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 586.3 578.7" xml:space="preserve">
-<g id="Layer_2" display="none">
-	<rect y="-12" display="inline" width="590.7" height="590.7"/>
+<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 586.3 578.7" style="enable-background:new 0 0 586.3 578.7;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:40.0019;stroke-miterlimit:10.0005;}
+	.st3{fill:#FFFFFF;}
+</style>
+<g class="st0">
+	<rect y="-12" class="st1" width="590.7" height="590.7"/>
 </g>
-<g id="Layer_1">
+<g>
 	
-		<ellipse transform="matrix(0.9294 -0.3692 0.3692 0.9294 -102.175 128.0965)" fill="none" stroke="#FFFFFF" stroke-width="40" stroke-miterlimit="10" cx="283.6" cy="331" rx="276" ry="102.1"/>
-	<circle fill="#FFFFFF" cx="420.1" cy="96.2" r="20.9"/>
-	<path fill="#FFFFFF" d="M420.1,122.1c-14.3,0-25.9-11.6-25.9-25.9s11.6-25.9,25.9-25.9c14.3,0,25.9,11.6,25.9,25.9c0,0,0,0,0,0
-		C445.9,110.5,434.3,122.1,420.1,122.1z M420.1,80.4c-8.8,0-15.9,7.1-15.9,15.9s7.1,15.9,15.9,15.9s15.9-7.1,15.9-15.9c0,0,0,0,0,0
+		<ellipse transform="matrix(0.9294 -0.3692 0.3692 0.9294 -102.1729 128.0877)" class="st2" cx="283.6" cy="331" rx="276" ry="102.1"/>
+	<circle class="st3" cx="420.1" cy="96.2" r="20.9"/>
+	<path class="st3" d="M420.1,122.1c-14.3,0-25.9-11.6-25.9-25.9s11.6-25.9,25.9-25.9S446,81.9,446,96.2l0,0
+		C445.9,110.5,434.3,122.1,420.1,122.1z M420.1,80.4c-8.8,0-15.9,7.1-15.9,15.9s7.1,15.9,15.9,15.9s15.9-7.1,15.9-15.9l0,0
 		C435.9,87.5,428.8,80.4,420.1,80.4z"/>
-	<circle fill="#FFFFFF" cx="283.6" cy="320.2" r="191.1"/>
-	<circle fill="#FFFFFF" cx="176.3" cy="43.3" r="6.4"/>
-	<circle fill="#FFFFFF" cx="359.1" cy="24.2" r="6.4"/>
-	<circle fill="#FFFFFF" cx="477.4" cy="88.8" r="6.4"/>
-	<circle fill="#FFFFFF" cx="449.8" cy="9.8" r="9.8"/>
+	<circle class="st3" cx="283.6" cy="320.2" r="191.1"/>
+	<circle class="st3" cx="176.3" cy="43.3" r="6.4"/>
+	<circle class="st3" cx="359.1" cy="24.2" r="6.4"/>
+	<circle class="st3" cx="477.4" cy="88.8" r="6.4"/>
+	<circle class="st3" cx="449.8" cy="9.8" r="9.8"/>
 </g>
 </svg>

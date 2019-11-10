@@ -16,6 +16,8 @@ RedirectMatch ^/journal/([^.^/]+)$ /journal/$1/
 
 RedirectMatch ^/index/$ "/"
 
+RewriteRule ^print/$ print.html [NC,L]
+
 RewriteRule ^resume/$ files/resume.pdf [NC,L]
 RewriteRule ^game/$ game.html [NC,L]
 RewriteRule ^/$ index.html [NC,L]
