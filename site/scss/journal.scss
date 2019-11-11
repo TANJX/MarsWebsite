@@ -110,9 +110,10 @@ $color: #e85a80;
     & > div {
       display: flex;
 
-      img {
+      & > div {
         width: 90%;
         padding-right: 20px;
+        flex-shrink: 0;
       }
     }
   }
