@@ -69,6 +69,17 @@ $color: #e85a80;
     }
   }
 
+  h4 {
+    color: $color;
+    font-size: 1.1rem;
+    margin: 15px 0 5px;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+    margin: 5px 0 5px;
+  }
+
   a {
     color: #d0556d;
     text-decoration: underline;
