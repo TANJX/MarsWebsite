@@ -9,12 +9,14 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116224796-1"></script>
   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-          dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'UA-116224796-1');
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-116224796-1');
 
   </script>
   <link rel="stylesheet"
@@ -27,9 +29,9 @@
   <script src='/js/lib/popper.js'></script>
   <script src='/js/lib/bootstrap-material-design.js'></script>
   <script>
-      $(document).ready(function () {
-          $('body').bootstrapMaterialDesign();
-      });
+  $(document).ready(function () {
+    $('body').bootstrapMaterialDesign();
+  });
 
   </script>
 </head>
@@ -93,17 +95,17 @@ $year = 9999;
 // gen cards
 foreach ($xml->children() as $work) {
   if (!($filter == "" ||
-      ($filter == "vector" && $work->type == "Vector") ||
-      ($filter == "animation" && $work->type == "Animation") ||
-      ($filter == "others" && $work->type == "Graphics"))) continue;
+    ($filter == "vector" && $work->type == "Vector") ||
+    ($filter == "animation" && $work->type == "Animation") ||
+    ($filter == "others" && $work->type == "Graphics"))) continue;
   $i++;
   if ($i <= $page * 9) continue;
   if ($i > $page * 9 + 9) break;
   // year
   $myyear = intval(explode('-', $work->date)[0]);
   if ($year > $myyear) {
-    $pos = 375 * intval($count / 3);
-    echo '<p class="vertical-text" style="top: ' . $pos . 'px">' . $myyear . '</p>';
+    $pos = intval($count / 3);
+    echo sprintf('<p class="vertical-text vertical-text__%d">%s</p>', $pos, $myyear);
     $year = $myyear;
   }
   // card
@@ -143,8 +145,8 @@ if ($filter != "") {
   $items = 0;
   foreach ($xml->children() as $work) {
     if (($filter == "vector" && $work->type == "Vector") ||
-        ($filter == "animation" && $work->type == "Animation") ||
-        ($filter == "others" && $work->type == "Graphics"))
+      ($filter == "animation" && $work->type == "Animation") ||
+      ($filter == "others" && $work->type == "Graphics"))
       $items++;
   }
   $pages = $items / 9;
@@ -215,14 +217,14 @@ function endsWith($haystack, $needle)
 ?>
 <script src="/js/menu.js"></script>
 <script>
-    const animation = bodymovin.loadAnimation({
-        container: document.getElementById('anime'),
-        path: '/animate/trojan.json',
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        name: "Hello World" // Name for future reference. Optional.
-    })
+const animation = bodymovin.loadAnimation({
+  container: document.getElementById('anime'),
+  path: '/animate/trojan.json',
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  name: "Hello World" // Name for future reference. Optional.
+})
 
 </script>
 </body>
