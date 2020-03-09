@@ -29,9 +29,10 @@ block body
             //+index_nav('DEV','/game')
 
             +index_nav('JOURNAL','/journal', false,
+              { name: 'Jan 2020', link: '/journal/2020-1', external: false },
+              { name: 'Nov 2019', link: '/journal/2019-11', external: false },
               { name: 'Oct 2019', link: '/journal/2019-10', external: false },
-              { name: 'Sep 2019', link: '/journal/2019-9', external: false },
-              { name: 'Jul-Aug 2019', link: '/journal/2019-8', external: false })
+              { name: 'Sep 2019', link: '/journal/2019-9', external: false })
 
             //+index_nav('APPS','http://apps.marstanjx.com', true,
             //  { name: 'Event', link: 'http://apps.marstanjx.com/#/event/', external: true },
@@ -133,14 +134,14 @@ block body
 
             // top right 2
             +block({
-              img: '/img/index/2019-10.jpg',
-              link: '/journal/2019-10'
+              img: '/img/index/2020-1.jpg',
+              link: '/journal/2020-1'
             }, {
               zoom: 'in'
             }, {
               type: 'small',
-              name: 'October 2019 Log'
-            })
+              name: 'Dec 2019,Jan 2020 Log'
+            }, 'white')
 
             // bottom left 1
             +block({
