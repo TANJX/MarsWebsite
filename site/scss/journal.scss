@@ -117,6 +117,7 @@ $color: #e85a80;
   .vertical-display {
     overflow: auto;
     width: 100%;
+    cursor: grabbing;
 
     & > div {
       display: flex;
