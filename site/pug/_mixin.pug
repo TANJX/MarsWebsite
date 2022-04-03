@@ -28,20 +28,20 @@ mixin index_nav(name, link, ex, ...sub_menu)
                         li: a(href=sub.link)= sub.name
 
 
-mixin block(basic, option, info)
+mixin block(basic, option, info, textcolor)
     - var class_block=['block']
     if option.zoom !== null
-    - class_block.push("zoom-"+option.zoom)
+        - class_block.push("zoom-"+option.zoom)
     if option.pos !== null
-    - class_block.push("block__"+option.pos)
+        - class_block.push("block__"+option.pos)
     div(class=class_block)
         if basic.link !== null
             a(href= basic.link)
                 +block_img(basic)
-                +block_text(info)
+                +block_text(info, textcolor)
         else
             +block_img(basic)
-            +block_text(info)
+            +block_text(info, textcolor)
 
 
 mixin block_img(basic)
@@ -53,17 +53,20 @@ mixin block_img(basic)
             img(src=basic.gif, class='img-alt--gif')
 
 
-mixin block_text(info)
+mixin block_text(info, textcolor)
+    - var colorStyle = 'color: ' + textcolor
+    if textcolor == null
+        - colorStyle = ''
     if info.type === 'small'
         .block--title__small
-            h2= info.name
+            h2(style=colorStyle)= info.name
     else
         if info.type != null && info.name != null
             .block--title
                 if info.type != null
-                    p= info.type
+                    p(style=colorStyle)= info.type
                 if info.name != null
-                    h2= info.name
+                    h2(style=colorStyle)= info.name
         if info.more != null
             .block--subtitle
-                p= info.more
+                p(style=colorStyle)= info.more

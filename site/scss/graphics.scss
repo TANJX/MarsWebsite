@@ -104,6 +104,46 @@
   z-index: -5;
 }
 
+@media (min-width: 768px) {
+  @for $i from 0 through 2 {
+    .vertical-text__#{$i} {
+      top: #{$i * 230}px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  @for $i from 0 through 2 {
+    .vertical-text__#{$i} {
+      top: #{$i * 310}px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  @for $i from 0 through 2 {
+    .vertical-text__#{$i} {
+      top: #{$i * 370}px;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  @for $i from 0 through 2 {
+    .vertical-text__#{$i} {
+      top: #{$i * 420}px;
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  @for $i from 0 through 2 {
+    .vertical-text__#{$i} {
+      top: #{$i * 550}px;
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .card h4.card-title {
     font-size: 1rem;

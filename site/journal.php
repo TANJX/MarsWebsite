@@ -56,6 +56,7 @@
     $('body').bootstrapMaterialDesign();
   });
   </script>
+  <script src="/js/horizontal_drag.js"></script>
 </head>
 
 <body>
@@ -191,6 +192,11 @@ $('#main a').attr('target', '_blank');
 $('#main img:not(.no-subtitle):not(.icon)').each(function () {
   $(this).parent().next().addClass('img-info');
 });
+
+// init horizontal_drag
+(function () {
+  document.querySelectorAll('.vertical-display').forEach((ele) => horizontal_drag(ele));
+})();
 </script>
 </body>
 

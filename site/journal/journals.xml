@@ -1,5 +1,53 @@
 <collection>
   <journal>
+    <title>March 2020 Log</title>
+    <type>log</type>
+    <file>2020-3</file>
+    <img>2020-3/banner.jpg</img>
+    <date>2020-3-1</date>
+    <color>white</color>
+  </journal>
+  <journal>
+    <title>February 2020 Log</title>
+    <type>log</type>
+    <file>2020-2</file>
+    <img>2020-2/banner.jpg</img>
+    <date>2020-2-1</date>
+    <color>#222</color>
+  </journal>
+  <journal>
+    <title>December 2019, January 2020 Log</title>
+    <type>log</type>
+    <file>2020-1</file>
+    <img>2020-1/banner.jpg</img>
+    <date>2020-1-1</date>
+    <color>#222</color>
+  </journal>
+  <journal>
+    <title>November 2019 Log</title>
+    <type>log</type>
+    <file>2019-11</file>
+    <img>2019-11/banner.jpg</img>
+    <date>2019-11-1</date>
+    <color>#222</color>
+  </journal>
+  <journal>
+    <title>October 2019 Log</title>
+    <type>log</type>
+    <file>2019-10</file>
+    <img>2019-10/banner.jpg</img>
+    <date>2019-10-1</date>
+    <color>#222</color>
+  </journal>
+  <journal>
+    <title>September 2019 Log</title>
+    <type>log</type>
+    <file>2019-9</file>
+    <img>2019-9/banner.jpg</img>
+    <date>2019-9-1</date>
+    <color>#222</color>
+  </journal>
+  <journal>
     <title>July, August 2019 Log</title>
     <type>log</type>
     <file>2019-8</file>
