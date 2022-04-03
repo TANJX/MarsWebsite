@@ -40,7 +40,7 @@ if (fs.existsSync('./dist')) {
   rmDir('./dist');
 }
 fs.mkdirSync('./dist');
-fs.mkdirSync('./dist/style');
+fs.mkdirSync('./dist/css');
 
 // pug to html
 for (const pugFile of pugFiles) {
@@ -56,13 +56,13 @@ for (const pugFile of pugFiles) {
 // scss to css
 for (const styleFile of styleFiles) {
   console.log(`Rendering ${styleFile}.scss`);
-  const result = sass.renderSync({ file: `./style/${styleFile}.scss` });
+  const result = sass.renderSync({ file: `./css/${styleFile}.scss` });
   console.log(`Writing ${styleFile}.css`);
-  fs.writeFileSync(`./dist/style/${styleFile}.css`, result.css);
+  fs.writeFileSync(`./dist/css/${styleFile}.css`, result.css);
 }
 
 
-// move static files
+// copy static files
 function copyDir(src, dist) {
   if (!fs.existsSync(dist) || !fs.lstatSync(dist).isDirectory()) {
     fs.mkdirSync(dist);

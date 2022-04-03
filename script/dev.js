@@ -35,8 +35,8 @@ function renderStyle() {
         outFile: `${styleFile}.css`,
       });
       console.log(`Writing ${styleFile}.css`);
-      fs.writeFileSync(`./dist/style/${styleFile}.css`, result.css);
-      fs.writeFileSync(`./dist/style/${styleFile}.css.map`, result.map);
+      fs.writeFileSync(`./dist/css/${styleFile}.css`, result.css);
+      fs.writeFileSync(`./dist/css/${styleFile}.css.map`, result.map);
     } catch (e) {
       styleError = true;
       errorFiles.push(`${styleFile}.scss`);
@@ -64,6 +64,43 @@ function renderTemplate() {
   }
 }
 
+// copy static files
+function copyDir(src, dist) {
+  if (!fs.existsSync(dist) || !fs.lstatSync(dist).isDirectory()) {
+    fs.mkdirSync(dist);
+  }
+
+  const paths = fs.readdirSync(src);
+  paths.forEach((path) => {
+    const _src = src + '/' + path;
+    const _dist = dist + '/' + path;
+    console.log(`Copying ${_src}`);
+    const stat = fs.statSync(_src);
+
+    // 判断是文件还是目录
+    if (stat.isFile()) {
+      fs.writeFileSync(_dist, fs.readFileSync(_src));
+    } else if (stat.isDirectory()) {
+      // 当是目录是，递归复制
+      copyDir(_src, _dist);
+    }
+  });
+}
+
+
+let rmDir = function (dirPath) {
+  const files = fs.readdirSync(dirPath);
+  if (files.length > 0)
+    for (var i = 0; i < files.length; i++) {
+      var filePath = dirPath + '/' + files[i];
+      if (fs.statSync(filePath).isFile())
+        fs.unlinkSync(filePath);
+      else
+        rmDir(filePath);
+    }
+  fs.rmdirSync(dirPath);
+};
+
 var watcher = fw({
   forcePolling: false,  // try event-based watching first
   debounce: 100,         // debounce events in non-polling mode by 10ms
@@ -74,9 +111,16 @@ var watcher = fw({
 
 notifier.notify('Start Mars Inc. debugging.');
 
+if (fs.existsSync('./dist')) {
+  rmDir('./dist');
+}
+fs.mkdirSync('./dist');
+fs.mkdirSync('./dist/css');
+
 renderStyle();
 renderTemplate();
 
+copyDir('./static', './dist');
 // ... or a directory
 watcher.add('./style');
 watcher.add('./template');

@@ -6,7 +6,7 @@ block body
     +prev_control('Old Landing Page','old_html/index_old.html')
 
     .logo
-        include ../img/logo/avatar-18rocket.svg
+        include ../static/img/logo/avatar-18rocket.svg
 
     .nav-bar
         ul(class='nav nav-main justify-content-center')
@@ -46,7 +46,8 @@ block body
             // top left big
             +block({
               img: '/img/index/aardvarc.jpg',
-              link: '/project/aardvarc'
+              link: '//acadoinformatics.com/aardvarc/',
+              external: true,
             }, {
               zoom: 'out',
               pos: 'big__left'
@@ -71,7 +72,8 @@ block body
             // bottom left 1
             +block({
               img: '/img/index/apps.svg',
-              link: '//apps.marstanjx.com'
+              link: '//apps.marstanjx.com',
+              external: true,
             }, {
               zoom: 'in'
             }, {
@@ -151,7 +153,8 @@ block body
             // bottom right big
             +block({
               img: '/img/index/japanese.jpg',
-              link: '//notes.marstanjx.com'
+              link: '//notes.marstanjx.com',
+              external: true,
             }, {
               zoom: 'out',
               pos: 'big__right'

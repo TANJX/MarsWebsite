@@ -5,12 +5,14 @@ mixin prev_control(text, link)
                 img(src='/img/icon/arrow_left.svg')
                 p= text
 
+
 mixin next_control(text, link)
     a(href=link)
         .next-control
             div
                 img(src='/img/icon/arrow_left.svg')
                 p= text
+
 
 mixin index_nav(name, link, ex, ...sub_menu)
     li(class='nav-item')
@@ -36,9 +38,14 @@ mixin block(basic, option, info, textcolor)
         - class_block.push("block__"+option.pos)
     div(class=class_block)
         if basic.link !== null
-            a(href= basic.link)
-                +block_img(basic)
-                +block_text(info, textcolor)
+            if basic.external !== null && basic.external === true
+                a(href= basic.link target='_blank')
+                    +block_img(basic)
+                    +block_text(info, textcolor)
+            else
+                a(href=basic.link)
+                    +block_img(basic)
+                    +block_text(info, textcolor)
         else
             +block_img(basic)
             +block_text(info, textcolor)
