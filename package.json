@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/TANJX/MarsWebsite-Portfolio#readme",
   "dependencies": {
+    "dayjs": "^1.11.5",
     "filewatcher": "^3.0.1",
     "http-server": "^14.1.0",
     "node-notifier": "^10.0.0",
     "pug": "^3.0.2",
-    "sass": "^1.36.0"
+    "sass": "^1.36.0",
+    "uglify-js": "^3.17.3"
   }
 }
